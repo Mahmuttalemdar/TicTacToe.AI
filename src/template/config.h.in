@@ -1,0 +1,31 @@
+#ifndef CONFIG_H
+#define CONFIG_H
+
+#include <QString>
+#include <QVersionNumber>
+#include <QStringList>
+
+#ifdef Q_OS_LINUX
+#include <stdint.h>
+#endif
+
+#include <vector>
+#include <QtGlobal>
+
+
+namespace kyc_engine {
+
+    constexpr bool ON = 1;
+    constexpr bool OFF = 0;
+
+    constexpr auto versionMajor{${VER_MAJ}};
+    constexpr auto versionMinor{${VER_MIN}};
+    constexpr auto versionPatch{${VER_PAT}};
+    constexpr auto versionTeamcityNo{${VER_TCN}};
+
+    auto const name = QString::fromUtf8("${CMAKE_PROJECT_NAME}");
+    auto const versionNumber = QVersionNumber{versionMajor, versionMinor, versionTeamcityNo};
+    auto const version = versionNumber.toString();
+
+}
+#endif //CONFIG_H

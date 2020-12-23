@@ -1,0 +1,5 @@
+module UIComponents
+classname UIComponentsPlugin
+depends QtQuick.Controls 2.15
+
+LoginTextArea 1.0 LoginTextArea.qml

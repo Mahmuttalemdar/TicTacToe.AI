@@ -1,0 +1,6071 @@
+[
+    {
+        "term": "ks_ast_001_activation_useridactivationcodeview_titel",
+        "definition": "Activation",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": "Localizable.strings\n  mPower\n\n  Created by Temmuz Aslan on 22.11.17.\n  Copyright \u00a9 2017 KOBIL Systems GmbH. All rights reserved."
+    },
+    {
+        "term": "ks_ast_001_activation_useridactivationcodeview_cancel",
+        "definition": "Annuler",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_useridactivationcodeview_description",
+        "definition": "Merci d'activer votre application !",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_useridactivationcodeview_textfield_userid_hint",
+        "definition": "Identifiant client",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_useridactivationcodeview_textfield_activationcode_hint",
+        "definition": "Code d'activation",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_useridactivationcodeview_button_activate",
+        "definition": "ACTIVER",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_useridactivationcodeview_button_getactivationcode",
+        "definition": "Obtenir le code d'activation",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_useridactivationcodeview_button_scanqrcode",
+        "definition": "Scanner le QR code",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_useridactivationcodeview_alert_title_invalid",
+        "definition": "Donn\u00e9es invalides",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_useridactivationcodeview_alert_valid",
+        "definition": "Donn\u00e9es valides",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_useridactivationcodeview_alert_missinguserid",
+        "definition": "Merci de saisir votre identifiant client",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_useridactivationcodeview_alert_missingactivationcode",
+        "definition": "Merci de saisir votre code d'activation",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_useridactivationcodeview_alert_missinguseridandactivationcode",
+        "definition": "Merci de saisir votre identifiant client et votre code d'activation",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_useridactivationcodeview_alert_activationcodetooshort",
+        "definition": "Code d'activation trop court",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_useridactivationcodeview_alert_OK",
+        "definition": "OK",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_002_scanqrcode_view_title",
+        "definition": "Scanner le QR code",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_002_scanqrcode_view_description",
+        "definition": "Viser le QR code \u00e0 scanner",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_title",
+        "definition": "D\u00e9finissez votre code PIN",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_description",
+        "definition": "Utilisez entre 6 et 32 chiffres pour d\u00e9finir votre code PIN",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_textfield_pin_hint",
+        "definition": "Code PIN",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_textfield_repeatpin_hint",
+        "definition": "Resaisir votre code PIN",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_button_go",
+        "definition": "Aller",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_label_usetouchid",
+        "definition": "Utiliser Touch ID",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_label_usefingerprint",
+        "definition": "Utiliser empreinte digitale",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_alert_title_invalid",
+        "definition": "Enr\u00e9e invalide",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_alert_enterpinandverify",
+        "definition": "Veuillez entrer votre code PIN et confirmez",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_alert_pinandverifynotequal",
+        "definition": "Les deux codes PIN n'ont pas la m\u00eame valeur",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_title_info",
+        "definition": "Info",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_button_help",
+        "definition": "Aide \/ Information",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_button_licences",
+        "definition": "Licence",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_label_sdkversion",
+        "definition": "Version du SDK",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_label_serialnumber",
+        "definition": "Num\u00e9ro de s\u00e9rie",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_label_deviceid",
+        "definition": "Identifiant du device",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_label_tenantid",
+        "definition": "Eco ID",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_label_model",
+        "definition": "Mod\u00e8le",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_label_iosversion",
+        "definition": "Version iOS",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_label_androidversion",
+        "definition": "Version Android",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_007_reactivation_useridactivationcodeview_title",
+        "definition": "Nouvelle activation",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_007_reactivation_useridactivationcodeview_button_cancel",
+        "definition": "Annuler",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_007_reactivation_useridactivationcodeview_description",
+        "definition": "Merci d'activer \u00e0 nouveau votre application",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_007_reactivation_useridactivationcodeview_textfield_userid_hint",
+        "definition": "Identifiant client",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_007_reactivation_useridactivationcodeview_textfield_activationcode_hint",
+        "definition": "Code d'activation",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_007_reactivation_useridactivationcodeview_button_activate",
+        "definition": "Activer \u00e0 nouveau",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_007_reactivation_useridactivationcodeview_button_scanqrcode",
+        "definition": "Scanner le QR code",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010_mchatsettings_view_titel",
+        "definition": "Param\u00e8tres",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010_mchatsettings_view_button_chat",
+        "definition": "Chat",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010_mchatsettings_view_button_contacts",
+        "definition": "Contacts",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010_mchatsettings_view_button_settings",
+        "definition": "Param\u00e8tres",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010_mchatsettings_view_label_editprofile",
+        "definition": "Editer le profile",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010_mchatsettings_view_label_changepin",
+        "definition": "Changer le code PIN",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010_mchatsettings_view_label_changetheme",
+        "definition": "Changer le th\u00e8me",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010_mchatsettings_view_label_touchid",
+        "definition": "Touch ID  ",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010_mchatsettings_view_label_info",
+        "definition": "Info",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010_mchatsettings_view_label_logout",
+        "definition": "Se d\u00e9connecter",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_013_changepin_view_title",
+        "definition": "Changer de code PIN",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_013_changepin_view_button_cancel",
+        "definition": "Annuler",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_013_changepin_view_textfield_currentpin_hint",
+        "definition": "Code PIN actuel",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_013_changepin_view_textfield_newpin_hint",
+        "definition": "Nouveu code PIN",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_013_changepin_view_textfield_reenternewpin_hint",
+        "definition": "Saisir \u00e0 nouveau votre code PIN",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_013_changepin_view_button_save",
+        "definition": "Sauvegarder",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_title",
+        "definition": "S'identifier",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_textfield_pin_hint",
+        "definition": "Entrez PIN",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_button_login",
+        "definition": "se connecter",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_button_forgotpin",
+        "definition": "PIN oubli\u00e9e?",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_label_usetouchid",
+        "definition": "Utiliser TouchID",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_label_usefingerprint",
+        "definition": "utiliser empreinte digitale",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_titel",
+        "definition": "PIN pas valide",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_text",
+        "definition": "Le code PIN est incorrect. Veuillez re-essayer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_update",
+        "definition": "Mis a jour",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_exit",
+        "definition": "Sortie",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_details",
+        "definition": "Details",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_016_switchuser_view_title",
+        "definition": "Change Compte",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_016_switchuser_view_adduser",
+        "definition": "Ajout utilisateur",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_004_newchat_view_title_newchat",
+        "definition": "Nouveau Chat",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_004_newchat_view_textfield_search_hint",
+        "definition": "Recherche",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_009_chatlist_view_title_chat",
+        "definition": "Chats",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_009_chatlist_view_textfield_search_hint",
+        "definition": "Recerche",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_011_mchatcontacts_view_titel",
+        "definition": "Contacts",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_011_mchatcontacts_view_textfield_search_hint",
+        "definition": "Rechercher",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_021_chatcontactdetails_title",
+        "definition": "D\u00e9tails du contact",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_024_chatcontactinfo_title",
+        "definition": "Information du contact",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_024_chatcontactinfo_view_label_lasttimeonline",
+        "definition": "derni\u00e8re connexion en ligne",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_024_chatcontactinfo_view_button_contactdetails",
+        "definition": "D\u00e9tails du contact",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_024_chatcontactinfo_view_button_sharedmedia",
+        "definition": "M\u00e9dias partag\u00e9s",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_024_chatcontactinfo_view_button_shareddocuments",
+        "definition": "Documents partag\u00e9s",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_024_chatcontactinfo_view_button_sharecontact",
+        "definition": "Contact partag\u00e9",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_024_chatcontactinfo_view_button_clearchat",
+        "definition": "Effacer la conversation chat",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_025_chatgroup_view_titel",
+        "definition": "Information groupe",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_025_chatgroup_view_label_text_createdby",
+        "definition": "Cr\u00e9\u00e9 par",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_025_chatgroup_view_label_button_editgroupname",
+        "definition": "Editer le nom du groupe",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_025_chatgroup_view_label_button_sharedmedia",
+        "definition": "M\u00e9dias partag\u00e9s",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_025_chatgroup_view_label_button_shareddocuments",
+        "definition": "Documents partag\u00e9s",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_025_chatgroup_view_label_button_clearchat",
+        "definition": "Effacer la conversation chat",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_025_chatgroup_view_label_button_exitgroup",
+        "definition": "Sortir du groupe",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_025_chatgroup_view_label_button_addparticipants",
+        "definition": "Ajouter des participants",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_025_chatgroup_view_alertremove_titel",
+        "definition": "Effacer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_025_chatgroup_view_alertremove_text",
+        "definition": "Etes vous certain de vouloir effacer ce participant du groupe ?",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_025_chatgroup_view_infotab_viewuser",
+        "definition": "Voir",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_025_chatgroup_view_infotab_removefromgroup",
+        "definition": "Effacer de ce groupe",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_signdoc_005_signdoc_view_title",
+        "definition": "Document",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_signdoc_005_signdoc_view_title_sign",
+        "definition": "Signer un document",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_signdoc_005_signdoc_view_infotab_changesignature",
+        "definition": "Changer la signature",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_signdoc_005_signdoc_view_infotab_useexistingsignature",
+        "definition": "Utiliser une signature existante",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_signdoc_005_signdoc_view_infotab_setsignature",
+        "definition": "Initialiser votre signature",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_signdoc_005_signdoc_view_infotab_addyoursignature",
+        "definition": "Ajouter votre signature",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_signdoc_005_signdoc_view_infotab_requestsignature",
+        "definition": "Obtenir une signature",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_signdoc_005_signdoc_view_infotab_cancel",
+        "definition": "Annuler",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_signdoc_005_signdoc_view_button_cancel",
+        "definition": "Annuler\n",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_signdoc_005_signdoc_view_button_save",
+        "definition": "Sauvegarder",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_signdoc_005_signdoc_view_alert_title_existingsignaturefound",
+        "definition": "Signature existante trouv\u00e9e",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_signdoc_005_signdoc_view_alert_title_nosignaturefound",
+        "definition": "Pas de signature trouv\u00e9e",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_signdoc_005_signdoc_view_button_signhere",
+        "definition": "Signer ici",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_signdoc_008_signature_view_title_setsignature",
+        "definition": "Initialiser votre signature",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_signdoc_008_signature_view_button_cancel",
+        "definition": "Annuler",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_signdoc_008_signature_view_button_save",
+        "definition": "Sauvegarder",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_signdoc_008_signature_view_label_color",
+        "definition": "Couleur",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_signdoc_008_signature_view_button_clear",
+        "definition": "Effacer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_scpmessage_008_uploaddocument_view_infotab_uploadtitle",
+        "definition": "T\u00e9l\u00e9charger",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_scpmessage_008_uploaddocument_view_infotab_takephoto",
+        "definition": "Prendre une photo",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_scpmessage_008_uploaddocument_view_infotab_choosephoto",
+        "definition": "Choisir une photo",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_scpmessage_008_uploaddocument_view_infotab_document",
+        "definition": "Document",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_scpmessage_008_uploaddocument_view_infotab_msafe",
+        "definition": "mSafe",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_scpmessage_008_uploaddocument_view_infotab_cancel",
+        "definition": "Effacer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_loading",
+        "definition": "Acc\u00e9der zone s\u00e9curis\u00e9e ...",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_image",
+        "definition": "Image",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_share",
+        "definition": "Partager",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_confirm",
+        "definition": "Confirmer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_leavingsecuredarea",
+        "definition": "Vous \u00eates en train de quitter la zone s\u00e9curis\u00e9e. Voulez-vous continuer ?",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_yes",
+        "definition": "Oui",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_no",
+        "definition": "Non",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010_mchatsettings_view_label_fingerprint",
+        "definition": "Empreintes digitales",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_touchidisclicked_pleaseauthenticate",
+        "definition": "Merci de vous authentifier pour prooc\u00e9der",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_touchidisclicked_sucess",
+        "definition": "Identification avec Touch Id en cours",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_fingerprint_sucess",
+        "definition": "Identification avec empreintes digitales en cours",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_tms_008_incomingtms_view_title_login",
+        "definition": "Trusted Verify",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_tms_008_incomingtms_view_button_cancel",
+        "definition": "Annuler",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_tms_008_incomingtms_view_label_pleaseenterpin",
+        "definition": "Merci de saisir votre code PIN",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_tms_008_incomingtms_view_textfield_pint_hint",
+        "definition": "Code PIN",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_tms_008_incomingtms_view_button_tmslogin",
+        "definition": "Trusted Verify Login",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_tms_008_incomingtms_view_alert_title_discard",
+        "definition": "Rejeter",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_tms_008_incomingtms_view_alert_text_discard",
+        "definition": "Etes-vous certain de vouloir rejeter cette transaction ?",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_tms_008_incomingtms_view_alert_button_discard",
+        "definition": "Rejeter",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_tms_008_incomingtms_view_title_button_cancel",
+        "definition": "Annuler",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_tms_011_incomingtms_view_title_tms",
+        "definition": "Trusted Verify",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_tms_011_incomingtms_view_label_tmsrequiringinteraction",
+        "definition": "Trusted Verify a besoin de votre interaction",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_tms_011_incomingtms_view_button_deny",
+        "definition": "refuser",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_tms_011_incomingtms_view_button_approve",
+        "definition": "confirmer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_tms_011_incomingtms_view_label_approved",
+        "definition": "Approuv\u00e9",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_tms_011_incomingtms_view_label_denied",
+        "definition": "Refus\u00e9",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_tms_011_incomingtms_view_alert_title_deny",
+        "definition": "Refuser",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_tms_011_incomingtms_view_alert_text_deny",
+        "definition": "Etes-vous certain de vouloir refuser cette transaction?",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_tms_011_incomingtms_view_alert_button_deny",
+        "definition": "Refuser",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_tms_011_incomingtms_view_alert_button_cancel",
+        "definition": "Annuler",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_tms_011_incomingtms_view_alert_title_timeout",
+        "definition": "temps echou\u00e9e",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_tms_011_incomingtms_view_alert_text_timeout",
+        "definition": "La transaction n'a pas \u00e9t\u00e9 confirm\u00e9e \u00e0 temps.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_tms_015_incomingtms_view_title_message",
+        "definition": "Message",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_tms_015_incomingtms_view_label_messageforconfirmation",
+        "definition": "Message de confirmation",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_tms_015_incomingtms_view_label_confirm",
+        "definition": "Confirmer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_alert_title_pleasewait",
+        "definition": "Merci d'attendre",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_alert_text_sending",
+        "definition": "Envoi en cours...",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_alert_title_forward",
+        "definition": "Transf\u00e9rer ce message",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_alert_text_forward",
+        "definition": "Merci de t\u00e9l\u00e9charger la pi\u00e8ce jointe afin de pouvoir transf\u00e9rer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_alert_title_share",
+        "definition": "Partager",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_alert_text_share",
+        "definition": "Merci de t\u00e9l\u00e9charger la pi\u00e8ce jointe afin de pouvoir partager",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_alert_button_ok",
+        "definition": "OK",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_signdoc_005_signdoc_view_infotab_title",
+        "definition": "Signature",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_signdoc_005_signdoc_view_button_delete",
+        "definition": "Effacer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_signdoc_005_signdoc_view_alert_close_text",
+        "definition": "Si vous quittez cet \u00e9cran, tous les modifications seront perdues !",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_signdoc_005_signdoc_view_alert_close_leave",
+        "definition": "Quitter",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_signdoc_005_signdoc_view_alert_close_cancel",
+        "definition": "Annuler",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_tms_011_incomingtms_view_label_usefingerprint",
+        "definition": "Utiliser les empreintes digitales",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_008_startscreen_view_menu_settings",
+        "definition": "Param\u00e8tres",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_008_startscreen_view_titel",
+        "definition": "KOBIL mPower",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_008_startscreen_view_button_mchat",
+        "definition": "mChat",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_008_startscreen_view_button_msafe",
+        "definition": "mSafe",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_008_startscreen_view_button_mwebview",
+        "definition": "mWebView",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_fingerprint_title",
+        "definition": "empreinte digitale",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_fingerprint_text",
+        "definition": "Voulez-vous allez aux pr\u00e9ferences pour configurer l'empreinte digitale?",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_fingerprint_cancel",
+        "definition": "annuler",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_fingerprint_settings",
+        "definition": "R\u00e9glements",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_002_scanqrcode_view_error_invalidqrcodedata",
+        "definition": "Donn\u00e9es QR non valides",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_016_switchuser_view_dialog_delete_title",
+        "definition": "Effacer compte",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_016_switchuser_view_menu_delete",
+        "definition": "effacer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_016_switchuser_view_dialog_delete_text_android",
+        "definition": "effacer %d comptes s\u00e9l\u00e9ction\u00e9es?",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_016_switchuser_view_dialog_delete_cancel",
+        "definition": "annuler",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_016_switchuser_view_dialog_delete_delete",
+        "definition": "Effacer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_005_addsigner_title",
+        "definition": "Ajouter un signataire",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_005_addsigner_view_search",
+        "definition": "Recherche",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_tryagain",
+        "definition": "Veuillez re-essayer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_button_update",
+        "definition": "Mis a jour",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_button_later",
+        "definition": "plus tard",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_updatefailed",
+        "definition": "Mis a jour echou\u00e9",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_dialog_fingerprint_title",
+        "definition": "S'identifier",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_dialog_fingerprint_text",
+        "definition": "Confirmer les empreintes digitales pour continuer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_dialog_fingerprint_cancel",
+        "definition": "Annuler",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_dialog_fingerprint_usepin",
+        "definition": "Utiliser le code PIN",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_update_necessary",
+        "definition": "Une mise \u00e0 jour de votre Application est n\u00e9cessaire. Merci de mettre \u00e0 jour votre Application.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_update_available_android",
+        "definition": "Une nouvelle version de votre Application est disponible. Vous pourrez continuer \u00e0 utiliser cette version de l'application pendant :%1$s",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_touch_obscured",
+        "definition": "Votre saisie a \u00e9t\u00e9 interdite par une autre application. Merci de fermer cette application!",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ok",
+        "definition": "OK",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_label_availableafterlogin",
+        "definition": "- disponible apr\u00e8s identification",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_menu_more",
+        "definition": "Davantage",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_enter_your_message_text_here",
+        "definition": "Saisir votre message texte ici",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_search",
+        "definition": "Rechercher",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_005_addsigner_view_label_chats",
+        "definition": "Chats",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_005_addsigner_view_label_contacts",
+        "definition": "Contacts",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_009_chatlist_view_label_yesterday",
+        "definition": "Hier",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_protected_by_not_translated",
+        "definition": "Protected by",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": "Doesn\u00b4t need a translation"
+    },
+    {
+        "term": "ks_ast_001_activation_useridactivationcodeview_alert_title_appregistered",
+        "definition": "Application enregistr\u00e9e",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_useridactivationcodeview_alert_text_appregistered",
+        "definition": "Votre application est enregistr\u00e9e",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_useridactivationcodeview_alert_title_activationfailed",
+        "definition": "Activation a \u00e9chou\u00e9e",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_useridactivationcodeview_alert_text_unknownversion",
+        "definition": "Version inconnue",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_useridactivationcodeview_alert_text_codeexpired",
+        "definition": "Code d'activation a expir\u00e9",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_useridactivationcodeview_alert_text_alreadyexists",
+        "definition": "Ce identifiant utilisateur est d\u00e9j\u00e0 enregistr\u00e9.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_useridactivationcodeview_alert_text_connectionnotestablished",
+        "definition": "Pas de Connection au serveur.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_useridactivationcodeview_alert_text_wrongcredentials",
+        "definition": "Mauvais identifiant utilisateur ou code d'activation",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_007_reactivation_useridactivationcodeview_alert_title_reactivationfailed",
+        "definition": "Re-activation echou\u00e9e",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_007_reactivation_useridactivationcodeview_alert_text_notactivatedonserver",
+        "definition": "Cet appareil n'est pas activ\u00e9 au serveur. Veuillez re-activez l'app.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_007_reactivation_useridactivationcodeview_alert_text_codeexpired",
+        "definition": "Code d'activation expir\u00e9",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_007_reactivation_useridactivationcodeview_alert_text_noconnectiontoserver",
+        "definition": "Pas de Connection au serveur.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_title_loginfailed",
+        "definition": "Log in echou\u00e9e",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_text_notactivated",
+        "definition": "Cet appareil n'est pas activ\u00e9 au serveur. Veuillez re-activez l'app.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_text_appdisabled",
+        "definition": "Cet App est bloqu\u00e9e. Veuillez contacter le support",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_text_wrongpin",
+        "definition": "Code PIN incorrecte. Veuillez re-essayer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_text_wrongpinlast",
+        "definition": "Code PIN incorrecte. Dernier essay!",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_text_noconnection",
+        "definition": "Connexion au serveur ne peut pas \u00eatre \u00e9tablie",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_text_wrongversion",
+        "definition": "La version de cette application n'est pas approuv\u00e9e",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_button_notuser",
+        "definition": "Pas %1$s?",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": "deleted unnecessary space chareacter"
+    },
+    {
+        "term": "ks_ast_001_activation_useridactivationcodeview_alert_text_internalerror_android",
+        "definition": "Une erreur s'est produite, merci de contacter votre administrateur. %1$d",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_007_reactivation_useridactivationcodeview_alert_text_invaliduser_android",
+        "definition": "Une erreur s'est produite, merci de contacter votre administrateur. %1$d",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_text_internalerror_android",
+        "definition": "Une erreur s'est produite, merci de contacter votre administrateur. %1$d",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_day",
+        "definition": {
+            "one": "jour",
+            "other": "jours"
+        },
+        "context": "",
+        "term_plural": "ks_day",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_hour",
+        "definition": {
+            "one": "heure",
+            "other": "heures"
+        },
+        "context": "",
+        "term_plural": "ks_hour",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_minute",
+        "definition": {
+            "one": "minute",
+            "other": "minutes"
+        },
+        "context": "",
+        "term_plural": "ks_minute",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_second",
+        "definition": {
+            "one": "seconde",
+            "other": "secondes"
+        },
+        "context": "",
+        "term_plural": "ks_second",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_text_wrongpin_android",
+        "definition": "Mauvais code PIN. %1$d %2$s gauche.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_useridactivationcodeview_alert_text_appregistered_android",
+        "definition": "L'enregistrement de votre application (%1$s) est courronn\u00e9 de succ\u00e8s. Merci d'activer l'application maintenant.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_text_wrongversion_android",
+        "definition": "La version %1$s (%2$s) de cette application %3$s n'est pas approuv\u00e9.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_scpmessage_008_uploaddocument_view_infotab_filetitle",
+        "definition": "Choisir un fichier",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_013_changepin_view_alert_input_valid",
+        "definition": "Donn\u00e9es valides",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_013_changepin_view_alert_input_pinempty",
+        "definition": "Merci de saisir votre code PIN",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_013_changepin_view_alert_input_pinshort",
+        "definition": "Code PIN actuel trop court",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_013_changepin_view_alert_input_newpinempty",
+        "definition": "Veuillez entrer votre code PIN",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_013_changepin_view_alert_input_newpinshort",
+        "definition": "Nouveau code PIN trop court",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_013_changepin_view_alert_input_repeatpinempty",
+        "definition": "Veuillez entrer nouveau code PIN deux fois",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_013_changepin_view_alert_input_repeatpinshort",
+        "definition": "Nouveau code PIN trop court",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_013_changepin_view_alert_input_notequal",
+        "definition": "Nouvelles code PIN ne sont pas le m\u00eames",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_input_valid",
+        "definition": "Entree valide",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_input_pinempty",
+        "definition": "Code PIN incorrecte. Veuillez re-essayer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_alert_ok",
+        "definition": "OK",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_alert_text_loading",
+        "definition": "chargement...",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_selectcontacts",
+        "definition": "selection des contacts",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_unknownfilename",
+        "definition": "nom fichier inconnu",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_trytosendagain",
+        "definition": "Veuillez re-essayer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_alert_title_messagenotsend",
+        "definition": "Message ne pas envoy\u00e9e",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_alert_text_checkinternetconnection",
+        "definition": "Veuillez verifier votre connection internet et re-essayer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_alert_title_cancel",
+        "definition": "Annuller",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_unknowncontact",
+        "definition": "contact inconnu",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_signrequestsignature",
+        "definition": "Signer ou demander une signature",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_signingoptions",
+        "definition": "Options de signature",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_signature",
+        "definition": "Signature",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_push_notification_newmessage",
+        "definition": "Nouveau message re\u00e7u. Cliquer ici pour le visualiser.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_push_notification_transaction",
+        "definition": "Transaction \/ Information re\u00e7ue. Cliquer ici pour vous identifier.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_transactionBannerloc",
+        "definition": "Transaction re\u00e7ue. Cliquer ici pour la visualiser",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_007_reactivation_useridactivationcodeview_alert_input_valid",
+        "definition": "Donn\u00e9es valides",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_007_reactivation_useridactivationcodeview_alert_input_empty",
+        "definition": "Merci de saisir votre code d'activation",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_007_reactivation_useridactivationcodeview_alert_input_short",
+        "definition": "Code d'activation trop court",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_alert_valid",
+        "definition": "Donn\u00e9es valides",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_alert_pinempty",
+        "definition": "Merci de saisir votre code PIN",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_alert_pinshort",
+        "definition": "Code PIN trop court",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_alert_repeatpinempty",
+        "definition": "Merci de saisir \u00e0 nouveau votre code PIN",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_alert_repeatpinshort",
+        "definition": "Code PIN trop court",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_alert_notequal",
+        "definition": "Vos code PIN ne sont pas identiques",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_scpmessage_009_recievefile_view_label_signer",
+        "definition": "Signer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_inprogress",
+        "definition": "Identification en cours",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_013_changepin_view_alert_title_invalid",
+        "definition": "Impossible de modifier le code PIN",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_013_changepin_view_alert_title_invalidevice",
+        "definition": "Appareil non valide",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_013_changepin_view_alert_title_invalidstate",
+        "definition": "Une erreur est apparu. Veuillez contacter le support",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_013_changepin_view_alert_title_internalerror",
+        "definition": "Une erreur est apparu. Veuillez contacter le support",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_013_changepin_view_alert_title_invalidpin",
+        "definition": "Code PIN incorrecte. Veuillez re-essayer ",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_013_changepin_view_alert_title_newpinformat",
+        "definition": "Nouveau code PIN ne correspond pas au format.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_013_changepin_view_alert_title_checkinternetconnection",
+        "definition": "Veuillez verifier votre connection internet et re-essayer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_tms_015_incomingtms_view_message_tmp",
+        "definition": "Votre banque vous propose un offre special. Veuillez contacter votre Banque!",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_finger_text_tmp",
+        "definition": "Senseur empreinte digitale",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010_mchatsettings_view_button_chatsettings_tmp",
+        "definition": "Param\u00e8tres mChat",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_title_not_translated",
+        "definition": "title",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": "Doesn\u00b4t need to be translated, because it is only a default view, which never get shown to a user"
+    },
+    {
+        "term": "ks_message_not_translated",
+        "definition": "message",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": "Doesn\u00b4t need to be translated, because it is only a default view, which never get shown to a user"
+    },
+    {
+        "term": "ks_negative_not_translated",
+        "definition": "negative",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": "Doesn\u00b4t need to be translated, because it is only a default view, which never get shown to a user"
+    },
+    {
+        "term": "ks_neutral_not_translated",
+        "definition": "neutral",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": "Doesn\u00b4t need to be translated, because it is only a default view, which never get shown to a user"
+    },
+    {
+        "term": "ks_positive_not_translated",
+        "definition": "positive",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": "Doesn\u00b4t need to be translated, because it is only a default view, which never get shown to a user"
+    },
+    {
+        "term": "ks_ast_tms_011_incomingtms_view_timer_format_long",
+        "definition": "m:ss",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_tms_011_incomingtms_view_timer_format_short",
+        "definition": "s",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_alert_no_internet_connection_tmp",
+        "definition": "Veuillez verifier votre appareil est bien connect\u00e9 au Internet!",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_alert_error_tmp",
+        "definition": "Erreur",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_info_view_label_copyright",
+        "definition": "Copyright 2012-2020 KOBIL Systems GmbH all right reserved.\n\nPDF technology powered by PDFNet SDK copyright \u00a9 PDFTron\u2122 Systems Inc., 2001-2020, and distributed by KOBIL Systems GmbH under license. All rights reserved.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": "Doesn\u00b4t need a translation"
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_label_usefaceid",
+        "definition": "Utiliser Face ID",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010_mchatsettings_view_label_faceid",
+        "definition": "Face ID",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_012_enterpin_view_title_enterpintocontinue",
+        "definition": "Confirmez votre code PIN",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_012_enterpin_view_label_enterpin",
+        "definition": "Veuillez entrer votre code PIN pour continuer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_012_enterpin_view_textfield_pin_hint",
+        "definition": "code PIN",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_012_enterpin_view_button_continue",
+        "definition": "Continuer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_012_enterpin_view_button_cancel",
+        "definition": "Annuler",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_touchidisclicked_sucessfaceid",
+        "definition": "Connection avec Face ID en progr\u00e9s",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_protected_by",
+        "definition": "Prot\u00e9g\u00e9e par",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_downloadfailed",
+        "definition": "Echec du t\u00e9l\u00e9chargement",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_downloadnotavailable",
+        "definition": "T\u00e9l\u00e9chargement non disponible",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_transaction_ok",
+        "definition": "OK",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_transaction_transaction",
+        "definition": "Transaction",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_transaction_transactionover",
+        "definition": "La transaction est d\u00e9j\u00e0 termin\u00e9e",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_label_useunknown",
+        "definition": "Utiliser Touch ID",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_alert_touchid_title",
+        "definition": "Touch ID",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_alert_touchid_description",
+        "definition": "Voulez-vous acc\u00e9der aux param\u00e8tres pour configurer Touch ID?",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_alert_touchid_settings",
+        "definition": "Param\u00e8tres",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_alert_touchid_cancel",
+        "definition": "Annuler",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_009_chatlist_view_label_today",
+        "definition": "Aujourd'hui",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_004_newchat_view_button_cancel",
+        "definition": "Annuler",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_009_chatlist_view_label_document",
+        "definition": "Document",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_009_chatlist_view_label_attachement",
+        "definition": "Pi\u00e8ce jointe",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_image",
+        "definition": "Image",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_document",
+        "definition": "Document",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_preparingupload",
+        "definition": "Pr\u00e9paration au t\u00e9l\u00e9chargement",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_signing",
+        "definition": "EN COURS DE SIGNATURE",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_pleasewait",
+        "definition": "Merci d'attendre...",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_scpmessage_008_conversation_view_infotab_copy",
+        "definition": "Copier",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_scpmessage_008_conversation_view_infotab_forward",
+        "definition": "Relayer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_scpmessage_008_conversation_view_infotab_share",
+        "definition": "Partager",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_scpmessage_008_conversation_view_infotab_cancel",
+        "definition": "Annuller",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_alert_activationinprogress",
+        "definition": "Activation en progr\u00e9s",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_notavailable",
+        "definition": "Ne pas disponible",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_corrupt",
+        "definition": "Environment corrumpu. Veuillez contacter Support.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "push_title_key",
+        "definition": null,
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": "Localizable.strings\n  mPower\n\n  Created by Temmuz Aslan on 22.11.17.\n  Copyright \u00a9 2017 KOBIL Systems GmbH. All rights reserved."
+    },
+    {
+        "term": "push_message_key",
+        "definition": "Vous avez recu une message",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_013_changepin_view_alert_text_newpinformat",
+        "definition": "Le nouveau code PIN est en mauvaise format. Veuillez re-essayer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_013_changepin_view_alert_text_invalidstate",
+        "definition": "Etat invalide",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_alert_text_copytext",
+        "definition": "Copier texte",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_alert_message_copiedtoclipboard",
+        "definition": "M\u00e9ssage a \u00e9t\u00e9 copi\u00e9 au clipboard:",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_011_mchatcontacts_alert_leaving_title",
+        "definition": "Veuillez-vous vraiment abandoner le choix d'un contact?",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_011_mchatcontacts_alert_leaving_leave",
+        "definition": "abandoner",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_011_mchatcontacts_alert_leaving_cancel",
+        "definition": "annuler",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_013_changepin_view_alert_text_connectionnotestablished",
+        "definition": "Connection serveur ne pas etabli",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_selectcontact",
+        "definition": "Selectionnez un contact",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_tms_011_incomingtms_view_alert_title_approve",
+        "definition": "Confirmez",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_tms_011_incomingtms_view_alert_text_areyousure",
+        "definition": "Etes-vous sur?",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_009_chatlist_view_label_nomessagetext",
+        "definition": "pas de message texte",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_fingerprint_atleastone",
+        "definition": "Enregistrer au moins une empreinte digitale dans les param\u00e8tres.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_fingerprint_unavailable",
+        "definition": "L'authentification via empreinte digitale n'est pas disponible.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_fingerprint_continue",
+        "definition": "Continuer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_fingerprint_cancel",
+        "definition": "Annuler",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_fingerprint_failed",
+        "definition": "L'authentification par empreintes digitales a \u00e9chou\u00e9",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_fingerprint_canceled",
+        "definition": "L'authentification par empreintes digitales a \u00e9t\u00e9 annul\u00e9e",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_fingerprint_message",
+        "definition": "Cliquer sur continuer pour vous authentifier sans empreintes digitales",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_fingerprint_confirmtocontinue",
+        "definition": "Confirmer vos empreintes digitales pour continuer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_alert_faceid_title",
+        "definition": "Face ID",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_alert_faceid_description",
+        "definition": "Souhaitez-vous acc\u00e9der aux param\u00e8tres pour configurer Face ID?",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_title_update",
+        "definition": "Mise \u00e0 jour",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_text_updatenecessary",
+        "definition": "Une mise \u00e0 jour de votre application est n\u00e9cessaire. Merci de mettre \u00e0 jour votre application.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_button_details",
+        "definition": "D\u00e9tails",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_button_exit",
+        "definition": "Sortir",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_025_chatgroup_view_label_participant",
+        "definition": "Participants",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_wearesorry",
+        "definition": "Nous sommes d\u00e9sol\u00e9",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_filetoolarge",
+        "definition": "Le fichier choisi est trop large",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_info",
+        "definition": "Info",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_invalidstate",
+        "definition": "Synchronisation avec serveur ne pas etabli, veuillez re-demarrer l'app",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_alert_pinlong",
+        "definition": "code PIN trop long",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_import_file_failed_warning",
+        "definition": "Attention",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_wrong_pin_error_message",
+        "definition": {
+            "one": "code PIN incorrect. Dernier essay!",
+            "other": "code PIN incorrect. Il vous reste %1$d essays"
+        },
+        "context": "",
+        "term_plural": "ks_wrong_pin_error_message",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_add_signature",
+        "definition": "Ajouter Signature",
+        "context": "Android overflow hint for menu with \"Add your Signature and ... \" menu",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_locked_login_tries",
+        "definition": {
+            "one": "Dernier essay",
+            "other": "%1$d essays restants"
+        },
+        "context": "",
+        "term_plural": "ks_locked_login_tries",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_fingerprint_login_possible",
+        "definition": "Connection avec empreinte digitale est possible maintenant",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_fingerprint_setup_success",
+        "definition": "Configuration empreinte digitale avec success.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_act_confirm_fingerprint",
+        "definition": "Utiliser empreinte digitale",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_act_confirm_enable_fingerprint",
+        "definition": "Confirmez connection avec empreinte digitale",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_locked_login_minutes",
+        "definition": "Connection bloqu\u00e9e pour %1$d minutes et",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_024_chatcontactinfo_view_label_lasttimeonline_android",
+        "definition": "Dernier fois en ligne %1$s",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_text_updateavailable",
+        "definition": {
+            "one": "Il y a une mise-a-jour pour votre app. Vouz devez appliquer cette mise-a-jour pour continuer utiliser cette app.",
+            "other": "Il y a une mise-a-jour pour votre app. Vouz devez appliquer cette mise-a-jour dans les prochaines %1$d jours pour continuer utiliser cette app."
+        },
+        "context": "",
+        "term_plural": "ks_ast_015_login_view_alert_text_updateavailable",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_008_startscreen_view_label_welcome",
+        "definition": "Bienvenu a l'ecosyst\u00e9me KOBIL",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_act_kobil_eco_system_trusted_file_save",
+        "definition": "mSafe",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_act_files_search",
+        "definition": "Cherche",
+        "context": "Search",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_act_message_attachemnt",
+        "definition": "Annexe message",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_act_message_signature",
+        "definition": "Demandes signature",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_act_files_failure_downloading",
+        "definition": "Erreur en t\u00e9l\u00e9chargement:",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_act_title_activity_ks_files",
+        "definition": "Fichiers",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_title",
+        "definition": "mChat",
+        "context": "Title for the \"root\" chat view with 2 tabs(Chats and Contacts)",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_useridactivationcode_qr_camera_error",
+        "definition": "Camera ne pas trouv\u00e9",
+        "context": "Could not find requested camera.",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_useridactivationcodeview_qr_scan_camera_error_title",
+        "definition": "Erreur camera",
+        "context": "Camera error",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_alert_send_again",
+        "definition": "Envoyer encore",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_alert_delete_message",
+        "definition": "Effacer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_alert_not_sent_message",
+        "definition": "Cet message n'a pas \u00e9t\u00e9 envoy\u00e9e [%1$s]",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_bubble_enter_text",
+        "definition": "Entrer texte",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_label_language",
+        "definition": "Language",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_label_region",
+        "definition": "R\u00e9gion",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_label_timezone",
+        "definition": "Fuseau horaire",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_label_appversion",
+        "definition": "Version App",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_scp_error_writing_database_title",
+        "definition": "Erreur intern",
+        "context": "Basically DataBase is corrupt to a point where it cannot be repaired only solution is reinstalling of app",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_scp_error_reading_data_base_title",
+        "definition": "Erreur intern",
+        "context": "Basically DataBase is corrupt to a point where it cannot be repaired only solution is reinstalling of app",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_chat_not_usable_ssl_error_title",
+        "definition": "Erreur connection",
+        "context": "Chat is not usable anymore from that point, problem are the certificates used for tls channel establichment",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_chat_not_usable_token_server_error_title",
+        "definition": "Erreur connection",
+        "context": "Chat is not usable anymore from that point, problem is issue with token issuer service",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_could_not_update_contacts_title",
+        "definition": "Mise en garde",
+        "context": "The contacts locally stored on client side are not updated",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_scp_error_retriving_conversation_data_title",
+        "definition": "Conversation n'a pas pu etre retrouv\u00e9e",
+        "context": "There have been problems with a conversation conversation list might not be updated",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_scp_error_parsing_conversation_data_title",
+        "definition": "Conversation n'a pas pu etre saisi",
+        "context": "There have been problems with a conversation conversation list might not be updated",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_scp_error_retriving_personal_contact_list_title",
+        "definition": "Mise en garde",
+        "context": "There has been a problem with the personal contact list. Usually User cannot fix this. New Login may work if not this issue is not fixable since adderss book JSON is damage in that case.",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_scp_error_parsing_personal_contact_list_title",
+        "definition": "Mise en garde",
+        "context": "There has been a problem with the personal contact list. Usually User cannot fix this. New Login may work if not this issue is not fixable since adderss book JSON is damage in that case.",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_scp_error_retriving_contact_data_title",
+        "definition": "Mise en garde",
+        "context": "Their has been a problem with one particual contact, usually the user cannot fix this. New Login may work if not this issue is not fixable since adderss book JSON of that paticular contact is damage in that case.",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_scp_error_parsing_contact_data_title",
+        "definition": "Mise en garde",
+        "context": "Their has been a problem with one particual contact, usually the user cannot fix this. New Login may work if not this issue is not fixable since adderss book JSON of that paticular contact is damage in that case.",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_scp_error_parsing_media_metadata_title",
+        "definition": "M\u00e9dia n'a pas pu etre retrouv\u00e9e",
+        "context": "Provided MediaMetadata are not conform to JSON Spec.",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_scp_error_malformed_message_title",
+        "definition": "Message n'a pas pu etre saisi ",
+        "context": "Message content is not conform to official JSON Message Content Spec.",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_scp_error_conversation_id_not_found_title",
+        "definition": "Mise en garde",
+        "context": "ConversationId provided in Action cannot be found",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_scp_error_set_message_status_title",
+        "definition": "Status du message n'a pas pu etre mise a jour",
+        "context": "Can be ignored",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_could_not_upload_media_title",
+        "definition": "Transfert echou\u00e9e",
+        "context": "the media upload was not successful, the code of the warning gives more information about issue",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_could_not_download_media_title",
+        "definition": "T\u00e9l\u00e9chargement echou\u00e9",
+        "context": "the media download was not successful, the code of the warning gives more information about issue",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_could_not_send_message_title",
+        "definition": "Message n'a pas pu etre envoy\u00e8e",
+        "context": "sending the message was not succesful, the code of the warning gives more information about issue",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_scp_error_writing_database_message",
+        "definition": "Vos donn\u00e9s chat sont effac\u00e9s. Veuillez re-activer votre app",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_scp_error_reading_data_base_message",
+        "definition": "Vos donn\u00e9s chat sont effac\u00e9s. Veuillez re-activer votre app",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_scp_error_retriving_conversation_data_message",
+        "definition": "Message n'a pas pu etre affich\u00e9e",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_scp_error_parsing_conversation_data_message",
+        "definition": "Message n'a pas pu etre affich\u00e9e",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_scp_error_retriving_personal_contact_list_message",
+        "definition": "La liste des contacts recu est corrumpu partiallement. Vous pouvez continuer avec une vieille liste ou bien t\u00e9l\u00e9charger encore une fois.\n",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_scp_error_parsing_personal_contact_list_message",
+        "definition": "La liste des contacts recu est corrumpu partiallement. Vous pouvez continuer avec une vieille liste ou bien t\u00e9l\u00e9charger encore une fois.\n",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_scp_error_retriving_contact_data_message",
+        "definition": "Le contact recu est corrumpu partiallement. Vous pouvez continuer avec le vieil contact ou bien t\u00e9l\u00e9charger encore une fois.\n",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_scp_error_parsing_contact_data_message",
+        "definition": "Le contact recu est corrumpu partiallement. Vous pouvez continuer avec le vieil contact ou bien t\u00e9l\u00e9charger encore une fois.\n",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_scp_error_parsing_media_metadata_message",
+        "definition": "Message ne peut pas etre affich\u00e9e",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_scp_error_malformed_message_message",
+        "definition": "Message ne peut pas etre affich\u00e9e",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_scp_error_conversation_id_not_found_message",
+        "definition": "Le chat demand\u00e9 n'est pas disponible.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_scp_error_set_message_status_message",
+        "definition": "Erreur mise-a-jour status message",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_could_not_update_contacts_message",
+        "definition": "La liste des contacts n'a pas pu etre mise-a-jour. Vous pouvez continuer avec une vieille liste.\n",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_could_not_upload_media_message",
+        "definition": "Transfer echou\u00e9e. Veuillez re-essayer plus tard",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_could_not_download_media_message",
+        "definition": "T\u00e9lechargement echou\u00e9e. Veuillez re-essayer plus tard",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_could_not_send_message_message",
+        "definition": "Ce message n'a pas \u00e9t\u00e9 envoy\u00e9",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_chat_not_usable_ssl_error_message",
+        "definition": "Connection securis\u00e9 ne pouvait pas etabli. Veuillez re-essayer plus tard.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_chat_not_usable_token_server_error_message",
+        "definition": "Connection securis\u00e9 ne pouvait pas etabli. Veuillez re-essayer plus tard.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_setpin_pinempty",
+        "definition": "Veuillez entrer un code PIN",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_setpin_pintooshort",
+        "definition": "code PIN est trop court",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_setpin_pintoolong",
+        "definition": "code PIN est trop long",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_setpin_pinnewline",
+        "definition": "code PIN ne doit pas contenir plusieurs lignes",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_setpin_pintab",
+        "definition": "code PIN de doit pas contenir une symbole \"tab\"",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_setpin_pinspace",
+        "definition": "code PIN de doit pas contenir une espace",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_setpin_pinspecialchar",
+        "definition": "code PIN de doit pas contenir des symboles speciaux",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_setpin_pinnotdigitonly",
+        "definition": "code PIN doit contenir seulement des chiffres",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_setpin_pinvalid",
+        "definition": "code PIN valide",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_016c_chooseuser_view_alert_title_deleteuser",
+        "definition": "Effacer compte",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_016c_chooseuser_view_alert_text_deleteuser",
+        "definition": "Voulez-vous reellement effacer le compte s\u00e9l\u00e9ction\u00e9?",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_activationcode_newline",
+        "definition": "code activation ne doit pas contenir plusieurs lignes",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_activationcode_tab",
+        "definition": "code activation de doit pas contenir une symbole \"tab\"",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_activationcode_space",
+        "definition": "code activation de doit pas contenir une espace",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_activationcode_notdigitonly",
+        "definition": "code activation doit contenir seulement des chiffres",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_activationcode_valid",
+        "definition": "code activation valide",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_userid_tooshort",
+        "definition": "Identifiant utilisateur est trop court.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_userid_newline",
+        "definition": "Identifiant utilisateur ne peut pas contenir plusieurs lignes.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_userid_tab",
+        "definition": "Identifiant utilisateur ne peut pas contenir symbole \"tab\"",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_userid_space",
+        "definition": "Identifiant utilisateur ne peut pas contenir symbole espace",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_userid_specialchars",
+        "definition": "Identifiant utilisateur ne peut pas contenir des symboles speciaux",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_userid_valid",
+        "definition": "Identifiant utilisateur invalide",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_useridactivationcodeview_alert_text_internalerror",
+        "definition": "Un erreur c'est produit, veuillez contacter Support. %d",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_text_internalerror",
+        "definition": "Un erreur c'est produit, veuillez contacter Support. %d",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_text_updateavailablelastday",
+        "definition": "Mise-a-jour disponible (dernier jour)",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_text_updateavailable_test",
+        "definition": "Une mise-a-jour est disponible pour votre app. Vous devez appliquer cette mise-a-jour aujourd'hui pour continuer.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_anonymous_splashscreen_activation_successful",
+        "definition": "Activation anonyme avec succ\u00e8s, connection en cours....",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_anonymous_splashscreen_login_successful",
+        "definition": "Activation connection avec succ\u00e8s, initialization chat en cours....",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_anonymous_splashscreen_chat_init_successful",
+        "definition": "Initialization chat avec succ\u00e8s, r\u00e9ception contacts en Cours...",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_anonymous_error_dialog_no_business_logic_contact",
+        "definition": "Contact business logic ne pas trouv\u00e9, procedure annul\u00e9",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_anonymous_starting_process",
+        "definition": "D\u00e9marrage activation anonyme...",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_item_type_choice",
+        "definition": "choix",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_item_type_document",
+        "definition": "document",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_item_type_photo",
+        "definition": "photo",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_item_type_signature",
+        "definition": "signature",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_item_type_text_entry",
+        "definition": "saisi texte",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_text_lockedretries",
+        "definition": "Essays Connection: %1$d. Acc\u00e8s bloqu\u00e9 pour %2$d seconde(s).",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": "split singular\/plural"
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_text_lockedretrieslong",
+        "definition": "Essays Connection: %1$d. Acc\u00e8s bloqu\u00e9 pour %2$d minute(s) et %3$d seconde(s).",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": "split singular\/plural"
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_text_lockedlast",
+        "definition": "Dernier Essay. Acc\u00e8s bloqu\u00e9 pour %1$d seconde(s).",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": "split singular\/plural"
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_text_lockedlastlong",
+        "definition": "Dernier Essay. Acc\u00e8s bloqu\u00e9 pour %1$d minute(s) et %1$d seconde(s).",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": "split singular\/plural"
+    },
+    {
+        "term": "ks_chat_signed",
+        "definition": "Sign\u00e9e",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_unknown_error",
+        "definition": "Erreur inconnu. [%1$d]",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_currentuser_not_identified",
+        "definition": "Votre identifiant utilisateur n'est pas trouv\u00e9 dans le syst\u00e8me. Veuillez contacter support",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_service_not_available",
+        "definition": "Service ne pas disponible en ce Moment.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_processing",
+        "definition": "Traitement en cours",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_prepare_secure_data",
+        "definition": "Preparation donn\u00e9s securis\u00e9s",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_cannot_read_file",
+        "definition": "Incapable de lire ce fichier",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_process_finished",
+        "definition": "Procedure termin\u00e9e",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_process_finished_error",
+        "definition": "Procedure termin\u00e9e sans succ\u00e8s",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_partner",
+        "definition": "Partenaire",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_services",
+        "definition": "Services",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_disabled_by_multiuseractivation",
+        "definition": "(d\u00e8sactiv\u00e9 par activation multiples-utilisateurs)",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_label_legalentity",
+        "definition": "Empreinte",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_label_contactinformation",
+        "definition": "Contact",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_error",
+        "definition": "Error",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_error_pdf_await_failed",
+        "definition": "Un erreur c'est produit. Veuillez re-essayer plus tard.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_error_pdf_append_failed",
+        "definition": "Un erreur c'est produit. Veuillez re-essayer plus tard.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_009_chatlist_view_label_yesterday_at",
+        "definition": "hier \u00e0 %1$s",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_009_chatlist_view_label_today_at",
+        "definition": "aujourd'hui a %1$s",
+        "context": "today at %1$s",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_error_general_file_exception",
+        "definition": "Un erreur c'est produit.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_label_legalentity_value",
+        "definition": "KOBIL Systems GmbH | Worms, Germany",
+        "context": "KOBIL Systems GmbH | Worms, Germany",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_label_contactinformation_value",
+        "definition": "Nom | E-mail | T\u00e9l\u00e9phone",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_internal_error_message",
+        "definition": "Une erreur s'est produite, merci de contacter votre administrateur.  \n[%1$s]",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_button_try_again",
+        "definition": "Re-essayez",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_button_close_app",
+        "definition": "Fermez app",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_update_failed_title",
+        "definition": "Mise-a-jour echou\u00e9e",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_choice_request_wrapper_constructor_alignment_not_parsable",
+        "definition": "Erreur UI donn\u00e9s",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_sc_ast_tms_008a_verification_failed_title",
+        "definition": "Verification echou\u00e9e",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_server_url",
+        "definition": "URLs serveur",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_ssms_url",
+        "definition": "SSMS",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_tis_url",
+        "definition": "Token Issuer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_mr_url",
+        "definition": "Message Router",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_abs_url",
+        "definition": "Address Book",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_ps_url",
+        "definition": "Presence",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_title",
+        "definition": "Options debug",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_message",
+        "definition": "Choisissez",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_export_files",
+        "definition": "Exporter fichiers log",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_server_tracing",
+        "definition": "D\u00e9marrer logging serveur",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_server_urls",
+        "definition": "Afficher URLs serveur",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_cancel",
+        "definition": "Annuler",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_log_file_not_present",
+        "definition": "Fichier log n'extiste pas.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_error_sending_log_file",
+        "definition": "Export du fichier log echou\u00e9e",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_push_notification_transaction_short",
+        "definition": "Transaction\/Information recu",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_server_url_desc",
+        "definition": "URLs serveur utilis\u00e9e dans cette app",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_sc_ast_tms_008a_verification_failed_app_blocked_title",
+        "definition": "Verification echou\u00e9e",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_sc_ast_tms_008a_verification_failed_app_blocked_message",
+        "definition": "App est d\u00e9sactiv\u00e9e. Veuillez contacter Support",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_import_file_failed_file_big",
+        "definition": "Le fichier vous avez s\u00e9l\u00e9ctionn\u00e9 est plus large que 8 MB. Il ne peut pas etre envoy\u00e9e [%1$s]",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_import_file_failed",
+        "definition": "Import fichier echou\u00e9e",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_import_file_unsupported_format",
+        "definition": "Format ne pas support\u00e9. Veuillez re-essayer ou bien choisir un autre fichier.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_label_devicename",
+        "definition": "Nom appareil",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_message_incoming_message_failed",
+        "definition": "Message n'a pas pu etre charg\u00e9.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_message_created_message_failed",
+        "definition": "Message n'a pas pu etre cre\u00e9.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_camera_failed",
+        "definition": "Erreur camera",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_finger_print_password_invalid",
+        "definition": "Mot de passe invalide",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_act_fingerprint_invalid_pin",
+        "definition": "code PIN invalide",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_alert_title_retry",
+        "definition": "Re-essayer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_accounts_send_log_files",
+        "definition": "Envoyer les fichier log par annexe email",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_accounts_copy_log_files",
+        "definition": "Copier fichiers log auf Speicher",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_accounts_copy_log_files_explanation",
+        "definition": "Copier fichiers log au stockage local.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_log_file_copied",
+        "definition": "Fichier log copi\u00e9 au stockage externe",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_create_anonymous_user_failed",
+        "definition": "Activation echou\u00e9e et annul\u00e9.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_alert_button_restart",
+        "definition": "Re-demarrage",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ui_error_mandetory_element_error",
+        "definition": "Une exception serieuse c'est produite.  Veuillez re-demarrer l'app",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_app_config_missing_value",
+        "definition": "Erreur configuration app. Veuillez contacter Support.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_file_import_preview_screen_title",
+        "definition": "vue pr\u00e9alable ",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_app_state_chat_not_initialized",
+        "definition": "Erreur interne. Veuillez re-demarrer l'app",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_setsignature_message_nosignature",
+        "definition": "Veuillez saisir une signature",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_alert_text_wrongpin_ios",
+        "definition": "Mauvais code PIN. %@",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_export_file_failed_warning",
+        "definition": "Mise en garde",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_export_files_failed",
+        "definition": "Export du fichier echou\u00e9",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_label_activated_accounts",
+        "definition": "Comptes activ\u00e9s",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ui_error_argument_was_null",
+        "definition": "Une erreur c'est produit",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_forward_message_failed",
+        "definition": "Relayer message echou\u00e9",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_foundation_returned_error",
+        "definition": "App ab\u00eem\u00e9e, veuillez contacter support",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_last_time_online",
+        "definition": "Derniere fois en ligne %1$s \u00e0 %2$s",
+        "context": "Show online status \"last time online\" of contact",
+        "term_plural": "",
+        "reference": "",
+        "comment": "Check!"
+    },
+    {
+        "term": "ks_qr_code_detection_not_installed",
+        "definition": "D\u00e9t\u00e9ction du code QR echou\u00e9. Veuillez mettre a jour votre App par Google Play Store et re-essayez.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_error_message_type_unknown",
+        "definition": "Type message invalide",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_import_file_failed_permission_not_given",
+        "definition": "Import echou\u00e9. mPower n'est pas capable d'importer des fichier si vous ne l'authorisez pas. Veuillez re-essayer ou contacter support",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_fingerprint_broken_message",
+        "definition": "Erreur inconnu. Veuillez desactviter et re-activer le fingerprint. Si le probl\u00e8me ne disparait pas, veuillez contacter votre administrateur.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_import_file_failed_canceled",
+        "definition": "Importation arret\u00e9e. Veuillez re-essayer ou bien contacter support.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_log_file_no_storage_permission",
+        "definition": "Permission stockage est n\u00e9cessaire pour copier des fichiers",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_import_handover_file_failed_too_big",
+        "definition": "Import fichier echou\u00e9, fichier est trop grand (max. 8 MB)",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_scp_can_not_be_initialised_message",
+        "definition": "Connection securis\u00e9 ne pouvait pas etabli. Veuillez re-essayer plus tard.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_scp_can_not_be_initialised_title",
+        "definition": "Erreur connection",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_permission_required_dialog_title",
+        "definition": "Permission necessaire",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_permission_required_dialog_text",
+        "definition": "Demande permission echou\u00e9. Veuillez donner la permission manuellement.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_permission_required_dialog_btn_pos",
+        "definition": "Donner manuellement",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_ui_not_initialized_message",
+        "definition": "Une erreur inattendu s'est produit. Veuillez re-essayer plus tard",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_migration_started",
+        "definition": "Conversion donn\u00e9es, un instant s'il vous pla\u00eet",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_002_scanqrcode_view_promt",
+        "definition": "Veuiller placer le code dans le centre du carr\u00e9.\\n Il serra reconnu automaticalement.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_save",
+        "definition": "Sauvegarder au classeur \"telechargements\"",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_file_review_screen_title",
+        "definition": "R\u00e9vision image",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_attachment_saved",
+        "definition": "%1$s sauvegard\u00e9!",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_011_activation_additional_user_useridactivationcodeview_description",
+        "definition": "Veuillez activer votre appliaction pour un utilisateur suppl\u00e9mentaire.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_error_unknown_date",
+        "definition": "Inconnu",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_setpin_6to16_digits_chars",
+        "definition": "Utilisez entre 6 et 16 chiffres ou lettres pour d\u00e9finir votre code PIN",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_error_unknown_user",
+        "definition": "Utilisateur inconnu",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_certificate_error",
+        "definition": "Erreur certificat",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_error_has_occurred",
+        "definition": "Une erreur s'est produite.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_log_email_subject_android",
+        "definition": "Fichier protocol mPower Android %1$s",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_log_email_content",
+        "definition": "Hi,\\n\\n Veuillez inspecter le fichier protocl attach\u00e9.\\n\\nNom du device: %1$s\\n\\Num\u00e9ro de support: <b>%2$s<\/b>\\n\\nMerci.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_app_my_contact_missing",
+        "definition": "Vos donn\u00e9es d' utilisateur sont abim\u00e9es. Veuillez contacter support.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_progress_server_disconnected",
+        "definition": "Connexion serveur perdu. Veuillez patienter.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_progress_chat_not_initialized",
+        "definition": "Chat n'a pas pu etre initialis\u00e9. Redemarrage en cours, veuillez patienter.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_progress_device_disconnected",
+        "definition": "Device disjoint. Veuillez patienter.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_progress_resume_failed",
+        "definition": "App n'a pas pu reveill\u00e9. Veuillez patienter.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_progress_generic_error",
+        "definition": "App sera redemarr\u00e9. Veuillez patienter.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_unhandled_error",
+        "definition": "Un erreur s\u00b4est \u00e9tabli.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_error_disconnected",
+        "definition": "Connextion perdu.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_fingerprint_disable",
+        "definition": "Desactiver et continuer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_change_pin_invalid_pin",
+        "definition": "Le code PIN n'est pas valide. %1$d tentatives restants.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_act_kobil_eco_system_trusted_chat_file_save",
+        "definition": "Sauvegarder fichier",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_006_trusted_webview",
+        "definition": "mWebView",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_start_screen_btn_see_all",
+        "definition": "Tous",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_start_screen_label_chats",
+        "definition": "Activit\u00e9",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_start_screen_label_services",
+        "definition": "Nos services",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_start_screen_label_services_partner",
+        "definition": "Services partenaires",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_start_screen_title",
+        "definition": "mPower",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_scp_error_title_contact_error",
+        "definition": "Erreur contact",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_start_screen_menu_item_history",
+        "definition": "Activit\u00e9s pr\u00e9cedents",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": "meine -> Meine"
+    },
+    {
+        "term": "ks_ast_006_helplicences_title",
+        "definition": "mWebView",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_start_screen_label_new_activity",
+        "definition": "Nouvelle activit\u00e9",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_error_dialog_webview_parsing_description",
+        "definition": "Special command ne pas reconnu. Veuillez verifier les parametres.",
+        "context": "Parsing the conversation id failed, please check the parameters",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_webview_title",
+        "definition": "Erreur Webview",
+        "context": "Webview Error",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_unknown",
+        "definition": "Inconnu",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_error_title_internal_error",
+        "definition": "Erreur intern",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_error_title_connection_error",
+        "definition": "Erreur connexion",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_error_title_warning",
+        "definition": "Avertissement",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_error_title_download_failed",
+        "definition": "T\u00e9l\u00e9chargement echou\u00e9",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_error_title_upload_failed",
+        "definition": "T\u00e9l\u00e9chargement echou\u00e9 ",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_error_title_error",
+        "definition": "Erreur",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_internal_error_description",
+        "definition": "Un erreur s\u00b4est produit. Veuillez contacter support.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_conversation_text_hint",
+        "definition": "Tapez un message",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_read_only_chat_warning_text",
+        "definition": "L\\'exp\u00e9diteur ne supporte pas les r\u00e9ponses",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_label_cpuarchitecture",
+        "definition": "Architecture CPU",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_special_commands_already_login_warning",
+        "definition": "Vous \u00e9tes d\u00e9j\u00e0 inscrits comme %1$s. Pout continuer, vous serrez disconnect\u00e9s. ",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_item_type_read_only",
+        "definition": "Lecture seule",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_error_no_installed_web_browser_apps",
+        "definition": "Il n'y a pas d'App install\u00e9 sur v\u00f4tre device capable d'ouvrir le page web.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_deleted_group",
+        "definition": "Groupe effac\u00e9e",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_dialog_insufficient_storage_title",
+        "definition": "M\u00e9moire insuffisante",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_dialog_insufficient_storage_description",
+        "definition": "Vous avez besoin de plus de m\u00e9moire libre que celle actuellement disponible sur votre appareil. Essayez de fermer d'autres applications ou de red\u00e9marrer votre appareil pour lib\u00e9rer de la m\u00e9moire pour cette op\u00e9ration.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_no_conversations_text",
+        "definition": "Pas encore de messages ici...",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_no_conversations_text_description",
+        "definition": "Apr\u00e8s avoir envoy\u00e9 votre premier message, il appara\u00eetra ici.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_no_contacts_text",
+        "definition": "Aucun contact",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_alert_function_for_another_user",
+        "definition": "Service demand\u00e9 pour un autre utilisateur. Veuillez disconnecter?",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_alert_function_for_user_but_user_not_activated",
+        "definition": "Service demand\u00e9 pour un utilisateur non-activ\u00e9 sur ce device.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_alert_app2app_incoming_warning",
+        "definition": "Service demand\u00e9 d'une source non verifi\u00e9e. Ca peut etre une risque de securit\u00e9e. Voulez-vous continuer?",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_alert_app2app_could_not_open_another_app",
+        "definition": "App destin\u00e9e n'est pas install\u00e9 sur votre device.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_notification_category_general_notifications_title",
+        "definition": "Notifications g\u00e9n\u00e9rales",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_extended_debug_screen",
+        "definition": "Ecran debug \u00e9largi",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_alert_url_blocked",
+        "definition": "URL bloqu\u00e9e.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_service_has_expired_alert_text",
+        "definition": "Le service vous avez d\u00e9mand\u00e9 est expir\u00e9e, it n'est plus disponible.",
+        "context": "Alert text when service is clicked by a user but in the meantime it has expired",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_label_framework",
+        "definition": "(Framework: %1$s)",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_button_contact_description",
+        "definition": "contact",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": "deleted upon request by Jens"
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_label_twv",
+        "definition": "(TWV: %1$s)",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_service_not_available_service_contact_not_found",
+        "definition": "Le backend du service n'est actuellement pas disponible.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_invalid_input",
+        "definition": "Entr\u00e9e non valable",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_err_no_applications_found",
+        "definition": "Il n'y a pas d'App install\u00e9 sur v\u00f4tre device capable d'ouvrir ce fichier.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_display_document_text",
+        "definition": "Document t\u00e9l\u00e9charg\u00e9. Voulez-vous le regarder mainenant?",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_useridactivationcodeview_textfield_tenant_hint",
+        "definition": "Tenant ID",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_username",
+        "definition": "Nom d'utilisateur",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_userId",
+        "definition": "User ID",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_useridactivationcodeview_alert_missingtenantid",
+        "definition": "Veuillez entrer Eco ID",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_close",
+        "definition": "Fermer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_logging_export_successful_description",
+        "definition": "Les fichiers journaux sont export\u00e9s avec succ\u00e8s vers un stockage externe. %1$s",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_logging_export_unsuccessful_description",
+        "definition": "Une erreur s'est produite lors du d\u00e9placement des fichiers journaux vers un stockage externe.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_label_qt_version",
+        "definition": "Version QT",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_label_ui_version",
+        "definition": "Version UI",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_label_mc_version",
+        "definition": "Version MC",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_label_twv_version",
+        "definition": "Version TWV",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_hiddenscreen_view_text_chooseHeader",
+        "definition": "Veuillez choisir",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_deleting_account",
+        "definition": "Effacer compte...",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_logout_view_info_inprogress",
+        "definition": "D\u00e9connexion en cours...",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_info_inprogress",
+        "definition": "Enregistrement Code PIN...",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_cleaning_activation_state",
+        "definition": "Nettoyage activation en cours...",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_entering_anonymous_chat",
+        "definition": "Connection chat anonyme en cours...",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003a_chat_title",
+        "definition": "Chat anonyme",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_initalizing_services",
+        "definition": "Initialization services en cours...",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_open_signature_image_text",
+        "definition": "Ouvrir image signature",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_signature_color_blue",
+        "definition": "Bleu",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_signature_color_black",
+        "definition": "Noir",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_signature_load",
+        "definition": "Charger",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_choose_file",
+        "definition": "Coisissez",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_mchat_new_chat",
+        "definition": "Nouveau Chat",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_welcome_message",
+        "definition": "Bienvenue %1",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010_mchatsettings_view_label_profile",
+        "definition": "Profil",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_choose_specific_file",
+        "definition": "Veuilez choisier un dossier %1",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_label_os_version",
+        "definition": "Version OS",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_initializingchat_inprogress",
+        "definition": "Initialization Chat en cours...",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_switch_assets",
+        "definition": "Changement Assets",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_available_assets_title",
+        "definition": "Assets disponible:",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_switch_assets_confirmation",
+        "definition": "Redemarrage App nec\u00e9ssaire. Continuer?",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_no_assets_found",
+        "definition": "Fichier assets n'est pas trouv\u00e9e",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_error_general_unexpected_event",
+        "definition": "Erreur inattendu. Veuillez re-essayer plus tard",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_error_chat_not_initialized",
+        "definition": "Chat n'a pas pu etre initialize. Veuillez redemarrer l'app",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_alert_app2app_user_is_not_activated",
+        "definition": "Utilisateur %1$s n'est past activ\u00e9",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_alert_app2app_user_is_not_logged_in",
+        "definition": "Utilisateur %1$s n'est pas connect\u00e9. Voulez-vouz choisir un autre utilisateur?",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_alert_app2app_user_is_not_logged_in_btn_switch",
+        "definition": "Change",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_alert_app2app_user_is_not_logged_in_btn_cancel",
+        "definition": "Annuller",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_sign_impossible_warning",
+        "definition": "Le document ne peut pas etre sign\u00e9e",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_opencensus_tracing",
+        "definition": "Lancer protocol serveur",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_transaction_waiting",
+        "definition": "En attente transaction",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_transaction_error_timeout_title",
+        "definition": "Erreur transaction",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_transaction_error_timeout_message",
+        "definition": "Tranaction n'a pas pu etre r\u00e9cuper\u00e9e",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_service_provider_not_found",
+        "definition": "Fournisseur de services introuvable.",
+        "context": "Use this string when a service provider is not found.",
+        "term_plural": "",
+        "reference": "",
+        "comment": "Service Provider not found"
+    },
+    {
+        "term": "ks_start_activity",
+        "definition": "D\u00e9marrer l'activit\u00e9",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_anonymous_activation_failed",
+        "definition": "Activation anonyme echou\u00e9e",
+        "context": "Anonymous Activated failed",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_service_contact_not_found",
+        "definition": "Contact de service introuvable",
+        "context": "Cannot find service contact",
+        "term_plural": "",
+        "reference": "",
+        "comment": "Service Contact not found"
+    },
+    {
+        "term": "ks_chat_024_chatcontactinfo_membership_title",
+        "definition": "Membre de",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_app2app_login_waiting",
+        "definition": "Login entre-app en cours...",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_003_activation_setpinview_textfield_repeatpin_enter",
+        "definition": "Repet\u00e9z code PIN",
+        "context": "Enter Repeat PIN",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_scpmessage_008_uploaddocument_view_infotab_galleryphoto",
+        "definition": "Choisissez une photo",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_error_description_connection_error",
+        "definition": "Pas de connexion internet. V\u00e9rifiez que le Wi-Fi ou les donn\u00e9es mobiles sont activ\u00e9s, puis r\u00e9essayez.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_register_application",
+        "definition": "Activer ou enregistrer l'application",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_category_administration",
+        "definition": "Administration",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_category_monitoring",
+        "definition": "Suivi",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_category_modification",
+        "definition": "Modification",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_category_server",
+        "definition": "Serveur",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_register_application_ongoing",
+        "definition": "Enregistrer l'application (en cours)",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_iam_error_no_authorization_code",
+        "definition": "Aucun code d'autorisation n'a \u00e9t\u00e9 re\u00e7u de la page web de l'AIM.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_iam_error_no_access_token",
+        "definition": "Aucun jeton d'acc\u00e8s n'a \u00e9t\u00e9 re\u00e7u de la page web de l'IAM.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_iam_error_no_tenant_id",
+        "definition": "Aucun nom de tenant n'a \u00e9t\u00e9 trouv\u00e9 dans le jeton d'acc\u00e8s qui a \u00e9t\u00e9 re\u00e7u de la page web de l'IAM.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_iam_error_no_user_id",
+        "definition": "Aucun identifiant d'utilisateur n'a \u00e9t\u00e9 trouv\u00e9 dans le jeton d'acc\u00e8s qui a \u00e9t\u00e9 re\u00e7u de la page web de l'IAM.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_iam_error_token_fetching_failed",
+        "definition": "La demande d'obtention du jeton d'acc\u00e8s et du jeton de rafra\u00eechissement a \u00e9chou\u00e9.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_iam_error_no_tokens_fetched",
+        "definition": "Aucun jeton d'acc\u00e8s ou de rafra\u00eechissement n'a \u00e9t\u00e9 re\u00e7u.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_iam_error_access_token_expired",
+        "definition": "Le jeton d'acc\u00e8s r\u00e9cup\u00e9r\u00e9 sur la page web de l'AIM est expir\u00e9 ou non valable.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_iam_error_refresh_token_expired",
+        "definition": "Le jeton de rafra\u00eechissement r\u00e9cup\u00e9r\u00e9 sur la page web de l'AIM est expir\u00e9 ou non valide.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_server_urls_explanation",
+        "definition": "Token Issuer, Message Router, Address Book, Presence urls",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_export_files_explanation",
+        "definition": "Exportez les fichiers journaux vers le stockage local et lance une application pour les envoyer.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_modify_app_config",
+        "definition": "Modifier app_config.json",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_modify_scp_config",
+        "definition": "Modifier scp_config.json",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_switch_assets_explanation",
+        "definition": "L'utilisateur peut changer d'environnement de serveur de fa\u00e7on dynamique.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_016_switchuser_view_title_explanation",
+        "definition": "L'application ouvrira l'\u00e9cran de changement de compte pour se connecter ou supprimer des utilisateurs.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_register_application_explanation",
+        "definition": "Activez ou enregistrez l'application en utilisant le pin.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_init_service_failed_title",
+        "definition": "Erreur Service Chat",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_init_service_failed_message",
+        "definition": "Le service n' est pas disponible",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010_mchatsettings_view_label_istanbul_pay",
+        "definition": "Istanbul Pay",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_autologin_loading",
+        "definition": "Traitement des donn\u00e9es de connexion automatique ...",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_alert_text_wrong_credentials",
+        "definition": "De fausses r\u00e9f\u00e9rences.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "share_using",
+        "definition": "Partager en utilisant",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_005_infoscreen_view_label_cb_version",
+        "definition": "Version CB",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010_mchatsettings_view_label_mpay",
+        "definition": "mPay",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_sticky_unread_messages",
+        "definition": "Unread Messages",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_server_tracing_started",
+        "definition": "Protocol server lanc\u00e9",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_server_tracing_finished",
+        "definition": "Protocol serveur finalis\u00e9",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_server_tracing_dialog_title",
+        "definition": "Protocol Serveur",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_fingerprint_disabled_dialog_title",
+        "definition": "Fingerprint Disabled",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_fingerprint_disabled_dialog_message",
+        "definition": "Authentication with fingerprint has been removed for security reasons. You can enable it after login.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_useridactivationcodeview_alert_text_integritycheckfailed",
+        "definition": "La v\u00e9rification de l'int\u00e9grit\u00e9 de la biblioth\u00e8que native a \u00e9chou\u00e9.",
+        "context": "Native library integrity check failed.",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_log_email_case_id_description",
+        "definition": "Votre num\u00e9ro de soutien est <b>%1$s<\/b>",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_iam_error_no_client_id",
+        "definition": "Aucun clientId trouv\u00e9.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_iam_error_parsing_json_response",
+        "definition": "Erreur de lecture de la r\u00e9ponse.",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_errordialog_internal_error_message_withresult",
+        "definition": "Un erreur c'est produit, veuillez contacter Support. \\nErreur-statut: %@",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_web_start_screen_title",
+        "definition": "\u00c9cran de d\u00e9marrage Web",
+        "context": "Show display name for the web start screen loaded",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_debug_options_extended_support_screen",
+        "definition": "Centre de soutien",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_chat_initialized",
+        "definition": "D\u00e9bogage uniquement: Initialization chat avec succ\u00e8s",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_001_activation_screen_title",
+        "definition": "mPower",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "cancel",
+        "definition": "Annuler",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_scpmessage_008_uploaddocument_view_dragdrop",
+        "definition": "Tirez fichier a envoyer ici",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_scpmessage_008_conversation_view_infotab_cut",
+        "definition": "d\u00e9couper",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_scpmessage_008_conversation_view_infotab_paste",
+        "definition": "coller",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_scpmessage_008_conversation_view_tooltip_send",
+        "definition": "envoyer",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010_mchatsettings_view_label_fontsize",
+        "definition": "taille du font",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010_mchatsettings_view_infotab_fontsize_small",
+        "definition": "petit",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010_mchatsettings_view_infotab_fontsize_large",
+        "definition": "large",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010_mchatsettings_view_infotab_fontsize_medium",
+        "definition": "medium",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010_mchatsettings_view_infotab_changetheme_light",
+        "definition": "th\u00e8me claire",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010_mchatsettings_view_infotab_changetheme_dark",
+        "definition": "th\u00e9me fonc\u00e9e",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010_mchatsettings_view_label_startscreen",
+        "definition": "Ecran demarrage",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010_mchatsettings_view_label_startscreenafterlogin",
+        "definition": "Ecran d\u00e9marrage apr\u00e8s login",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010_mchatsettings_view_label_enterweburl",
+        "definition": "Entrez URL web",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_signdoc_005_signdoc_view_button_decline",
+        "definition": "Refuser signature",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_signdoc_005_signdoc_view_label_declined",
+        "definition": "Signature refus\u00e9e",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_015_login_view_updating",
+        "definition": "Mise \u00e1 jour en cours",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_bottom_nav_bar_home_title",
+        "definition": "Home",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_bottom_nav_bar_chats_title",
+        "definition": "Chats",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_bottom_nav_bar_mpay_title",
+        "definition": "mPay",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_bottom_nav_bar_discover_title",
+        "definition": "Discover",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_bottom_nav_bar_mid_title",
+        "definition": "mID",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_iam_error_connection",
+        "definition": null,
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_sc_chat_018_field_contact_name_text",
+        "definition": "Contact Name",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010a_mid_view_titel",
+        "definition": null,
+        "context": "mID",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010a_mid_activity_history",
+        "definition": "Activit\u00e9s pr\u00e9cedents",
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010a_mid_official_accounts",
+        "definition": null,
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010a_mid_settings",
+        "definition": null,
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010a_mid_info",
+        "definition": null,
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    },
+    {
+        "term": "ks_ast_010a_mid_logout",
+        "definition": null,
+        "context": "",
+        "term_plural": "",
+        "reference": "",
+        "comment": ""
+    }
+]

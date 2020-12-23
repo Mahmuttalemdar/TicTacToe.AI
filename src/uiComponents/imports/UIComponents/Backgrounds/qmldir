@@ -1,0 +1,7 @@
+module UIComponents
+classname UIComponentsPlugin
+depends QtQuick.Controls 2.15
+
+LoginBackground 1.0 LoginBackground.qml
+KYCLogo 1.0 KYCLogo.qml
+AnimatedTile 1.0 AnimatedTile.qml

@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/imports/UIScreens">
+        <file>StartScreen/qmldir</file>
+        <file>StartScreen/StartScreenPage.qml</file>
+        <file>StartScreen/CameraTutorialPage.qml</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,8 @@
+module UIComponents
+classname UIComponentsPlugin
+depends QtQuick.Controls 2.15
+
+DefaultButton 1.0 DefaultButton.qml
+LinkButton 1.0 LinkButton.qml
+StartScreenButton 1.0 StartScreenButton.qml
+IconButton 1.0 IconButton.qml

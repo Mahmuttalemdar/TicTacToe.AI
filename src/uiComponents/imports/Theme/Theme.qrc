@@ -1,0 +1,30 @@
+<RCC>
+    <qresource prefix="/imports/Theme">
+        <file>fonts/Open_Sans/OpenSans-Regular.ttf</file>
+        <file>fonts/Roboto/Roboto-Medium.ttf</file>
+        <file>images/Backgrounds/Background.png</file>
+        <file>images/Backgrounds/Background2.png</file>
+        <file>images/Backgrounds/Background2.svg</file>
+        <file>images/Backgrounds/Board.png</file>
+        <file>images/Backgrounds/Board.svg</file>
+        <file>images/Backgrounds/StartScreenBackground.png</file>
+        <file>images/Buttons/ButtonBackground.png</file>
+        <file>images/Buttons/ButtonBackground2.png</file>
+        <file>images/Dashes/DashHorizontal.png</file>
+        <file>images/Dashes/DashVertical.png</file>
+        <file>images/Tiles/TileA.png</file>
+        <file>images/Tiles/TileA.svg</file>
+        <file>images/Tiles/TileM.png</file>
+        <file>images/Tiles/TileM.svg</file>
+        <file>images/Tiles/TileO.png</file>
+        <file>images/Tiles/TileO.svg</file>
+        <file>images/Tiles/TileU.png</file>
+        <file>images/Tiles/TileU.svg</file>
+        <file>images/Tiles/TileX.png</file>
+        <file>images/Tiles/TileX.svg</file>
+        <file>images/Tiles/TileK.png</file>
+        <file>images/Tiles/TileK.svg</file>
+        <file>images/Logo/Logo.png</file>
+        <file>images/Logo/Logo.svg</file>
+    </qresource>
+</RCC>

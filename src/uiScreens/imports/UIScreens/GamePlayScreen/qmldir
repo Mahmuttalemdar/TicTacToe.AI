@@ -1,0 +1,6 @@
+module UIScreens
+classname UIScreensPlugin
+depends QtQuick.Controls 2.15
+
+MRZDetectionPage 1.0 MRZDetectionPage.qml
+MRZResultPage 1.0 MRZResultPage.qml

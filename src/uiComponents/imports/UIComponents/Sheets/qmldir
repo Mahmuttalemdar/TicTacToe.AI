@@ -1,0 +1,5 @@
+module UIComponents
+classname UIComponentsPlugin
+depends QtQuick.Controls 2.15
+
+BottomSheet 1.0 BottomSheet.qml
