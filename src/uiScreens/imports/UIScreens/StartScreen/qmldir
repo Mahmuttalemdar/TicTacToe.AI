@@ -3,4 +3,3 @@ classname UIScreensPlugin
 depends QtQuick.Controls 2.15
 
 StartScreenPage 1.0 StartScreenPage.qml
-CameraTutorialPage 1.0 CameraTutorialPage.qml

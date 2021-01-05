@@ -34,8 +34,8 @@ class Entrance : public QObject
 
     public:
         /**
-     * Access Providers
-     */
+         * Access Providers
+         */
         statechart::Main* statechart() const;
         AppConfig* appConfig() const;
         Theme *theme() const;

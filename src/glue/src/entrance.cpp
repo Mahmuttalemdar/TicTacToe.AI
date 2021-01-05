@@ -142,7 +142,7 @@ bool Entrance::registerPlugins()
             }
         }
     }
-    catch (exception& e)
+    catch (std::exception& e)
     {
         // TODO :: LOG
         // KYCLog(e.what())
@@ -175,10 +175,14 @@ void Entrance::startStateChart()
 
 bool Entrance::initialize()
 {
+    // Initialize objects
     data->statechart = std::make_unique<statechart::Main>();
     data->appConfig = std::make_unique<AppConfig>();
     data->theme = std::make_unique<Theme>();
     data->gameController = std::make_unique<GameController>(3, 5);
+
+    // Set app configs
+    data->gameController->setAppConfig(data->appConfig.get());
 
     return true;
 }

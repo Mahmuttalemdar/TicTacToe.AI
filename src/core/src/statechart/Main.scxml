@@ -1,2 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" binding="early" xmlns:qt="http://www.qt.io/2015/02/scxml-ext" name="Main" qt:editorversion="4.13.3"/>
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" binding="early" xmlns:qt="http://www.qt.io/2015/02/scxml-ext" name="Main" qt:editorversion="4.14.0">
+    <state id="TicTacToe.AI">
+        <qt:editorinfo scenegeometry="337.04;144.72;277.04;63.52;1165.74;826.44" geometry="337.04;144.72;-60;-81.20;1165.74;826.44"/>
+        <state id="StartScreen">
+            <qt:editorinfo scenegeometry="377.06;212.52;317.06;162.52;474.85;279.90" geometry="40.02;67.80;-60;-50;474.85;279.90"/>
+            <transition type="external" event="openOptionScreen" target="OptionsScreen">
+                <qt:editorinfo endTargetFactors="4.62;52.32"/>
+            </transition>
+            <onentry>
+                <log label="[Statechart]::[StartScreen]" expr="Entered"/>
+            </onentry>
+        </state>
+        <state id="OptionsScreen">
+            <qt:editorinfo scenegeometry="1005.45;257.49;918.61;163.23;498.62;275.11" geometry="668.41;112.77;-86.84;-94.26;498.62;275.11"/>
+            <state id="ChooseShape">
+                <qt:editorinfo scenegeometry="998.61;283.91;938.61;233.91;187.72;133.78" geometry="-6.84;26.42;-60;-50;187.72;133.78"/>
+                <transition type="external" event="openDifficultyPage" target="ChooseDifficulty">
+                    <qt:editorinfo endTargetFactors="10.75;48.94"/>
+                </transition>
+                <onentry>
+                    <log label="[Statechart]::[ChooseShape]" expr="Entered"/>
+                </onentry>
+            </state>
+            <state id="ChooseDifficulty">
+                <qt:editorinfo scenegeometry="1278.09;282.70;1218.09;232.70;176.48;130.39" geometry="272.64;25.21;-60;-50;176.48;130.39"/>
+                <transition type="external" event="openGamePlayScreen" target="GamePlayScreen">
+                    <qt:editorinfo endTargetFactors="30.23;10.80" localGeometry="0;177.22;-831.04;177.22"/>
+                </transition>
+                <transition type="external" event="backToChooseShapePage" target="ChooseShape">
+                    <qt:editorinfo startTargetFactors="7.59;80.72" endTargetFactors="89.08;76.82" movePoint="15.01;28.87"/>
+                </transition>
+                <onentry>
+                    <log label="[Statechart]::[ChooseDifficulty]" expr="Entered"/>
+                </onentry>
+            </state>
+            <onentry>
+                <log label="[Statechart]::[OptionsScreen]" expr="Entered"/>
+            </onentry>
+        </state>
+        <state id="GamePlayScreen">
+            <qt:editorinfo scenegeometry="395.45;597.72;335.45;547.72;462.58;293.19" geometry="58.41;453;-60;-50;462.58;293.19"/>
+            <transition type="external" event="openScoreScreen" target="ScoreScreen">
+                <qt:editorinfo endTargetFactors="5.50;51.16"/>
+            </transition>
+        </state>
+        <state id="ScoreScreen">
+            <qt:editorinfo scenegeometry="992.17;600.79;926.05;550.35;446.19;289.54" geometry="655.13;456.07;-66.12;-50.44;446.19;289.54"/>
+        </state>
+        <onentry>
+            <log label="[Statechart]::[TicTacToe.AI]" expr="Entered"/>
+        </onentry>
+    </state>
+</scxml>

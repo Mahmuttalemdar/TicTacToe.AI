@@ -34,7 +34,7 @@ Item {
     onStateChanged: {
         if(root.state === "END" && !animationTimer.running)
         {
-            //animationTimer.start()
+            animationTimer.start()
         }
     }
 

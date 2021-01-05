@@ -2,5 +2,8 @@ module UIScreens
 classname UIScreensPlugin
 depends QtQuick.Controls 2.15
 
-MRZDetectionPage 1.0 MRZDetectionPage.qml
-MRZResultPage 1.0 MRZResultPage.qml
+GamePlayScreenPage 1.0 GamePlayScreenPage.qml
+GamePlayScreen 1.0 GamePlayScreen.qml
+GamePlayBoard 1.0 GamePlayBoard.qml
+PlayerInfo 1.0 PlayerInfo.qml
+PlayerScore 1.0 PlayerScore.qml

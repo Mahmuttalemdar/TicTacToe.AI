@@ -1,13 +1,14 @@
 <RCC>
     <qresource prefix="/imports/UIComponents">
         <file>Backgrounds/LoginBackground.qml</file>
-        <file>Backgrounds/KYCLogo.qml</file>
+        <file>Backgrounds/Logo.qml</file>
         <file>Backgrounds/AnimatedTile.qml</file>
         <file>Backgrounds/qmldir</file>
         <file>Buttons/StartScreenButton.qml</file>
         <file>Buttons/IconButton.qml</file>
         <file>Buttons/DefaultButton.qml</file>
         <file>Buttons/LinkButton.qml</file>
+        <file>Buttons/DashedButton.qml</file>
         <file>Buttons/qmldir</file>
         <file>Text/LoginTextArea.qml</file>
         <file>Text/qmldir</file>

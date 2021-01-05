@@ -41,10 +41,10 @@ void UIScreensPlugin::registerTypes(const char *uri)
     registered = true;
     initProviders();
 
+    qmlRegisterModule("UIScreens.GamePlayScreen", 1, 0);
+    qmlRegisterModule("UIScreens.OptionsScreen", 1, 0);
+    qmlRegisterModule("UIScreens.ScoreScreen", 1, 0);
     qmlRegisterModule("UIScreens.StartScreen", 1, 0);
-    qmlRegisterModule("UIScreens.LoginScreen", 1, 0);
-    qmlRegisterModule("UIScreens.DetectionScreen", 1, 0);
-    qmlRegisterModule("UIScreens.NFCScreen", 1, 0);
 }
 
 void UIScreensPlugin::initializeEngine(QQmlEngine *engine, const char * uri)

@@ -1,7 +1,20 @@
 <RCC>
     <qresource prefix="/imports/UIScreens">
+        <file>GamePlayScreen/qmldir</file>
+        <file>GamePlayScreen/GamePlayScreenPage.qml</file>
+        <file>GamePlayScreen/GamePlayBoard.qml</file>
+        <file>GamePlayScreen/GamePlayScreen.qml</file>
+        <file>GamePlayScreen/PlayerInfo.qml</file>
+        <file>GamePlayScreen/PlayerScore.qml</file>
+        <file>OptionsScreen/qmldir</file>
+        <file>OptionsScreen/OptionsScreenPage.qml</file>
+        <file>OptionsScreen/OptionsBoard.qml</file>
+        <file>OptionsScreen/OptionsTitle.qml</file>
+        <file>OptionsScreen/ShapeChooser.qml</file>
+        <file>OptionsScreen/DifficultyChooser.qml</file>
+        <file>ScoreScreen/qmldir</file>
+        <file>ScoreScreen/ScoreScreenPage.qml</file>
         <file>StartScreen/qmldir</file>
         <file>StartScreen/StartScreenPage.qml</file>
-        <file>StartScreen/CameraTutorialPage.qml</file>
     </qresource>
 </RCC>

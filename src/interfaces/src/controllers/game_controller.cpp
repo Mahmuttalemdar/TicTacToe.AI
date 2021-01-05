@@ -13,13 +13,25 @@ GameController::GameController(const unsigned int gridSize, const unsigned int a
     , m_aiPlayer(Player::Type::AI)
     , m_gameBoard(new Board(m_gridSize))
     , m_aiImplement(new AIPlayer(m_aiPlayer, m_humanPlayer, m_aiLevel))
+    , m_tileShapeModel(new TileShapeModel(parent))
 {
-    // makes symbol connection for moves processed (ieA.I) to the controller receiving the move
+    // Initialize tile shape model
+    initializeModels();
+
+    // Makes symbol connection for moves processed (ieA.I) to the controller receiving the move
     QObject::connect(this, &GameController::aiPlayedAt, this, &GameController::handleAIPlayedAt);
 }
 
 GameController::~GameController()
 {}
+
+void GameController::setAppConfig(AppConfig* config)
+{
+    if(config)
+    {
+        m_appConfig = config;
+    }
+}
 
 bool GameController::isPlayed(unsigned int row, unsigned int column)
 {
@@ -46,8 +58,11 @@ void GameController::humanPlayedAt(unsigned int row, unsigned int column)
     {
 
     }
+}
 
-
+void GameController::selectShapeByIndex(unsigned int index)
+{
+    m_appConfig->setSelectedShape(m_tileShapeModel->getByIndex(index));
 }
 
 unsigned int GameController::gridSize() const
@@ -68,6 +83,21 @@ bool GameController::isPlayLock() const
 Board* GameController::gameBoard() const
 {
     return m_gameBoard;
+}
+
+TileShapeModel* GameController::tileShapeModel() const
+{
+    return m_tileShapeModel;
+}
+
+void GameController::initializeModels()
+{
+    m_tileShapeModel->addTileShape(new TileShape(TileShape::TileShapeType::TileA, "qrc:/imports/Theme/images/Tiles/TileA.svg"));
+    m_tileShapeModel->addTileShape(new TileShape(TileShape::TileShapeType::TileK, "qrc:/imports/Theme/images/Tiles/TileK.svg"));
+    m_tileShapeModel->addTileShape(new TileShape(TileShape::TileShapeType::TileM, "qrc:/imports/Theme/images/Tiles/TileM.svg"));
+    m_tileShapeModel->addTileShape(new TileShape(TileShape::TileShapeType::TileO, "qrc:/imports/Theme/images/Tiles/TileO.svg"));
+    m_tileShapeModel->addTileShape(new TileShape(TileShape::TileShapeType::TileU, "qrc:/imports/Theme/images/Tiles/TileU.svg"));
+    m_tileShapeModel->addTileShape(new TileShape(TileShape::TileShapeType::TileX, "qrc:/imports/Theme/images/Tiles/TileX.svg"));
 }
 
 void GameController::aiThinkAndPlay()
@@ -116,4 +146,13 @@ void GameController::handleAIPlayedAt(unsigned int row, unsigned int column)
     }
 
     emit updateAIPlayerOnUI(row,column);
+}
+
+void GameController::setTileShapeModel(TileShapeModel* tileShapeModel)
+{
+    if (m_tileShapeModel == tileShapeModel)
+        return;
+
+    m_tileShapeModel = tileShapeModel;
+    emit tileShapeModelChanged(m_tileShapeModel);
 }

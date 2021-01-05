@@ -20,38 +20,47 @@ add_definitions(-DQT_STATICPLUGIN=1)
 # -------------------------------------------------------------------------------------------------
 # Source files *.cpp
 set(SOURCES
+    "${CMAKE_CURRENT_LIST_DIR}/src/ai/ai_player.cpp"
     "${CMAKE_CURRENT_LIST_DIR}/src/core_plugin.cpp"
     "${CMAKE_CURRENT_LIST_DIR}/src/config/app_config.cpp"
-    "${CMAKE_CURRENT_LIST_DIR}/src/theme/theme.cpp"
-    "${CMAKE_CURRENT_LIST_DIR}/src/theme/colors.cpp"
-    "${CMAKE_CURRENT_LIST_DIR}/src/theme/sizes.cpp"
-    "${CMAKE_CURRENT_LIST_DIR}/src/theme/fonts.cpp"
+
+    "${CMAKE_CURRENT_LIST_DIR}/src/data/game_difficulty.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/src/data/tile_shape.cpp"
 
     "${CMAKE_CURRENT_LIST_DIR}/src/game/board.cpp"
-    # "${CMAKE_CURRENT_LIST_DIR}/src/game/board_model.cpp"
     "${CMAKE_CURRENT_LIST_DIR}/src/game/game_object.cpp"
     "${CMAKE_CURRENT_LIST_DIR}/src/game/player.cpp"
     "${CMAKE_CURRENT_LIST_DIR}/src/game/tile.cpp"
 
-    "${CMAKE_CURRENT_LIST_DIR}/src/ai/ai_player.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/src/model/tile_shape_model.cpp"
+
+    "${CMAKE_CURRENT_LIST_DIR}/src/theme/theme.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/src/theme/colors.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/src/theme/sizes.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/src/theme/fonts.cpp"
     )
 
 # Header files *.h
 set(HEADERS
+    "${CMAKE_CURRENT_LIST_DIR}/src/ai/ai_player.h"
+
     "${CMAKE_CURRENT_LIST_DIR}/src/core_plugin.h"
     "${CMAKE_CURRENT_LIST_DIR}/src/config/app_config.h"
-    "${CMAKE_CURRENT_LIST_DIR}/src/theme/theme.h"
-    "${CMAKE_CURRENT_LIST_DIR}/src/theme/colors.h"
-    "${CMAKE_CURRENT_LIST_DIR}/src/theme/sizes.h"
-    "${CMAKE_CURRENT_LIST_DIR}/src/theme/fonts.h"
+
+    "${CMAKE_CURRENT_LIST_DIR}/src/data/game_difficulty.h"
+    "${CMAKE_CURRENT_LIST_DIR}/src/data/tile_shape.h"
 
     "${CMAKE_CURRENT_LIST_DIR}/src/game/board.h"
-    # "${CMAKE_CURRENT_LIST_DIR}/src/game/board_model.h"
     "${CMAKE_CURRENT_LIST_DIR}/src/game/game_object.h"
     "${CMAKE_CURRENT_LIST_DIR}/src/game/player.h"
     "${CMAKE_CURRENT_LIST_DIR}/src/game/tile.h"
 
-    "${CMAKE_CURRENT_LIST_DIR}/src/ai/ai_player.h"
+    "${CMAKE_CURRENT_LIST_DIR}/src/model/tile_shape_model.h"
+
+    "${CMAKE_CURRENT_LIST_DIR}/src/theme/theme.h"
+    "${CMAKE_CURRENT_LIST_DIR}/src/theme/colors.h"
+    "${CMAKE_CURRENT_LIST_DIR}/src/theme/sizes.h"
+    "${CMAKE_CURRENT_LIST_DIR}/src/theme/fonts.h"
     )
 
 # Resource files *.qrc

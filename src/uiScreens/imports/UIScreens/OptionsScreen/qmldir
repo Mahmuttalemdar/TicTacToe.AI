@@ -1,0 +1,9 @@
+module UIScreens
+classname UIScreensPlugin
+depends QtQuick.Controls 2.15
+
+OptionsScreenPage 1.0 OptionsScreenPage.qml
+OptionsBoard 1.0 OptionsBoard.qml
+OptionsTitle 1.0 OptionsTitle.qml
+ShapeChooser 1.0 ShapeChooser.qml
+DifficultyChooser 1.0 DifficultyChooser.qml

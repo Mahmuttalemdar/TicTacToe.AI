@@ -26,5 +26,12 @@
         <file>images/Tiles/TileK.svg</file>
         <file>images/Logo/Logo.png</file>
         <file>images/Logo/Logo.svg</file>
+        <file>images/Difficulty/DifficultyEasy.svg</file>
+        <file>images/Difficulty/DifficultyEasyActive.svg</file>
+        <file>images/Difficulty/DifficultyHard.svg</file>
+        <file>images/Difficulty/DifficultyHardActive.svg</file>
+        <file>images/Difficulty/DifficultyMedium.svg</file>
+        <file>images/Difficulty/DifficultyMediumActive.svg</file>
+        <file>images/Player/PlayerProfile.svg</file>
     </qresource>
 </RCC>

@@ -4,9 +4,11 @@
 #include <QObject>
 #include <memory>
 
+#include "core/src/config/app_config.h"
 #include "core/src/game/board.h"
 #include "core/src/game/player.h"
 #include "core/src/ai/ai_player.h"
+#include "core/src/model/tile_shape_model.h"
 
 class GameController : public QObject
 {
@@ -15,6 +17,7 @@ class GameController : public QObject
         Q_PROPERTY(unsigned int aiLevel READ aiLevel WRITE setAiLevel NOTIFY aiLevelChanged)
         Q_PROPERTY(bool isPlayLock READ isPlayLock WRITE setIsPlayLock NOTIFY isPlayLockChanged)
         Q_PROPERTY(Board* gameBoard READ gameBoard NOTIFY gameBoardChanged)
+        Q_PROPERTY(TileShapeModel* tileShapeModel READ tileShapeModel WRITE setTileShapeModel NOTIFY tileShapeModelChanged)
 
     public:
         /**
@@ -27,16 +30,21 @@ class GameController : public QObject
           */
         ~GameController();
 
+        void setAppConfig(AppConfig* config);
+
         Q_INVOKABLE bool isPlayed(unsigned int row, unsigned int column);
         Q_INVOKABLE void humanPlayedAt(unsigned int row, unsigned int column);
+        Q_INVOKABLE void selectShapeByIndex(unsigned int index);
 
         unsigned int gridSize() const;
         unsigned int aiLevel() const;
         bool isPlayLock() const;
 
         Board* gameBoard() const;
+        TileShapeModel* tileShapeModel() const;
 
     private:
+        void initializeModels();
         void aiThinkAndPlay();
 
     public slots:
@@ -44,6 +52,7 @@ class GameController : public QObject
         void setAiLevel(unsigned int aiLevel);
         void setIsPlayLock(bool isPlayLock);
         void handleAIPlayedAt(unsigned int row, unsigned int column);
+        void setTileShapeModel(TileShapeModel* tileShapeModel);
 
     signals:
         void gridSizeChanged(unsigned int gridSize);
@@ -53,8 +62,9 @@ class GameController : public QObject
         void updateAIPlayerOnUI(unsigned int row, unsigned int column);
 
         void gameBoardChanged(Board* gameBoard);
+        void tileShapeModelChanged(TileShapeModel* tileShapeModel);
 
-        private:
+    private:
         unsigned int m_gridSize;
         unsigned int m_aiLevel = 0;
 
@@ -65,6 +75,8 @@ class GameController : public QObject
         Player m_aiPlayer;
         Board* m_gameBoard;
         AIPlayer* m_aiImplement;
+        TileShapeModel* m_tileShapeModel;
+        AppConfig* m_appConfig;
 };
 
 #endif //GAME_CONTROLLER_H

@@ -1,0 +1,5 @@
+module UIScreens
+classname UIScreensPlugin
+depends QtQuick.Controls 2.15
+
+ScoreScreenPage 1.0 ScoreScreenPage.qml
