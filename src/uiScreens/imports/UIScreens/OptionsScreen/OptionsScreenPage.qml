@@ -11,10 +11,13 @@ import UIScreens.OptionsScreen 1.0
 
 // OPTION SCREEN
 Rectangle {
-    id: startScreen
+    id: root
     width: parent.width
     height: parent.height
     color: "red"
+
+    property string eventName: "openDifficultyPage"
+    property string buttonText: "NEXT"
 
     // BACKGROUND
     Image {
@@ -82,7 +85,7 @@ Rectangle {
             buttonWidth: 170
             buttonHeight: 60
             buttonOpacity: 0.9
-            buttonText: "NEXT"
+            buttonText: root.buttonText
             buttonTextColor: "#FFFFFF"
             buttonBackgroundPrimaryColor: "#D7386F"
             buttonBackgroundSecondaryColor: "#8159E6"
@@ -97,10 +100,7 @@ Rectangle {
             anchors.horizontalCenter: parent.horizontalCenter
 
             onClicked : {
-                //openDifficultyPage
-                //openGamePlayScreen
-                //backToChooseShapePage
-                entrance.statechart.submitEvent("openDifficultyPage")
+                entrance.statechart.submitEvent(root.eventName)
             }
 
         }
@@ -127,17 +127,67 @@ Rectangle {
             width: parent.width
             height: parent.height
         }
- }
+    }
+
+    // GRIDSIZE CHOOSER
+    Component {
+        id: gridSizeChooserComp
+
+        GridSizeChooser {
+            id: gridSizeChooser
+            width: parent.width
+            height: parent.height
+        }
+    }
+
+    // PLAYER SETTINGS
+    Component {
+        id: playerSettingsComp
+
+        PlayerSettings {
+            id: playerSettings
+            width: parent.width
+            height: parent.height
+        }
+    }
 
     // EVENT: openDifficultyPage
     EventConnection {
         stateMachine: entrance.statechart
         events: ["openDifficultyPage"]
         onOccurred: {
+            root.eventName = "openGridSizePage"
+            root.buttonText = "NEXT"
             optionsTitle.itemText = "Choose difficulty"
             optionStack.push(difficultyChooserComp)
         }
     }
+
+    // EVENT: openGridSizePage
+    EventConnection {
+        stateMachine: entrance.statechart
+        events: ["openGridSizePage"]
+        onOccurred: {
+            root.buttonText = "NEXT"
+            root.eventName = "openPlayerSettings"
+            optionsTitle.itemText = "Choose a grid size"
+            optionStack.push(gridSizeChooserComp)
+        }
+    }
+
+    // EVENT: openPlayerSettings
+    EventConnection {
+        stateMachine: entrance.statechart
+        events: ["openPlayerSettings"]
+        onOccurred: {
+            root.buttonText = "PLAY"
+            root.eventName = "openGamePlayScreen"
+            optionsTitle.itemText = "Enter your name"
+            optionStack.push(playerSettingsComp)
+        }
+    }
+
+
 
     // EVENT: backToChooseShapePage
     EventConnection {
@@ -145,15 +195,6 @@ Rectangle {
         events: ["backToChooseShapePage"]
         onOccurred: {
             optionStack.push(shapeChooserComp)
-        }
-    }
-
-    // EVENT: openGamePlayScreen
-    EventConnection {
-        stateMachine: entrance.statechart
-        events: ["openGamePlayScreen"]
-        onOccurred: {
-            optionStack.push(difficultyChooserComp)
         }
     }
 

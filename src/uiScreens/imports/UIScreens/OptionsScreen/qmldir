@@ -7,3 +7,5 @@ OptionsBoard 1.0 OptionsBoard.qml
 OptionsTitle 1.0 OptionsTitle.qml
 ShapeChooser 1.0 ShapeChooser.qml
 DifficultyChooser 1.0 DifficultyChooser.qml
+GridSizeChooser 1.0 GridSizeChooser.qml
+PlayerSettings 1.0 PlayerSettings.qml

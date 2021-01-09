@@ -12,6 +12,8 @@
         <file>OptionsScreen/OptionsTitle.qml</file>
         <file>OptionsScreen/ShapeChooser.qml</file>
         <file>OptionsScreen/DifficultyChooser.qml</file>
+        <file>OptionsScreen/GridSizeChooser.qml</file>
+        <file>OptionsScreen/PlayerSettings.qml</file>
         <file>ScoreScreen/qmldir</file>
         <file>ScoreScreen/ScoreScreenPage.qml</file>
         <file>StartScreen/qmldir</file>
