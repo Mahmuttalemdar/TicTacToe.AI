@@ -406,24 +406,24 @@ bool Board::nextChildBoard(Player player, std::shared_ptr<Board>& childBoard)
     return false;
 }
 
+void Board::restart()
+{
+    m_rowPlayed = 0;
+    m_columnPlayed = 0;
+    m_cachedLastRowPlayed = 0;
+    m_cachedLastColumnPlayed = 0;
+    m_utilityValue = 0;
+    m_depth = 0;
 
+    //Intialize With All Blanks
+    std::vector<std::vector<Tile>> boardData(
+                m_gridSize,
+                std::vector<Tile>(m_gridSize)
+                );
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    //Set Board Game Data Structure
+    m_gameBoard = std::move(boardData);
+}
 
 
 

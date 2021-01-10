@@ -90,9 +90,9 @@ statechart::Main *Entrance::statechart() const
     return data->statechart.get();
 }
 
-AppConfig* Entrance::appConfig() const
+GameSettings* Entrance::gameSettings() const
 {
-    return data->appConfig.get();
+    return data->gameSettings.get();
 }
 
 Theme* Entrance::theme() const
@@ -177,12 +177,9 @@ bool Entrance::initialize()
 {
     // Initialize objects
     data->statechart = std::make_unique<statechart::Main>();
-    data->appConfig = std::make_unique<AppConfig>();
+    data->gameSettings = std::make_unique<GameSettings>();
     data->theme = std::make_unique<Theme>();
-    data->gameController = std::make_unique<GameController>(3, 5);
-
-    // Set app configs
-    data->gameController->setAppConfig(data->appConfig.get());
+    data->gameController = std::make_unique<GameController>(data->gameSettings.get());
 
     return true;
 }

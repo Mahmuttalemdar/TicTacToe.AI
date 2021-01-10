@@ -4,19 +4,24 @@
 
 #include <QObject>
 
-GameController::GameController(const unsigned int gridSize, const unsigned int aiLevel, QObject* parent)
+GameController::GameController(GameSettings* gameSettings, QObject* parent)
     : QObject(parent)
-    , m_gridSize(gridSize)
-    , m_aiLevel(aiLevel)
+    , m_gameSettings(gameSettings)
     , m_isPlayLock(false)
     , m_humanPlayer(Player::Type::HUMAN)
     , m_aiPlayer(Player::Type::AI)
-    , m_gameBoard(new Board(m_gridSize))
-    , m_aiImplement(new AIPlayer(m_aiPlayer, m_humanPlayer, m_aiLevel))
+    , m_gameBoard(new Board(m_gameSettings->gridSize()))
+    , m_aiImplement(new AIPlayer(m_aiPlayer, m_humanPlayer, m_gameSettings->getAILevel()))
     , m_tileShapeModel(new TileShapeModel(parent))
 {
     // Initialize tile shape model
     initializeModels();
+
+    // Connect to game settings
+    QObject::connect(m_gameSettings->gameDifficulty(), &GameDifficulty::difficultyChanged, this, &GameController::handleGameDifficultyChanged);
+    QObject::connect(m_gameSettings, &GameSettings::gridSizeChanged, this, &GameController::handleGridSizeChanged);
+    QObject::connect(m_gameSettings, &GameSettings::humanPlayerNameChanged, this, &GameController::handleHumanPlayerNameChanged);
+    QObject::connect(m_gameSettings, &GameSettings::aiPlayerNameChanged, this, &GameController::handleAiPlayerNameChanged);
 
     // Makes symbol connection for moves processed (ieA.I) to the controller receiving the move
     QObject::connect(this, &GameController::aiPlayedAt, this, &GameController::handleAIPlayedAt);
@@ -24,14 +29,6 @@ GameController::GameController(const unsigned int gridSize, const unsigned int a
 
 GameController::~GameController()
 {}
-
-void GameController::setAppConfig(AppConfig* config)
-{
-    if(config)
-    {
-        m_appConfig = config;
-    }
-}
 
 bool GameController::isPlayed(unsigned int row, unsigned int column)
 {
@@ -62,17 +59,14 @@ void GameController::humanPlayedAt(unsigned int row, unsigned int column)
 
 void GameController::selectShapeByIndex(unsigned int index)
 {
-    m_appConfig->setSelectedShape(m_tileShapeModel->getByIndex(index));
-}
+    m_gameSettings->setHumanTile(m_tileShapeModel->getByIndex(index));
 
-unsigned int GameController::gridSize() const
-{
-    return m_gridSize;
-}
-
-unsigned int GameController::aiLevel() const
-{
-    return m_aiLevel;
+    if(index == 3) {
+        m_gameSettings->setAiTile(m_tileShapeModel->getByIndex(0));
+    }
+    else {
+        m_gameSettings->setAiTile(m_tileShapeModel->getByIndex(3));
+    }
 }
 
 bool GameController::isPlayLock() const
@@ -110,24 +104,6 @@ void GameController::aiThinkAndPlay()
     emit aiPlayedAt(rowAI,columnAI);
 }
 
-void GameController::setGridSize(unsigned int gridSize)
-{
-    if (m_gridSize == gridSize)
-        return;
-
-    m_gridSize = gridSize;
-    emit gridSizeChanged(m_gridSize);
-}
-
-void GameController::setAiLevel(unsigned int aiLevel)
-{
-    if (m_aiLevel == aiLevel)
-        return;
-
-    m_aiLevel = aiLevel;
-    emit aiLevelChanged(m_aiLevel);
-}
-
 void GameController::setIsPlayLock(bool isPlayLock)
 {
     if (m_isPlayLock == isPlayLock)
@@ -135,6 +111,15 @@ void GameController::setIsPlayLock(bool isPlayLock)
 
     m_isPlayLock = isPlayLock;
     emit isPlayLockChanged(m_isPlayLock);
+}
+
+void GameController::setTileShapeModel(TileShapeModel* tileShapeModel)
+{
+    if (m_tileShapeModel == tileShapeModel)
+        return;
+
+    m_tileShapeModel = tileShapeModel;
+    emit tileShapeModelChanged(m_tileShapeModel);
 }
 
 void GameController::handleAIPlayedAt(unsigned int row, unsigned int column)
@@ -148,11 +133,45 @@ void GameController::handleAIPlayedAt(unsigned int row, unsigned int column)
     emit updateAIPlayerOnUI(row,column);
 }
 
-void GameController::setTileShapeModel(TileShapeModel* tileShapeModel)
+void GameController::handleGameDifficultyChanged(GameDifficulty::Difficulty difficulty)
 {
-    if (m_tileShapeModel == tileShapeModel)
-        return;
+    switch (difficulty)
+    {
+    case GameDifficulty::Difficulty::Easy:
+        m_gameBoard->setDepth(m_gameSettings->getAILevel());
+        m_gameSettings->setAiPlayerName("EasyBot.AI");
+        break;
+    case GameDifficulty::Difficulty::Medium:
+        m_gameBoard->setDepth(m_gameSettings->getAILevel());
+        m_gameSettings->setAiPlayerName("MediumBot.AI");
+        break;
+    case GameDifficulty::Difficulty::Hard:
+        m_gameBoard->setDepth(m_gameSettings->getAILevel());
+        m_gameSettings->setAiPlayerName("HardBot.AI");
+        break;
+    default:
+        m_gameBoard->setDepth(m_gameSettings->getAILevel());
+        m_gameSettings->setAiPlayerName("EasyBot.AI");
+        break;
+    }
 
-    m_tileShapeModel = tileShapeModel;
-    emit tileShapeModelChanged(m_tileShapeModel);
+    m_gameBoard->restart();
+}
+
+void GameController::handleGridSizeChanged(unsigned int gridSize)
+{
+    m_gameBoard->setGridSize(gridSize);
+    m_gameBoard->restart();
+}
+
+void GameController::handleHumanPlayerNameChanged(QString playerName)
+{
+    m_humanPlayer.SetPlayerName(playerName);
+    m_gameBoard->restart();
+}
+
+void GameController::handleAiPlayerNameChanged(QString playerName)
+{
+    m_aiPlayer.SetPlayerName(playerName);
+    m_gameBoard->restart();
 }

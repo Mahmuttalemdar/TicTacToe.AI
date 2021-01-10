@@ -55,7 +55,7 @@ Item {
             onClicked: {
                 deactiveAll()
                 easyOptionArea.isActivated = true
-                entrance.appConfig.gameDifficulty.difficulty = GameDifficulty.Easy
+                entrance.gameSettings.gameDifficulty.difficulty = GameDifficulty.Easy
             }
         }
     }
@@ -102,7 +102,7 @@ Item {
             onClicked: {
                 deactiveAll()
                 mediumOptionArea.isActivated = true
-                entrance.appConfig.gameDifficulty.difficulty = GameDifficulty.Medium
+                entrance.gameSettings.gameDifficulty.difficulty = GameDifficulty.Medium
             }
         }
     }
@@ -150,7 +150,7 @@ Item {
             onClicked: {
                 deactiveAll()
                 hardOptionArea.isActivated = true
-                entrance.appConfig.gameDifficulty.difficulty = GameDifficulty.Hard
+                entrance.gameSettings.gameDifficulty.difficulty = GameDifficulty.Hard
             }
         }
     }

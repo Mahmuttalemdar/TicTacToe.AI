@@ -42,8 +42,9 @@ Rectangle {
             id: aiPlayerInfo
             turnText: "AI turn"
             playerTypeText: "AI"
-            playerNameText: "Basag.AI"
-            isTurnActive: true
+            playerNameText: entrance.gameSettings.aiPlayerName
+            playerShapeImage: entrance.gameSettings.aiTile.image
+            isTurnActive: entrance.gameController.isPlayLock
 
             anchors.verticalCenter: parent.verticalCenter
             anchors.left: parent.left
@@ -55,8 +56,9 @@ Rectangle {
             id: humanPlayerInfo
             turnText: "Your turn"
             playerTypeText: "Player"
-            playerNameText: "Mahmut"
-            isTurnActive: false
+            playerNameText: entrance.gameSettings.humanPlayerName
+            playerShapeImage: entrance.gameSettings.humanTile.image
+            isTurnActive: !entrance.gameController.isPlayLock
 
             anchors.verticalCenter: parent.verticalCenter
             anchors.right: parent.right
@@ -162,6 +164,15 @@ Rectangle {
             }
         }
 
+    }
+
+    // CONNECTIONS
+    Connections {
+        target: entrance.gameController
+
+        function onIsPlayLockChanged(isPlayLock){
+            console.log("GAME TURN IS: ", isPlayLock)
+        }
     }
 }
 

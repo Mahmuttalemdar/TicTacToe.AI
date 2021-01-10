@@ -15,6 +15,8 @@ Rectangle {
     property real shapeOpacity: 1.0
     property int lineSpacing: root.width / 15
 
+    property int moveTime: 1000
+
     // DASHED SHAPE (OUTLINES)
     Shape {
         id: shape
@@ -98,7 +100,7 @@ Rectangle {
         id: horizontalRepeater
         width: parent.width
         height: parent.height
-        model: entrance.appConfig.gridSize - 1
+        model: entrance.gameSettings.gridSize - 1
 
         // HORIZONTAL LINES
         Shape {
@@ -112,7 +114,7 @@ Rectangle {
             ShapePath {
                 id: horizontalLine
                 startX: root.lineSpacing
-                startY: (horizontalLinesShape.height / entrance.appConfig.gridSize) * (index + 1)
+                startY: (horizontalLinesShape.height / entrance.gameSettings.gridSize) * (index + 1)
 
                 strokeWidth: root.shapeStrokeWidth
                 strokeColor: root.dashColor
@@ -121,7 +123,7 @@ Rectangle {
                 capStyle: ShapePath.RoundCap
 
                 // LINE 1
-                PathLine { x: horizontalLinesShape.width - root.lineSpacing; y: ((horizontalLinesShape.height / entrance.appConfig.gridSize) * (index + 1)) }
+                PathLine { x: horizontalLinesShape.width - root.lineSpacing; y: ((horizontalLinesShape.height / entrance.gameSettings.gridSize) * (index + 1)) }
 
                 // GRADIENT COLOR
                 fillGradient: LinearGradient {
@@ -139,7 +141,7 @@ Rectangle {
         id: verticalRepeater
         width: parent.width
         height: parent.height
-        model: entrance.appConfig.gridSize - 1
+        model: entrance.gameSettings.gridSize - 1
 
         // HORIZONTAL LINES
         Shape {
@@ -153,7 +155,7 @@ Rectangle {
             ShapePath {
                 id: verticalLine
                 startY: root.lineSpacing
-                startX: (verticalLinesShape.width / entrance.appConfig.gridSize) * (index + 1)
+                startX: (verticalLinesShape.width / entrance.gameSettings.gridSize) * (index + 1)
 
                 strokeWidth: root.shapeStrokeWidth
                 strokeColor: root.dashColor
@@ -162,7 +164,7 @@ Rectangle {
                 capStyle: ShapePath.RoundCap
 
                 // LINE 1
-                PathLine { x: ((verticalLinesShape.width / entrance.appConfig.gridSize) * (index + 1)); y: verticalLinesShape.height - root.lineSpacing }
+                PathLine { x: ((verticalLinesShape.width / entrance.gameSettings.gridSize) * (index + 1)); y: verticalLinesShape.height - root.lineSpacing }
 
                 // GRADIENT COLOR
                 fillGradient: LinearGradient {
@@ -182,13 +184,13 @@ Rectangle {
         height: parent.height - gridPadding
         interactive: true
 
-        cellWidth: boardGrid.width / entrance.appConfig.gridSize
-        cellHeight: boardGrid.height / entrance.appConfig.gridSize
+        cellWidth: boardGrid.width / entrance.gameSettings.gridSize
+        cellHeight: boardGrid.height / entrance.gameSettings.gridSize
 
         property int gridPadding: 10
         property int tilePadding: 10
 
-        model: entrance.appConfig.gridSize * entrance.appConfig.gridSize
+        model: entrance.gameSettings.gridSize * entrance.gameSettings.gridSize
         delegate: tileComp
 
         anchors.left: parent.left
@@ -207,8 +209,8 @@ Rectangle {
             height: boardGrid.cellHeight - boardGrid.tilePadding
             opacity: 1
 
-            property int cellRow: index / entrance.appConfig.gridSize
-            property int cellColumn: index % entrance.appConfig.gridSize
+            property int cellRow: index / entrance.gameSettings.gridSize
+            property int cellColumn: index % entrance.gameSettings.gridSize
             property int clipperRectRadius: clipperRect.width
 
             property string defaultBackgroundColor: "#421791"
@@ -276,8 +278,11 @@ Rectangle {
 
                     if(!entrance.gameController.isPlayed(cellRow, cellColumn))
                     {
-                        tileImage.source = "qrc:/imports/Theme/images/Tiles/TileX.svg"
-                        entrance.gameController.humanPlayedAt(cellRow, cellColumn)
+                        tileImage.source = entrance.gameSettings.humanTile.image
+                        entrance.gameController.isPlayLock = true;
+                        root.delay(root.moveTime, function() {
+                            entrance.gameController.humanPlayedAt(cellRow, cellColumn)
+                        })
                     }
                     else {
                         console.log("Tile already played: X: ", cellRow, " Y: ",cellColumn)
@@ -294,7 +299,7 @@ Rectangle {
                             && boardRect.cellRow === row
                             && boardRect.cellColumn === column)
                     {
-                        tileImage.source = "qrc:/imports/Theme/images/Tiles/TileO.svg"
+                        tileImage.source = entrance.gameSettings.aiTile.image
                     }
                 }
             }
@@ -305,13 +310,13 @@ Rectangle {
                 if(boardRect.cellRow === 0 && boardRect.cellColumn === 0) {
                     boardRect.rotation = 0;
                 }
-                else if(boardRect.cellRow === 0 && boardRect.cellColumn === (entrance.appConfig.gridSize - 1)) {
+                else if(boardRect.cellRow === 0 && boardRect.cellColumn === (entrance.gameSettings.gridSize - 1)) {
                     boardRect.rotation = 90;
                 }
-                else if(boardRect.cellRow === (entrance.appConfig.gridSize - 1) && boardRect.cellColumn === 0) {
+                else if(boardRect.cellRow === (entrance.gameSettings.gridSize - 1) && boardRect.cellColumn === 0) {
                     boardRect.rotation = -90;
                 }
-                else if(boardRect.cellRow === (entrance.appConfig.gridSize - 1) && boardRect.cellColumn === (entrance.appConfig.gridSize - 1)) {
+                else if(boardRect.cellRow === (entrance.gameSettings.gridSize - 1) && boardRect.cellColumn === (entrance.gameSettings.gridSize - 1)) {
                     boardRect.rotation = 180;
                 }
                 else {
@@ -319,12 +324,20 @@ Rectangle {
                     boardRect.clipperRectRadius = 0
                 }
             }
-
         }
-
-
     }
 
+    // TIMER FOR MOVE
+    Timer {
+        id: moveTimer
+    }
 
+    // Delay function for tile move
+    function delay(delayTime, cb) {
+        moveTimer.interval = delayTime;
+        moveTimer.repeat = false;
+        moveTimer.triggered.connect(cb);
+        moveTimer.start();
+    }
 
 }

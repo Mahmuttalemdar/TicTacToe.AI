@@ -22,7 +22,7 @@ add_definitions(-DQT_STATICPLUGIN=1)
 set(SOURCES
     "${CMAKE_CURRENT_LIST_DIR}/src/ai/ai_player.cpp"
     "${CMAKE_CURRENT_LIST_DIR}/src/core_plugin.cpp"
-    "${CMAKE_CURRENT_LIST_DIR}/src/config/app_config.cpp"
+    "${CMAKE_CURRENT_LIST_DIR}/src/settings/game_settings.cpp"
 
     "${CMAKE_CURRENT_LIST_DIR}/src/data/game_difficulty.cpp"
     "${CMAKE_CURRENT_LIST_DIR}/src/data/tile_shape.cpp"
@@ -45,7 +45,7 @@ set(HEADERS
     "${CMAKE_CURRENT_LIST_DIR}/src/ai/ai_player.h"
 
     "${CMAKE_CURRENT_LIST_DIR}/src/core_plugin.h"
-    "${CMAKE_CURRENT_LIST_DIR}/src/config/app_config.h"
+    "${CMAKE_CURRENT_LIST_DIR}/src/settings/game_settings.h"
 
     "${CMAKE_CURRENT_LIST_DIR}/src/data/game_difficulty.h"
     "${CMAKE_CURRENT_LIST_DIR}/src/data/tile_shape.h"

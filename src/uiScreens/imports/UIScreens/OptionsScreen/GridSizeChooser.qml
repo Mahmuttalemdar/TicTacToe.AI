@@ -51,7 +51,7 @@ Item {
             onClicked: {
                 deactiveAll()
                 easyOptionArea.isActivated = true
-                //entrance.appConfig.gameDifficulty.difficulty = GameDifficulty.Easy
+                entrance.gameSettings.gridSize = 3
             }
         }
     }
@@ -96,7 +96,7 @@ Item {
             onClicked: {
                 deactiveAll()
                 mediumOptionArea.isActivated = true
-                //entrance.appConfig.gameDifficulty.difficulty = GameDifficulty.Medium
+                entrance.gameSettings.gridSize = 5
             }
         }
     }
@@ -142,7 +142,7 @@ Item {
             onClicked: {
                 deactiveAll()
                 hardOptionArea.isActivated = true
-                //entrance.appConfig.gameDifficulty.difficulty = GameDifficulty.Hard
+                entrance.gameSettings.gridSize = 7
             }
         }
     }

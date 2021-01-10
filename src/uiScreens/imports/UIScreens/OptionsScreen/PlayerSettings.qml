@@ -39,6 +39,15 @@ Item {
             color: "#FFFFFF"
             anchors.bottom: parent.bottom
             anchors.horizontalCenter: parent.horizontalCenter
+
+            onTextChanged: {
+                if(text.length > 0) {
+                    entrance.gameSettings.humanPlayerName = text
+                }
+                else {
+                    entrance.gameSettings.humanPlayerName = "Player1"
+                }
+            }
         }
 
     }

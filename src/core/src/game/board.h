@@ -164,6 +164,8 @@ class Board
 
         bool nextChildBoard(Player player, std::shared_ptr<Board>& childBoard);
 
+        void restart();
+
 
     private:
         unsigned int m_gridSize = 0;

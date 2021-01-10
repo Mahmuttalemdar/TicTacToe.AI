@@ -8,6 +8,7 @@ Item {
 
     property string playerTypeText: "Player 2"
     property string playerNameText: "JANE123"
+    property string playerShapeImage: "qrc:/imports/Theme/images/Tiles/TileO.svg"
     property string turnText: "Your turn"
     property bool isTurnActive: true
 
@@ -99,7 +100,7 @@ Item {
             id: selectedTileShape
             width: 40
             height: 40
-            source: "qrc:/imports/Theme/images/Tiles/TileO.svg"
+            source: root.playerShapeImage
 
             anchors.top: innerPlayerNameText.bottom
             anchors.topMargin: 8

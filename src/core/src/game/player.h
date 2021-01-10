@@ -1,6 +1,8 @@
 #ifndef PLAYER_H
 #define PLAYER_H
 
+#include <QString>
+
 /**
  * @brief The Player class: holds the all player
  * data, type and reprensetation
@@ -34,8 +36,21 @@ class Player
          */
         const Type& GetType() const;
 
+        /**
+         * @brief Modifies the player name
+         * @param name: Name of Human player or Default AI Name
+         */
+        void SetPlayerName(const QString& playerName);
+
+        /**
+         * @brief Returns current name of player
+         * @return playerName as String
+         */
+        const QString& GetPlayerName() const;
+
     private:
         Type m_type;
+        QString m_playerName;
 };
 
 #endif // PLAYER_H

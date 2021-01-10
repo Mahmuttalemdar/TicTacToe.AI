@@ -12,7 +12,7 @@
 #include <QQmlApplicationEngine>
 
 #include "statechart/Main.h"
-#include <core/src/config/app_config.h>
+#include <core/src/settings/game_settings.h>
 #include <core/src/theme/theme.h>
 #include <interfaces/src/controllers/game_controller.h>
 
@@ -28,7 +28,7 @@ class Entrance : public QObject
 {
         Q_OBJECT
         Q_PROPERTY(statechart::Main *statechart READ statechart NOTIFY statechartChanged)
-        Q_PROPERTY(AppConfig *appConfig READ appConfig NOTIFY appConfigChanged)
+        Q_PROPERTY(GameSettings *gameSettings READ gameSettings NOTIFY gameSettingsChanged)
         Q_PROPERTY(Theme *theme READ theme NOTIFY themeChanged)
         Q_PROPERTY(GameController* gameController READ gameController NOTIFY gameControllerChanged)
 
@@ -37,12 +37,12 @@ class Entrance : public QObject
          * Access Providers
          */
         statechart::Main* statechart() const;
-        AppConfig* appConfig() const;
+        GameSettings* gameSettings() const;
         Theme *theme() const;
         GameController* gameController() const;
 
     Q_SIGNALS:
-        void appConfigChanged();
+        void gameSettingsChanged();
         void statechartChanged();
         void themeChanged();
         void gameControllerChanged();

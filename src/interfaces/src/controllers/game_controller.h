@@ -4,7 +4,7 @@
 #include <QObject>
 #include <memory>
 
-#include "core/src/config/app_config.h"
+#include "core/src/settings/game_settings.h"
 #include "core/src/game/board.h"
 #include "core/src/game/player.h"
 #include "core/src/ai/ai_player.h"
@@ -13,8 +13,6 @@
 class GameController : public QObject
 {
         Q_OBJECT
-        Q_PROPERTY(unsigned int gridSize READ gridSize WRITE setGridSize NOTIFY gridSizeChanged)
-        Q_PROPERTY(unsigned int aiLevel READ aiLevel WRITE setAiLevel NOTIFY aiLevelChanged)
         Q_PROPERTY(bool isPlayLock READ isPlayLock WRITE setIsPlayLock NOTIFY isPlayLockChanged)
         Q_PROPERTY(Board* gameBoard READ gameBoard NOTIFY gameBoardChanged)
         Q_PROPERTY(TileShapeModel* tileShapeModel READ tileShapeModel WRITE setTileShapeModel NOTIFY tileShapeModelChanged)
@@ -23,21 +21,17 @@ class GameController : public QObject
         /**
           * @brief C-tor
           */
-        GameController(const unsigned int gridSize = 3, const unsigned int aiLevel = 2, QObject* parent = nullptr);
+        GameController(GameSettings* gameSettings, QObject* parent = nullptr);
 
         /**
           * @brief D-tor
           */
         ~GameController();
 
-        void setAppConfig(AppConfig* config);
-
         Q_INVOKABLE bool isPlayed(unsigned int row, unsigned int column);
         Q_INVOKABLE void humanPlayedAt(unsigned int row, unsigned int column);
         Q_INVOKABLE void selectShapeByIndex(unsigned int index);
 
-        unsigned int gridSize() const;
-        unsigned int aiLevel() const;
         bool isPlayLock() const;
 
         Board* gameBoard() const;
@@ -48,15 +42,16 @@ class GameController : public QObject
         void aiThinkAndPlay();
 
     public slots:
-        void setGridSize(unsigned int gridSize);
-        void setAiLevel(unsigned int aiLevel);
         void setIsPlayLock(bool isPlayLock);
-        void handleAIPlayedAt(unsigned int row, unsigned int column);
         void setTileShapeModel(TileShapeModel* tileShapeModel);
 
+        void handleAIPlayedAt(unsigned int row, unsigned int column);
+        void handleGameDifficultyChanged(GameDifficulty::Difficulty difficulty);
+        void handleGridSizeChanged(unsigned int gridSize);
+        void handleHumanPlayerNameChanged(QString playerName);
+        void handleAiPlayerNameChanged(QString playerName);
+
     signals:
-        void gridSizeChanged(unsigned int gridSize);
-        void aiLevelChanged(unsigned int aiLevel);
         void isPlayLockChanged(bool isPlayLock);
         void aiPlayedAt(unsigned int row, unsigned int column);
         void updateAIPlayerOnUI(unsigned int row, unsigned int column);
@@ -65,18 +60,15 @@ class GameController : public QObject
         void tileShapeModelChanged(TileShapeModel* tileShapeModel);
 
     private:
-        unsigned int m_gridSize;
-        unsigned int m_aiLevel = 0;
-
+        GameSettings* m_gameSettings;
         //Stop A Player From Playing A Second Time Until The Lock Is Released
         bool m_isPlayLock = false;
-
-        Player m_humanPlayer = Player::Type::NONE;
+        Player m_humanPlayer;
         Player m_aiPlayer;
         Board* m_gameBoard;
         AIPlayer* m_aiImplement;
         TileShapeModel* m_tileShapeModel;
-        AppConfig* m_appConfig;
+
 };
 
 #endif //GAME_CONTROLLER_H

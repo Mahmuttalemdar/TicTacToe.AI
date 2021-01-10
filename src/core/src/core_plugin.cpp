@@ -4,8 +4,9 @@
 #include "src/theme/sizes.h"
 #include "src/theme/fonts.h"
 
-#include "src/config/app_config.h"
+#include "src/settings/game_settings.h"
 #include "src/data/game_difficulty.h"
+#include "src/data/tile_shape.h"
 
 #include <QQmlContext>
 #include <QQmlEngine>
@@ -54,7 +55,7 @@ void CorePlugin::registerTypes(const char * uri)
     qmlRegisterType<Sizes>("Core.Theme", 1, 0, "Sizes");
     qmlRegisterType<Fonts>("Core.Theme", 1, 0, "Fonts");
 
-    qmlRegisterType<AppConfig>("Core.Data", 1, 0, "AppConfig");
+    qmlRegisterType<GameSettings>("Core.Data", 1, 0, "GameSettings");
     qmlRegisterType<GameDifficulty>("Core.Data", 1, 0, "GameDifficulty");
 }
 
