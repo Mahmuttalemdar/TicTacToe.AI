@@ -442,7 +442,11 @@ void Board::restart()
                 );
 
     //Set Board Game Data Structure
+    m_gameBoard.clear();
     m_gameBoard = std::move(boardData);
+
+    // Restart game state
+    setGameState(GameState::ONGOING);
 }
 
 QList<QPoint> Board::getWinnerList()

@@ -9,6 +9,7 @@
 #include "core/src/game/player.h"
 #include "core/src/ai/ai_player.h"
 #include "core/src/model/tile_shape_model.h"
+#include "statechart/Main.h"
 
 class GameController : public QObject
 {
@@ -42,6 +43,8 @@ class GameController : public QObject
         Board* gameBoard() const;
         TileShapeModel* tileShapeModel() const;
 
+        void setStateChart(statechart::Main *stateChart);
+
     private:
         void initializeModels();
         void aiThinkAndPlay();
@@ -55,6 +58,7 @@ class GameController : public QObject
         void handleGridSizeChanged(unsigned int gridSize);
         void handleHumanPlayerNameChanged(QString playerName);
         void handleAiPlayerNameChanged(QString playerName);
+        void handleRestartGame();
 
     signals:
         void isPlayLockChanged(bool isPlayLock);
@@ -72,6 +76,7 @@ class GameController : public QObject
         Board* m_gameBoard;
         AIPlayer* m_aiImplement;
         TileShapeModel* m_tileShapeModel;
+        statechart::Main* m_statechart;
 };
 
 #endif //GAME_CONTROLLER_H

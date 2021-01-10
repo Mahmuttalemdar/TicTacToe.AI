@@ -181,6 +181,8 @@ bool Entrance::initialize()
     data->theme = std::make_unique<Theme>();
     data->gameController = std::make_unique<GameController>(data->gameSettings.get());
 
+    data->gameController->setStateChart(data->statechart.get());
+
     return true;
 }
 

@@ -176,27 +176,5 @@ Rectangle {
         }
     }
 
-    // CONNECTIONS
-    Connections {
-        target: entrance.gameController.gameBoard
-
-        function onGameStateChanged(gameState){
-            console.log("Game state: ", gameState)
-
-            if(gameState === GameBoard.WON) {
-                console.log("Game state: WON")
-            }
-            else if(gameState === GameBoard.LOSS) {
-                console.log("Game state: LOSS")
-            }
-            else if(gameState === GameBoard.DRAW) {
-                console.log("Game state: DRAW")
-            }
-            else if(gameState === GameBoard.ONGOING) {
-                console.log("Game state: ONGOING")
-            }
-        }
-    }
-
 }
 

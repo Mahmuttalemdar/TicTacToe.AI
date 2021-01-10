@@ -33,5 +33,6 @@
         <file>images/Difficulty/DifficultyMedium.svg</file>
         <file>images/Difficulty/DifficultyMediumActive.svg</file>
         <file>images/Player/PlayerProfile.svg</file>
+        <file>images/Backgrounds/Crystal.svg</file>
     </qresource>
 </RCC>

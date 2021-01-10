@@ -16,6 +16,7 @@ Button {
     property int buttonShapeInnerDistance: 12
     property int buttonDasherDuration: 700
     property int buttonFontSize: 22
+    property int buttonStrokeWidth: 3
     property bool isAnimateable: false
 
     width: buttonWidth
@@ -52,7 +53,7 @@ Button {
                 startX: shape.shapeRadius / 2
                 startY: 0
 
-                strokeWidth: 3
+                strokeWidth: root.buttonStrokeWidth
                 strokeColor: itemRoot.dashColor
                 strokeStyle: ShapePath.DashLine
                 dashPattern: [ 3, 5 ]

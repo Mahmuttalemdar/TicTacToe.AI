@@ -1,191 +1,127 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
-import QtMultimedia 5.15
+import QtGraphicalEffects 1.15
 
+import Core.Data 1.0
 import UIComponents.Buttons 1.0
+import UIScreens.OptionsScreen 1.0
+
+Popup {
+    id: root
+    width: 450
+    height: 600
+    modal: true
+    focus: true
+    padding: 0
+    closePolicy: Popup.CloseOnEscape
+    anchors.centerIn: Overlay.overlay
+
+    property string winnerText: "YOU WON"
 
 
-// START SCREEN
-Rectangle {
-    id: startScreen
-    width: parent.width
-    height: parent.height
-    color: "red"
-
-    // BACKGROUND
-    Image {
-        id: backgroundImage
-        width: parent.width
-        height: parent.height
-        source: "qrc:/imports/Theme/images/Backgrounds/Background2.svg"
+    enter: Transition {
+        NumberAnimation { property: "opacity"; from: 0.0; to: 1.0; duration: 1000 }
+    }
+    background: Rectangle {
+        color: "transparent"
     }
 
-    // BOARD
-    Item {
-        id: board
-        width: 500
-        height: 500
+    contentItem: Rectangle {
+        width: root.width
+        height: root.height
+        color: "transparent"
+        clip: true
 
-        anchors.top: parent.top
-        anchors.topMargin: 120
-        anchors.horizontalCenter: parent.horizontalCenter
-
-        // BOARD BACKGROUND
+        // BACKGROUND
         Image {
-            id: boardImage
-            width: parent.width
-            height: parent.height
-            source: "qrc:/imports/Theme/images/Backgrounds/Board.svg"
-        }
-
-        // ROW 1
-        Shape {
-            id: row1
-            width: board.width
-
-            ShapePath {
-                strokeColor: "white"
-                strokeWidth: 3
-                strokeStyle: ShapePath.DashLine
-
-                startX: 0
-                startY: board.height / 3
-
-                // PATH
-                PathLine { x: board.width; y: board.height / 3 }
+            id: background
+            anchors.fill: parent
+            source: "qrc:/imports/Theme/images/Backgrounds/Crystal.svg"
+            layer.enabled: true
+            layer.effect: OpacityMask {
+                maskSource: mask
             }
         }
 
-        // ROW 2
-        Shape {
-            id: row2
-            width: board.width
-
-            ShapePath {
-                strokeColor: "white"
-                strokeWidth: 3
-                strokeStyle: ShapePath.DashLine
-
-                startX: 0
-                startY: board.height * (2 / 3)
-
-                // PATH
-                PathLine { x: board.width; y: board.height * (2 / 3) }
-            }
+        Rectangle {
+            id: mask
+            anchors.fill: parent
+            radius: 60
+            visible: false
         }
 
-        // COLUMN 1
-        Shape {
-            id: column1
-            width: board.height
+        // TITLE
+        OptionsTitle {
+            id: optionsTitle
+            width: 200
+            height: 70
+            itemText: root.winnerText
+            itemTextColor: "#FFFFFF"
+            itemFontSize: 42
+            dashColor: "#FFFFFF"
+            dasherDuration: 700
+            shapeInnerDistance: 12
+            shapeStrokeWidth: 2
+            shapeOpacity: 1.0
 
-            ShapePath {
-                strokeColor: "white"
-                strokeWidth: 3
-                strokeStyle: ShapePath.DashLine
-
-                startX: board.width / 3
-                startY: 0
-
-                // PATH
-                PathLine { x: board.width / 3; y: board.height }
-            }
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: 92
+            anchors.horizontalCenter: parent.horizontalCenter
         }
 
-        // COLUMN 2
-        Shape {
-            id: column2
-            width: board.height
+        // NEXT BUTTON
+        DashedButton {
+            buttonWidth: 100
+            buttonHeight: 30
+            buttonOpacity: 1.0
+            buttonText: "REPLAY"
+            buttonTextColor: "#FFFFFF"
+            buttonBackgroundPrimaryColor: "transparent"
+            buttonBackgroundSecondaryColor: "transparent"
+            buttonDashColor: "#FFFFFF"
+            buttonShapeInnerDistance: 4
+            buttonDasherDuration: 700
+            buttonFontSize: 18
+            buttonStrokeWidth: 2
+            isAnimateable: false
 
-            ShapePath {
-                strokeColor: "white"
-                strokeWidth: 3
-                strokeStyle: ShapePath.DashLine
+            anchors.bottom: parent.bottom
+            anchors.bottomMargin: 35
+            anchors.horizontalCenter: parent.horizontalCenter
 
-                startX: board.width * 2 / 3
-                startY: 0
-
-                // PATH
-                PathLine { x: board.width * 2 / 3; y: board.height }
+            onClicked : {
+                entrance.statechart.submitEvent("restartGame", {})
             }
+
         }
+    }
 
-        // GRID
-        Grid {
-            id: boardGrid
-            width: parent.width
-            height: parent.height
-            flow: Grid.LeftToRight
-            layoutDirection: Qt.LeftToRight
+    // CONNECTIONS
+    Connections {
+        target: entrance.gameController.gameBoard
 
-            rows: entrance.gameController.gridSize
-            columns: entrance.gameController.gridSize
-            spacing: 6
+        function onGameStateChanged(gameState){
+            console.log("Game state: ", gameState)
 
-            // REPEATER
-            Repeater{
-                id: boardRepeater
-                model: boardGrid.rows * boardGrid.columns
-
-                Rectangle {
-                    id: boardRect
-                    width: boardGrid.width / boardGrid.columns - boardGrid.spacing
-                    height: boardGrid.height / boardGrid.rows - boardGrid.spacing
-                    color: "purple"
-
-                    property int cellRow: index / boardGrid.rows
-                    property int cellColumn: index % boardGrid.columns
-
-                    Item {
-                        id: tileImageItem
-                        anchors.fill: parent
-
-                        Image {
-                            id: tileImage
-                            source: ""
-                            fillMode: Image.PreserveAspectFit
-                            asynchronous: false
-                            anchors.fill: parent
-                        }
-                    }
-
-                    MouseArea {
-                        anchors.fill: parent
-
-                        onClicked: {
-                            console.log("Clicked :: X: ", cellRow)
-                            console.log("Clicked :: Y: ", cellColumn)
-
-                            if(!entrance.gameController.isPlayed(cellRow, cellColumn))
-                            {
-                                tileImage.source = "qrc:/imports/Theme/images/Tiles/TileX.svg"
-                                entrance.gameController.humanPlayedAt(cellRow, cellColumn)
-                            }
-                            else {
-                                console.log("Tile already played: X: ", cellRow, " Y: ",cellColumn)
-                            }
-                        }
-                    }
-
-
-                    Connections {
-                        target: entrance.gameController
-                        function onUpdateAIPlayerOnUI(row, column)
-                        {
-                            if(entrance.gameController.isPlayed(cellRow, cellColumn)
-                                    && boardRect.cellRow === row
-                                    && boardRect.cellColumn === column)
-                            {
-                                tileImage.source = "qrc:/imports/Theme/images/Tiles/TileO.svg"
-                            }
-                            else {
-                                console.log("Tile already played: X: ", cellRow, " Y: ",cellColumn)
-                            }
-                        }
-                    }
-
-                }
-
+            if(gameState === GameBoard.WON) {
+                console.log("Game state: WON")
+                root.winnerText = "YOU LOSE"
+                root.open()
+            }
+            else if(gameState === GameBoard.LOSS) {
+                console.log("Game state: LOSS")
+                root.winnerText = "YOU WON"
+                root.open()
+            }
+            else if(gameState === GameBoard.DRAW) {
+                console.log("Game state: DRAW")
+                root.winnerText = "DRAW"
+                root.open()
+            }
+            else if(gameState === GameBoard.ONGOING) {
+                console.log("Game state: ONGOING")
+                root.winnerText = "ONGOING"
+                root.close()
             }
         }
     }

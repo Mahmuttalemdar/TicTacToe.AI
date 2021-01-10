@@ -187,8 +187,6 @@ Rectangle {
         }
     }
 
-
-
     // EVENT: backToChooseShapePage
     EventConnection {
         stateMachine: entrance.statechart

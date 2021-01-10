@@ -3,6 +3,7 @@
 #include <thread>
 
 #include <QObject>
+#include <QScxmlStateMachine>
 
 GameController::GameController(GameSettings* gameSettings, QObject* parent)
     : QObject(parent)
@@ -86,6 +87,15 @@ Board* GameController::gameBoard() const
 TileShapeModel* GameController::tileShapeModel() const
 {
     return m_tileShapeModel;
+}
+
+void GameController::setStateChart(statechart::Main* stateChart)
+{
+    if(stateChart)
+    {
+        m_statechart = stateChart;
+        m_statechart->connectToEvent("restartGame", this, &GameController::handleRestartGame);
+    }
 }
 
 void GameController::initializeModels()
@@ -177,5 +187,11 @@ void GameController::handleHumanPlayerNameChanged(QString playerName)
 void GameController::handleAiPlayerNameChanged(QString playerName)
 {
     m_aiPlayer.SetPlayerName(playerName);
+    m_gameBoard->restart();
+}
+
+void GameController::handleRestartGame()
+{
+    setIsPlayLock(false);
     m_gameBoard->restart();
 }

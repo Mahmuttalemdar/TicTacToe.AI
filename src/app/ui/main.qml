@@ -2,10 +2,8 @@
 import QtQuick.Window 2.15
 import QtQuick.Controls 2.15
 import QtScxml 5.15
-import QtQuick.Shapes 1.15
 
 import UIComponents.Backgrounds 1.0
-
 import UIScreens.GamePlayScreen 1.0
 import UIScreens.OptionsScreen 1.0
 import UIScreens.ScoreScreen 1.0
@@ -30,6 +28,12 @@ ApplicationWindow {
         height: appRootHeight
         initialItem: startScreenPageComp
         focus: true
+
+        ScoreScreenPage {
+            id: scoreScreenPage
+        }
+
+        Component.onCompleted: scoreScreenPage.open()
     }
 
     // START SCREEN PAGE
@@ -82,6 +86,7 @@ ApplicationWindow {
             mainStack.push(gamePlayScreenPageComp)
         }
     }
+
 }
 
 
