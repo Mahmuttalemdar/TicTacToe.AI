@@ -10,6 +10,7 @@ Board::Board(unsigned int gridSize)
     , m_columnPlayed(0)
     , m_cachedLastRowPlayed(0)
     , m_cachedLastColumnPlayed(0)
+    , m_gameState(GameState::ONGOING)
 {
     //Intialize With All Blanks
     std::vector<std::vector<Tile>> boardData(
@@ -31,6 +32,7 @@ Board::Board(const Board& board)
     m_cachedLastRowPlayed = board.m_cachedLastRowPlayed;
     m_cachedLastColumnPlayed = board.m_cachedLastColumnPlayed;
     m_gameBoard = board.m_gameBoard;
+    m_gameState = board.m_gameState;
 }
 
 Board& Board::operator =(const Board& board)
@@ -43,6 +45,7 @@ Board& Board::operator =(const Board& board)
     m_cachedLastRowPlayed = board.m_cachedLastRowPlayed;
     m_cachedLastColumnPlayed = board.m_cachedLastColumnPlayed;
     m_gameBoard = board.m_gameBoard;
+    m_gameState = board.m_gameState;
 
     return *this;
 }
@@ -58,6 +61,7 @@ Board::Board(const Board& board, unsigned int row, unsigned int column, Player p
     m_cachedLastColumnPlayed = 0;
     m_gameBoard = board.m_gameBoard;
     m_gameBoard[row][column].SetPlayer(player);
+    m_gameState = board.m_gameState;
 
 }
 
@@ -71,6 +75,7 @@ Board::Board(Board&& board)
     m_cachedLastRowPlayed = std::move(board.m_cachedLastRowPlayed);
     m_cachedLastColumnPlayed = std::move(board.m_cachedLastColumnPlayed);
     m_gameBoard = std::move(board.m_gameBoard);
+    m_gameState = std::move(board.m_gameState);
 }
 
 Board& Board::operator =(Board&& board)
@@ -83,7 +88,7 @@ Board& Board::operator =(Board&& board)
     m_cachedLastRowPlayed = std::move(board.m_cachedLastRowPlayed);
     m_cachedLastColumnPlayed = std::move(board.m_cachedLastColumnPlayed);
     m_gameBoard = std::move(board.m_gameBoard);
-
+    m_gameState = std::move(board.m_gameState);
     return *this;
 }
 
@@ -165,11 +170,6 @@ const std::vector<std::vector<Tile>>& Board::getGameBoard()
     return m_gameBoard;
 }
 
-//Tile& Board::getTile(unsigned int row, unsigned int column)
-//{
-//    return m_gameBoard[row][column];
-//}
-
 const Tile& Board::getTile(unsigned int row, unsigned int column) const
 {
     return m_gameBoard[row][column];
@@ -233,7 +233,7 @@ const std::vector<std::unique_ptr<Board> > Board::generatePossibleStates(Player 
     return movesSet;
 }
 
-Board::GameState Board::checkGameState() const
+Board::GameState Board::checkGameState()
 {
     // ROWS
     for(unsigned int row = 0; row < getGridSize(); row++)
@@ -247,24 +247,31 @@ Board::GameState Board::checkGameState() const
                     && m_gameBoard[row][column].GetState() != Tile::State::BLANK )
             {
                 ++rowCount;
+                m_winnerList.append(QPoint(row, column));
             }
             else {
-                break;;
+                break;
             }
         }
 
         // If one row is fill (this mean HUMAN or AI WON)
         if(rowCount == getGridSize() - 1)
         {
+            m_winnerList.append(QPoint(0, rowCount));
             if(m_gameBoard[row][0].GetPlayer().GetType() == Player::Type::AI)
             {
+                setGameState(GameState::WON);
                 return GameState::WON;
             }
             else
             {
+                setGameState(GameState::LOSS);
                 return GameState::LOSS;
             }
 
+        }
+        else {
+            m_winnerList.clear();
         }
 
     }
@@ -280,6 +287,7 @@ Board::GameState Board::checkGameState() const
                     && m_gameBoard[row][column].GetState() != Tile::State::BLANK )
             {
                 ++columnCount;
+                m_winnerList.append(QPoint(row, column));
             }
             else {
                 break;;
@@ -289,15 +297,21 @@ Board::GameState Board::checkGameState() const
         // If one row is fill (this mean HUMAN or AI WON)
         if(columnCount == getGridSize() - 1)
         {
+            m_winnerList.append(QPoint(columnCount, 0));
             if(m_gameBoard[0][column].GetPlayer().GetType() == Player::Type::AI)
             {
+                setGameState(GameState::WON);
                 return GameState::WON;
             }
             else
             {
+                setGameState(GameState::LOSS);
                 return GameState::LOSS;
             }
 
+        }
+        else {
+            m_winnerList.clear();
         }
     }
 
@@ -322,10 +336,12 @@ Board::GameState Board::checkGameState() const
     {
         if(m_gameBoard[0][0].GetPlayer().GetType() == Player::Type::AI)
         {
+            setGameState(GameState::WON);
             return GameState::WON;
         }
         else
         {
+            setGameState(GameState::LOSS);
             return GameState::LOSS;
         }
     }
@@ -351,10 +367,12 @@ Board::GameState Board::checkGameState() const
     {
         if(m_gameBoard[0][getGridSize() - 1].GetPlayer().GetType() == Player::Type::AI)
         {
+            setGameState(GameState::WON);
             return GameState::WON;
         }
         else
         {
+            setGameState(GameState::LOSS);
             return GameState::LOSS;
         }
     }
@@ -366,12 +384,14 @@ Board::GameState Board::checkGameState() const
         {
             if(m_gameBoard[i][j].GetState() == Tile::State::BLANK)
             {
+                setGameState(GameState::ONGOING);
                 return GameState::ONGOING;
             }
         }
     }
 
     // DRAW
+    setGameState(GameState::DRAW);
     return GameState::DRAW;
 }
 
@@ -423,6 +443,25 @@ void Board::restart()
 
     //Set Board Game Data Structure
     m_gameBoard = std::move(boardData);
+}
+
+QList<QPoint> Board::getWinnerList()
+{
+    return m_winnerList;
+}
+
+Board::GameState Board::gameState() const
+{
+    return m_gameState;
+}
+
+void Board::setGameState(Board::GameState gameState)
+{
+    if (m_gameState == gameState)
+        return;
+
+    m_gameState = gameState;
+    emit gameStateChanged(m_gameState);
 }
 
 

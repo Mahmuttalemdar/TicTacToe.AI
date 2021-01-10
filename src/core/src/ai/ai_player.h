@@ -35,7 +35,7 @@ class AIPlayer
         Board MiniMaxDecision(Board* currentBoard);
 
         //Evaluation Function State
-        int evalutaionFunciton(const Board& currentBoard, Player player);
+        int evalutaionFunciton(Board& currentBoard, Player player);
         //max function
         int maxValue(Board& childBoard, int alpha, int beta);
         //min function

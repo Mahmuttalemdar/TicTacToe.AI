@@ -4,6 +4,10 @@
 #include <vector>
 #include <ostream>
 
+#include <QList>
+#include <QPoint>
+#include <QObject>
+
 class Tile;
 class Player;
 
@@ -11,10 +15,19 @@ class Player;
  * @brief The Player class: holds the board state
  * and board grid size
  */
-class Board
+class Board : public QObject
 {
+        Q_OBJECT
+        Q_PROPERTY(GameState gameState READ gameState WRITE setGameState NOTIFY gameStateChanged)
     public:
-        enum class GameState { WON, LOSS, ONGOING, DRAW };
+        enum GameState
+        {
+            WON = 0
+            , LOSS
+            , ONGOING
+            , DRAW
+        };
+        Q_ENUM(GameState)
 
         /**
          * @brief C-tor
@@ -160,12 +173,21 @@ class Board
          */
         const std::vector<std::unique_ptr<Board>> generatePossibleStates(Player player);
 
-        GameState checkGameState() const;
+        GameState checkGameState();
 
         bool nextChildBoard(Player player, std::shared_ptr<Board>& childBoard);
 
         void restart();
 
+        Q_INVOKABLE QList<QPoint> getWinnerList();
+
+        GameState gameState() const;
+
+    public slots:
+        void setGameState(GameState gameState);
+
+    signals:
+        void gameStateChanged(GameState gameState);
 
     private:
         unsigned int m_gridSize = 0;
@@ -178,6 +200,11 @@ class Board
 
         std::vector<std::vector<Tile>> m_gameBoard;
         std::shared_ptr<Board> m_childrenBoard = nullptr;
+        QList<QPoint> m_winnerList;
+        GameState m_gameState;
 };
+
+Q_DECLARE_METATYPE(Board *)
+Q_DECLARE_METATYPE(const Board *)
 
 #endif // BOARD_H

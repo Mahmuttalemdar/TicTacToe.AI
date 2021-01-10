@@ -7,6 +7,7 @@
 #include "src/settings/game_settings.h"
 #include "src/data/game_difficulty.h"
 #include "src/data/tile_shape.h"
+#include "src/game/board.h"
 
 #include <QQmlContext>
 #include <QQmlEngine>
@@ -57,6 +58,8 @@ void CorePlugin::registerTypes(const char * uri)
 
     qmlRegisterType<GameSettings>("Core.Data", 1, 0, "GameSettings");
     qmlRegisterType<GameDifficulty>("Core.Data", 1, 0, "GameDifficulty");
+    qmlRegisterType<Board>("Core.Data", 1, 0, "GameBoard");
+
 }
 
 void CorePlugin::initializeEngine(QQmlEngine *engine, const char * uri)

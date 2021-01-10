@@ -276,16 +276,22 @@ Rectangle {
                     console.log("Clicked :: X: ", cellRow)
                     console.log("Clicked :: Y: ", cellColumn)
 
-                    if(!entrance.gameController.isPlayed(cellRow, cellColumn))
-                    {
-                        tileImage.source = entrance.gameSettings.humanTile.image
-                        entrance.gameController.isPlayLock = true;
-                        root.delay(root.moveTime, function() {
-                            entrance.gameController.humanPlayedAt(cellRow, cellColumn)
-                        })
+                    if(entrance.gameController.isPlayLock === false) {
+
+                        if(!entrance.gameController.isPlayed(cellRow, cellColumn))
+                        {
+                            tileImage.source = entrance.gameSettings.humanTile.image
+                            entrance.gameController.isPlayLock = true;
+                            root.delay(root.moveTime, function() {
+                                entrance.gameController.humanPlayedAt(cellRow, cellColumn)
+                            })
+                        }
+                        else {
+                            console.log("Tile already played: X: ", cellRow, " Y: ",cellColumn)
+                        }
                     }
                     else {
-                        console.log("Tile already played: X: ", cellRow, " Y: ",cellColumn)
+                        console.log("AI is still thinking, you can not move yet!. Be patient :)")
                     }
                 }
             }

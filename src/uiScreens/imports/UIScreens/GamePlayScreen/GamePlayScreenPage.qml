@@ -2,6 +2,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Shapes 1.15
 
+import Core.Data 1.0
 import UIComponents.Backgrounds 1.0
 import UIComponents.Buttons 1.0
 
@@ -174,5 +175,28 @@ Rectangle {
             console.log("GAME TURN IS: ", isPlayLock)
         }
     }
+
+    // CONNECTIONS
+    Connections {
+        target: entrance.gameController.gameBoard
+
+        function onGameStateChanged(gameState){
+            console.log("Game state: ", gameState)
+
+            if(gameState === GameBoard.WON) {
+                console.log("Game state: WON")
+            }
+            else if(gameState === GameBoard.LOSS) {
+                console.log("Game state: LOSS")
+            }
+            else if(gameState === GameBoard.DRAW) {
+                console.log("Game state: DRAW")
+            }
+            else if(gameState === GameBoard.ONGOING) {
+                console.log("Game state: ONGOING")
+            }
+        }
+    }
+
 }
 

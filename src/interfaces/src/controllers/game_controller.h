@@ -19,13 +19,18 @@ class GameController : public QObject
 
     public:
         /**
-          * @brief C-tor
-          */
-        GameController(GameSettings* gameSettings, QObject* parent = nullptr);
+         * @brief C-tor
+         */
+        explicit GameController(GameSettings* gameSettings, QObject* parent = nullptr);
 
         /**
-          * @brief D-tor
-          */
+         * @brief C-tor
+         */
+        GameController(QObject* parent = nullptr);
+
+        /**
+         * @brief D-tor
+         */
         ~GameController();
 
         Q_INVOKABLE bool isPlayed(unsigned int row, unsigned int column);
@@ -55,7 +60,6 @@ class GameController : public QObject
         void isPlayLockChanged(bool isPlayLock);
         void aiPlayedAt(unsigned int row, unsigned int column);
         void updateAIPlayerOnUI(unsigned int row, unsigned int column);
-
         void gameBoardChanged(Board* gameBoard);
         void tileShapeModelChanged(TileShapeModel* tileShapeModel);
 
@@ -68,7 +72,6 @@ class GameController : public QObject
         Board* m_gameBoard;
         AIPlayer* m_aiImplement;
         TileShapeModel* m_tileShapeModel;
-
 };
 
 #endif //GAME_CONTROLLER_H

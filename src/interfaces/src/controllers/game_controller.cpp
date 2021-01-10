@@ -27,6 +27,10 @@ GameController::GameController(GameSettings* gameSettings, QObject* parent)
     QObject::connect(this, &GameController::aiPlayedAt, this, &GameController::handleAIPlayedAt);
 }
 
+GameController::GameController(QObject* parent)
+    : QObject(parent)
+{}
+
 GameController::~GameController()
 {}
 

@@ -97,7 +97,7 @@ Board AIPlayer::MiniMaxDecision(Board* currentBoard)
     return std::move(*bestMove);
 }
 
-int AIPlayer::evalutaionFunciton(const Board& currentBoard, Player player)
+int AIPlayer::evalutaionFunciton(Board& currentBoard, Player player)
 {
     // WON :: If you have won = INF
     if(currentBoard.checkGameState() == Board::GameState::WON)

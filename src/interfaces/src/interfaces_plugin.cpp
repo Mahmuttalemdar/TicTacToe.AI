@@ -1,4 +1,5 @@
 #include "interfaces_plugin.h"
+#include "src/controllers/game_controller.h"
 
 #include <QQmlContext>
 #include <QQmlEngine>
@@ -35,6 +36,8 @@ void InterfacesPlugin::registerTypes(const char * uri)
 
     registered = true;
     initProviders();
+
+    qmlRegisterType<GameController>("Core.Interface", 1, 0, "GameController");
 
 }
 
