@@ -29,11 +29,45 @@ ApplicationWindow {
         initialItem: startScreenPageComp
         focus: true
 
+        popEnter: Transition {
+            XAnimator {
+                from: (mainStack.mirrored ? -1 : 1) * -mainStack.width
+                to: 0
+                duration: 400
+                easing.type: Easing.OutCubic
+            }
+        }
+
+        popExit: Transition {
+            XAnimator {
+                from: 0
+                to: (mainStack.mirrored ? -1 : 1) * mainStack.width
+                duration: 400
+                easing.type: Easing.OutCubic
+            }
+        }
+
+        pushEnter: Transition {
+            XAnimator {
+                from: (mainStack.mirrored ? -1 : 1) * -mainStack.width
+                to: 0
+                duration: 400
+                easing.type: Easing.OutCubic
+            }
+        }
+
+        pushExit: Transition {
+            XAnimator {
+                from: 0
+                to: (mainStack.mirrored ? -1 : 1) * mainStack.width
+                duration: 400
+                easing.type: Easing.OutCubic
+            }
+        }
+
         ScoreScreenPage {
             id: scoreScreenPage
         }
-
-        Component.onCompleted: scoreScreenPage.open()
     }
 
     // START SCREEN PAGE
@@ -83,6 +117,17 @@ ApplicationWindow {
         stateMachine: entrance.statechart
         events: ["openGamePlayScreen"]
         onOccurred: {
+            mainStack.push(gamePlayScreenPageComp)
+        }
+    }
+
+    // EVENT: restartGame
+    EventConnection {
+        stateMachine: entrance.statechart
+        events: ["restartGame"]
+        onOccurred: {
+            console.log("Main stack current item: ", mainStack.currentItem)
+            mainStack.pop()
             mainStack.push(gamePlayScreenPageComp)
         }
     }
