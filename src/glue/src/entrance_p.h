@@ -2,15 +2,11 @@
 #define ENTRANCE_P_H
 
 #include <memory>
-#include <QObject>
-#include <QString>
 
 #include "statechart/Main.h"
 #include <core/src/settings/game_settings.h>
 #include <core/src/theme/theme.h>
 #include <interfaces/src/controllers/game_controller.h>
-
-
 
 struct EntrancePrivate
 {

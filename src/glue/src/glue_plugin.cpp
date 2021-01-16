@@ -17,7 +17,9 @@ static void cleanupProviders() {}
 GluePlugin::GluePlugin(QObject *parent)
     : QQmlExtensionPlugin(parent)
     , registered(false)
-{}
+{
+    initResources();
+}
 
 GluePlugin::~GluePlugin()
 {

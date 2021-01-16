@@ -78,8 +78,6 @@ class Board : public QObject
          * @param column
          * @return : Tile
          */
-        //Tile* getTile(unsigned int row, unsigned int column);
-
         const Tile& getTile(unsigned int row, unsigned int column) const;
 
         /**

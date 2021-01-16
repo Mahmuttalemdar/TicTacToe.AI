@@ -1,13 +1,10 @@
 #ifndef ENTRANCE_H
 #define ENTRANCE_H
 
-#include <memory>
 #include <thread>
 #include <mutex>
 
 #include <QObject>
-#include <QWindow>
-#include <QQmlComponent>
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 
@@ -34,11 +31,27 @@ class Entrance : public QObject
 
     public:
         /**
-         * Access Providers
+         * @brief Getter: statechart
+         * @return : statechart::Main
          */
         statechart::Main* statechart() const;
+
+        /**
+         * @brief Getter: GameSettings
+         * @return : GameSettings
+         */
         GameSettings* gameSettings() const;
+
+        /**
+         * @brief Getter: Theme
+         * @return : Theme
+         */
         Theme *theme() const;
+
+        /**
+         * @brief Getter: GameController
+         * @return : GameController
+         */
         GameController* gameController() const;
 
     Q_SIGNALS:
@@ -90,28 +103,28 @@ class Entrance : public QObject
         * @brief Imports necessary plugins
         * @return
         */
-        bool registerPlugins(void);
+        void registerPlugins(void);
 
         /**
         * @brief Initialize QQmlApplicationEngine
         * @return
         */
-        bool createQQmlEngines(void);
+        void createQQmlEngines(void) const;
 
         /**
          * @brief startStateChart
          */
-        void startStateChart(void);
+        void startStateChart(void) const;
 
         /**
          * @brief configureQGuiApplication
          */
-        bool configureQGuiApplication(void);
+        void configureQGuiApplication(void) const;
 
         /**
          * @brief initialize
          */
-        bool initialize(void);
+        void initialize(void) const;
 
     private:
         static Entrance *instance;
@@ -121,12 +134,8 @@ class Entrance : public QObject
         EntrancePrivate* data;
 
     private:
-        QPointer<QGuiApplication> app;
-        QObject* appRoot_{};
-        QWindow* appWindow_{};
-
-        // QQmlApplicationEngine* splashscreenEngine_;
-        QPointer<QQmlApplicationEngine> engine;
+        QPointer<QGuiApplication> m_app{};
+        QPointer<QQmlApplicationEngine> m_engine{};
 };
 
 #endif //ENTRANCE_H

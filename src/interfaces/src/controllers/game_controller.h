@@ -34,25 +34,65 @@ class GameController : public QObject
          */
         ~GameController();
 
+        /**
+         * @brief isPlayed: Is played to this tile by a player
+         * @param row : played tile row number
+         * @param column : played tile column number
+         * @return true: played this tile, false: not played
+         */
         Q_INVOKABLE bool isPlayed(unsigned int row, unsigned int column);
+
+        /**
+         * @brief humanPlayedAt: Firing after human played a tile on board
+         * @param row : played tile row number
+         * @param column : played tile column number
+         */
         Q_INVOKABLE void humanPlayedAt(unsigned int row, unsigned int column);
+
+        /**
+         * @brief selectShapeByIndex: On option screen, player will choose a tile type
+         * @param index : index parameter on model
+         */
         Q_INVOKABLE void selectShapeByIndex(unsigned int index);
 
+        /**
+         * @brief isPlayLock: Is current player can able to move a tile or not
+         * @return: true: ai, false: human
+         */
         bool isPlayLock() const;
 
+        /**
+         * @brief gameBoard: Storing all game logic and board data
+         * @return: an instance of game board
+         */
         Board* gameBoard() const;
+
+        /**
+         * @brief tileShapeModel: getter for model which is storing tile shapes
+         * @return: an instance of tile shapes
+         */
         TileShapeModel* tileShapeModel() const;
 
+        /**
+         * @brief setStateChart: Alias of statechart whichs is comming from entrance
+         * @param stateChart: statechart::Main
+         */
         void setStateChart(statechart::Main *stateChart);
 
     private:
+        /**
+         * @brief initializeModels: init function to construct all models
+         */
         void initializeModels();
+
+        /**
+         * @brief aiThinkAndPlay: Get latest board and try to find best move
+         */
         void aiThinkAndPlay();
 
     public slots:
         void setIsPlayLock(bool isPlayLock);
         void setTileShapeModel(TileShapeModel* tileShapeModel);
-
         void handleAIPlayedAt(unsigned int row, unsigned int column);
         void handleGameDifficultyChanged(GameDifficulty::Difficulty difficulty);
         void handleGridSizeChanged(unsigned int gridSize);
@@ -69,7 +109,6 @@ class GameController : public QObject
 
     private:
         GameSettings* m_gameSettings;
-        //Stop A Player From Playing A Second Time Until The Lock Is Released
         bool m_isPlayLock = false;
         Player m_humanPlayer;
         Player m_aiPlayer;

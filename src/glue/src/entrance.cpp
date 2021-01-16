@@ -1,32 +1,10 @@
 #include "entrance.h"
 #include "entrance_p.h"
 
-#include <memory>
-#include <thread>
-#include <chrono>
-
-#include <QQmlApplicationEngine>
-#include <QQmlContext>
-#include <QQmlEngine>
+#include <QtPlugin>
 #include <QPluginLoader>
 #include <QQmlExtensionPlugin>
-#include <QObject>
-#include <QWindow>
-#include <QtPlugin>
-#include <QCommandLineParser>
-#include <QCommandLineOption>
-#include <QQmlComponent>
-#include <QQuickView>
-#include <QtPlugin>
 #include <QDebug>
-#include <QQmlComponent>
-#include <QTimer>
-#include <QDir>
-#include <QtGlobal>
-#include <QAbstractEventDispatcher>
-#include <QSettings>
-#include <QTimer>
-#include <QProcess>
 
 #ifdef QT_DEBUG
 #include <QQmlDebuggingEnabler>
@@ -61,19 +39,18 @@ Entrance* Entrance::getInstance()
     return instance;
 }
 
-
 int Entrance::run(int argc, char *argv[])
 {
     // Pre-Settings of Application
     configureQGuiApplication();
 
-    app = new QGuiApplication(argc, argv);
-    engine = new QQmlApplicationEngine();
+    m_app = new QGuiApplication(argc, argv);
+    m_engine = new QQmlApplicationEngine();
 
     // Initialize objects and environments
     initialize();
 
-    // Register all STATIC Plugins
+    // Register all static plugins
     registerPlugins();
 
     // Initialize Qml Engine
@@ -82,7 +59,7 @@ int Entrance::run(int argc, char *argv[])
     // Start Statechart
     startStateChart();
 
-    return app->exec();
+    return m_app->exec();
 }
 
 statechart::Main *Entrance::statechart() const
@@ -105,17 +82,16 @@ GameController* Entrance::gameController() const
     return data->gameController.get();
 }
 
-bool Entrance::configureQGuiApplication()
+void Entrance::configureQGuiApplication() const
 {
     QGuiApplication::setApplicationName("TicTacToe.AI");
     QGuiApplication::setOrganizationName("AlemdarCorp");
     QGuiApplication::setApplicationVersion("0.1.0");
     QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QGuiApplication::setAttribute(Qt::AA_ShareOpenGLContexts);
-    return true;
 }
 
-bool Entrance::registerPlugins()
+void Entrance::registerPlugins()
 {
     try
     {
@@ -125,43 +101,33 @@ bool Entrance::registerPlugins()
         Q_IMPORT_PLUGIN(InterfacesPlugin)
         Q_IMPORT_PLUGIN(GluePlugin)
 
-        // TODO :: LOG
-        // KYCLog(Initializing plugins)
         for (auto const &plugin : QPluginLoader::staticPlugins())
         {
             auto name = plugin.metaData()["IID"].toString("");
-
             auto iid = name.toStdString();
             auto instance = qobject_cast<QQmlExtensionPlugin*>(plugin.instance());
 
-            qDebug() << instance << iid.c_str();
+            qDebug() << "Initialized plugin: "<< instance << " : "<<iid.c_str();
             if (instance != nullptr)
             {
                 instance->registerTypes(iid.c_str());
-                instance->initializeEngine(engine, iid.c_str());
+                instance->initializeEngine(m_engine, iid.c_str());
             }
         }
     }
     catch (std::exception& e)
     {
-        // TODO :: LOG
-        // KYCLog(e.what())
-        qDebug() << "Failed to register plugins: " << e.what();
-        return false;
+        qCritical() << "Failed to register plugins: " << e.what();
     }
-
-    return true;
 }
 
-bool Entrance::createQQmlEngines()
+void Entrance::createQQmlEngines() const
 {
     const QUrl url(QStringLiteral("qrc:/main.qml"));
-    engine->load(url);
-
-    return true;
+    m_engine->load(url);
 }
 
-void Entrance::startStateChart()
+void Entrance::startStateChart() const
 {
     if(data->statechart)
     {
@@ -173,17 +139,12 @@ void Entrance::startStateChart()
     }
 }
 
-bool Entrance::initialize()
+void Entrance::initialize() const
 {
     // Initialize objects
     data->statechart = std::make_unique<statechart::Main>();
     data->gameSettings = std::make_unique<GameSettings>();
     data->theme = std::make_unique<Theme>();
     data->gameController = std::make_unique<GameController>(data->gameSettings.get());
-
     data->gameController->setStateChart(data->statechart.get());
-
-    return true;
 }
-
-

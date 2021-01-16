@@ -38,7 +38,6 @@ void InterfacesPlugin::registerTypes(const char * uri)
     initProviders();
 
     qmlRegisterType<GameController>("Core.Interface", 1, 0, "GameController");
-
 }
 
 void InterfacesPlugin::initializeEngine(QQmlEngine *engine, const char * uri)
