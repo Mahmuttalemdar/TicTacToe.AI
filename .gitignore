@@ -1,7 +1,6 @@
 # This file is used to ignore files which are generated
 # ----------------------------------------------------------------------------
 /build/
-.clang-format
 *.user
 *.user.*
 *~
@@ -76,7 +75,6 @@ Thumbs.db
 
 *.qmlc
 compile_commands.json
-.clang-format
 *.profraw
 *.log
 *.out
@@ -120,4 +118,3 @@ out
 .Trashes
 ehthumbs.db
 Thumbs.db
-src/interfaces/src/.DS_Store
