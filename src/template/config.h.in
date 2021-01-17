@@ -17,13 +17,13 @@ namespace tictactoeai {
 constexpr bool ON = 1;
 constexpr bool OFF = 0;
 
-constexpr auto versionMajor{ ${ VER_MAJ } };
-constexpr auto versionMinor{ ${ VER_MIN } };
-constexpr auto versionPatch{ ${ VER_PAT } };
-constexpr auto versionTeamcityNo{ ${ VER_TCN } };
+constexpr auto versionMajor{ "${VER_MAJ}" };
+constexpr auto versionMinor{ "${VER_MIN}" };
+constexpr auto versionPatch{ "${VER_PAT}" };
+constexpr auto versionBuildNo{ "${VER_BID}" };
 
 auto const name = QString::fromUtf8("${CMAKE_PROJECT_NAME}");
-auto const versionNumber = QVersionNumber{ versionMajor, versionMinor, versionTeamcityNo };
+auto const versionNumber = QVersionNumber{ versionMajor, versionMinor, versionBuildNo };
 auto const version = versionNumber.toString();
 
 }

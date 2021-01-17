@@ -10,7 +10,7 @@ set(VER_PAT 0)      # App patch version number
 set(VER_BID 0)      # Pipeline build number
 
 if(DEFINED ENV{BUILD_ID})
-    set(VER_TCN $ENV{BUILD_ID})
+    set(VER_BID $ENV{BUILD_ID})
 endif()
 
 set(PROJECT_VERSION_MAJOR ${VER_MAJ})
