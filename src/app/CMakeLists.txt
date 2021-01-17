@@ -72,3 +72,5 @@ add_dependencies(
         sub::UIComponents
         sub::UIScreens
     )
+
+include(Install)

@@ -48,4 +48,9 @@ set_property(GLOBAL PROPERTY QML_IMPORT_PATH "${QML_IMPORT_PATH}")
 set(QML_IMPORT_PATH "${QML_IMPORT_PATH} ${QML_DIRS}" CACHE STRING "Qt Creator extra qml import paths" FORCE)
 set(QML2_IMPORT_PATH "${QML2_IMPORT_PATH} ${QML_DIRS}" CACHE STRING "Qt Creator extra qml import paths" FORCE)
 
+# -------------------------------------------------------------------------------------------------
+# CPack
+# -------------------------------------------------------------------------------------------------
+include(Package)
+
 
