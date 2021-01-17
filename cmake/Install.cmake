@@ -12,20 +12,20 @@ install(TARGETS TicTacToe.AI
 
 # Install desktop files, completion and dbus files
 configure_file(${CMAKE_SOURCE_DIR}/res/desktopEntry/package/org.alemdarCorp.TicTacToe.AI.desktop
-               ${CMAKE_CURRENT_BINARY_DIR}/share/applications/org.alemdarCorp.TicTacToe.AI.desktop COPYONLY)
+               ${CMAKE_BINARY_DIR}/app/share/applications/org.alemdarCorp.TicTacToe.AI.desktop COPYONLY)
 
 # Install Icons
 configure_file(${CMAKE_SOURCE_DIR}/res/img/hicolor/48x48/apps/tictactoe.png
-               ${CMAKE_CURRENT_BINARY_DIR}/share/icons/hicolor/48x48/apps/tictactoe.png COPYONLY)
+               ${CMAKE_BINARY_DIR}/app/share/icons/hicolor/48x48/apps/tictactoe.png COPYONLY)
 
 configure_file(${CMAKE_SOURCE_DIR}/res/img/hicolor/128x128/apps/tictactoe.png
-               ${CMAKE_CURRENT_BINARY_DIR}/share/icons/hicolor/128x128/apps/tictactoe.png COPYONLY)
+               ${CMAKE_BINARY_DIR}/app/share/icons/hicolor/128x128/apps/tictactoe.png COPYONLY)
 
 configure_file(${CMAKE_SOURCE_DIR}/res/img/hicolor/scalable/apps/tictactoe.svg
-               ${CMAKE_CURRENT_BINARY_DIR}/share/icons/hicolor/scalable/apps/tictactoe.svg COPYONLY)
+               ${CMAKE_BINARY_DIR}/app/share/icons/hicolor/scalable/apps/tictactoe.svg COPYONLY)
 
 # Install assets
-install(DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}/share/ DESTINATION ${CMAKE_INSTALL_DATAROOTDIR})
+install(DIRECTORY ${CMAKE_BINARY_DIR}/app/share/ DESTINATION ${CMAKE_INSTALL_DATAROOTDIR})
 
 # Install Translations
 # install(FILES ${QM_FILES} DESTINATION ${CMAKE_INSTALL_DATAROOTDIR}/tictactoe/translations)
@@ -61,14 +61,15 @@ endif()
 # macdeployqt
 if (APPLE)
     set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/Modules/")
-    execute_process(COMMAND brew --prefix qt5 OUTPUT_VARIABLE QTDIR)
+    # execute_process(COMMAND brew --prefix qt5 OUTPUT_VARIABLE QTDIR)
+    set(QTDIR "${Qt5_DIR}/../../../")
     string(REGEX REPLACE "\n$" "" QTDIR "${QTDIR}")
     set(MAC_DEPLOY_QT ${QTDIR}/bin/macdeployqt)
     if (EXISTS ${MAC_DEPLOY_QT})
-        set_source_files_properties(resources/icon.icns PROPERTIES
+        set_source_files_properties(${CMAKE_SOURCE_DIR}/res/img/app/tictactoe.icns PROPERTIES
                 MACOSX_PACKAGE_LOCATION Resources)
 
-        set_target_properties(${target} PROPERTIES
+        set_target_properties(${PROJECT_NAME} PROPERTIES
                 MACOSX_BUNDLE TRUE
                 )
     else ()
