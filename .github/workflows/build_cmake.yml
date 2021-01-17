@@ -71,7 +71,7 @@ jobs:
         # 
         # We need to source the profile file to make sure conan is in PATH
         run: |
-          cmake $GITHUB_WORKSPACE -DCMAKE_BUILD_TYPE=$BUILD_TYPE
+          cmake $GITHUB_WORKSPACE -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DQt5_DIR=/opt/Qt5/lib/cmake/Qt5
       - name: Build
         working-directory: ${{runner.workspace}}/build
         shell: bash
