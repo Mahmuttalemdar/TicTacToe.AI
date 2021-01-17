@@ -11,7 +11,7 @@ class Fonts : public QObject
     Q_PROPERTY(QString openSans READ openSans NOTIFY openSansChanged)
 
 public:
-    explicit Fonts(QObject *parent = nullptr);
+    explicit Fonts(QObject* parent = nullptr);
     ~Fonts();
 
     QString roboto() const;

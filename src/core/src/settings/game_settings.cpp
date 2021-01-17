@@ -1,17 +1,16 @@
 #include "game_settings.h"
 
-GameSettings::GameSettings(QObject *parent)
-    : QObject{parent}
-    , m_humanTile(new TileShape(TileShape::TileShapeType::None, "", parent))
-    , m_aiTile(new TileShape(TileShape::TileShapeType::None, "", parent))
-    , m_gameDifficulty(new GameDifficulty(parent))
-    , m_gridSize(3)
-    , m_humanPlayerName("Player1")
-    , m_aiPlayerName("EasyBot.AI")
+GameSettings::GameSettings(QObject* parent)
+  : QObject{ parent }
+  , m_humanTile(new TileShape(TileShape::TileShapeType::None, "", parent))
+  , m_aiTile(new TileShape(TileShape::TileShapeType::None, "", parent))
+  , m_gameDifficulty(new GameDifficulty(parent))
+  , m_gridSize(3)
+  , m_humanPlayerName("Player1")
+  , m_aiPlayerName("EasyBot.AI")
 {}
 
-GameSettings::~GameSettings()
-{}
+GameSettings::~GameSettings() {}
 
 TileShape* GameSettings::humanTile() const
 {
@@ -46,20 +45,19 @@ QString GameSettings::aiPlayerName() const
 unsigned int GameSettings::getAILevel()
 {
     unsigned int aiLevel = 1;
-    switch (m_gameDifficulty->difficulty())
-    {
-    case GameDifficulty::Difficulty::Easy:
-        aiLevel = 1;
-        break;
-    case GameDifficulty::Difficulty::Medium:
-        aiLevel = 3;
-        break;
-    case GameDifficulty::Difficulty::Hard:
-        aiLevel = 5;
-        break;
-    default:
-        aiLevel = 1;
-        break;
+    switch (m_gameDifficulty->difficulty()) {
+        case GameDifficulty::Difficulty::Easy:
+            aiLevel = 1;
+            break;
+        case GameDifficulty::Difficulty::Medium:
+            aiLevel = 3;
+            break;
+        case GameDifficulty::Difficulty::Hard:
+            aiLevel = 5;
+            break;
+        default:
+            aiLevel = 1;
+            break;
     }
 
     return aiLevel;

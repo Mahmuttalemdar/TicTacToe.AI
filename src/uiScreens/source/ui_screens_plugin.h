@@ -1,30 +1,30 @@
-#ifndef GLUE_PLUGIN_H
-#define GLUE_PLUGIN_H
+#ifndef UI_SCREENS_PLUGIN_H
+#define UI_SCREENS_PLUGIN_H
 
 #include <QObject>
 #include <QQmlExtensionPlugin>
 #include <QtPlugin>
 
 /**
- * @brief The GluePlugin class which is defined
- * to collect all module and module data's and send them to UI side
+ * @brief The UIScreensPlugin class; providing
+ * all screens and pages to qml engine
  */
-class GluePlugin : public QQmlExtensionPlugin
+class UIScreensPlugin : public QQmlExtensionPlugin
 {
     Q_OBJECT
-    Q_PLUGIN_METADATA(IID "Glue")
+    Q_PLUGIN_METADATA(IID "UIScreens")
 
 public:
     /**
      * @brief C-tor
      * @param parent; parent QObject based component
      */
-    GluePlugin(QObject* parent = nullptr);
+    UIScreensPlugin(QObject* parent = nullptr);
 
     /**
      * @brief D-tor
      */
-    ~GluePlugin() override;
+    ~UIScreensPlugin() override;
 
     /**
      * @brief Registering all qml types
@@ -42,4 +42,4 @@ private:
     bool registered;
 };
 
-#endif // GLUE_PLUGIN_H
+#endif // UI_SCREENS_PLUGIN_H

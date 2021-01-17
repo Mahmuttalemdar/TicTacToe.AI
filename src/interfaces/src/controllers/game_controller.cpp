@@ -6,20 +6,21 @@
 #include <QScxmlStateMachine>
 
 GameController::GameController(GameSettings* gameSettings, QObject* parent)
-    : QObject(parent)
-    , m_gameSettings(gameSettings)
-    , m_isPlayLock(false)
-    , m_humanPlayer(Player::Type::HUMAN)
-    , m_aiPlayer(Player::Type::AI)
-    , m_gameBoard(new Board(m_gameSettings->gridSize()))
-    , m_aiImplement(new AIPlayer(m_aiPlayer, m_humanPlayer, m_gameSettings->getAILevel()))
-    , m_tileShapeModel(new TileShapeModel(parent))
+  : QObject(parent)
+  , m_gameSettings(gameSettings)
+  , m_isPlayLock(false)
+  , m_humanPlayer(Player::Type::HUMAN)
+  , m_aiPlayer(Player::Type::AI)
+  , m_gameBoard(new Board(m_gameSettings->gridSize()))
+  , m_aiImplement(new AIPlayer(m_aiPlayer, m_humanPlayer, m_gameSettings->getAILevel()))
+  , m_tileShapeModel(new TileShapeModel(parent))
 {
     // Initialize tile shape model
     initializeModels();
 
     // Connect to game settings
-    QObject::connect(m_gameSettings->gameDifficulty(), &GameDifficulty::difficultyChanged, this, &GameController::handleGameDifficultyChanged);
+    QObject::connect(
+      m_gameSettings->gameDifficulty(), &GameDifficulty::difficultyChanged, this, &GameController::handleGameDifficultyChanged);
     QObject::connect(m_gameSettings, &GameSettings::gridSizeChanged, this, &GameController::handleGridSizeChanged);
     QObject::connect(m_gameSettings, &GameSettings::humanPlayerNameChanged, this, &GameController::handleHumanPlayerNameChanged);
     QObject::connect(m_gameSettings, &GameSettings::aiPlayerNameChanged, this, &GameController::handleAiPlayerNameChanged);
@@ -29,11 +30,10 @@ GameController::GameController(GameSettings* gameSettings, QObject* parent)
 }
 
 GameController::GameController(QObject* parent)
-    : QObject(parent)
+  : QObject(parent)
 {}
 
-GameController::~GameController()
-{}
+GameController::~GameController() {}
 
 bool GameController::isPlayed(unsigned int row, unsigned int column)
 {
@@ -47,18 +47,14 @@ void GameController::humanPlayedAt(unsigned int row, unsigned int column)
         setIsPlayLock(true);
         m_gameBoard->playAt(row, column, m_humanPlayer);
 
-        //check if the game is on goiing
-        if (this->m_gameBoard->checkGameState() != Board::GameState::ONGOING)
-        {
+        // check if the game is on goiing
+        if (this->m_gameBoard->checkGameState() != Board::GameState::ONGOING) {
             return;
         }
 
-        //launches and detaches a seperate thread for a.i processing
+        // launches and detaches a seperate thread for a.i processing
         std::thread(&GameController::aiThinkAndPlay, this).detach();
-    }
-    catch (...)
-    {
-
+    } catch (...) {
     }
 }
 
@@ -66,10 +62,9 @@ void GameController::selectShapeByIndex(unsigned int index)
 {
     m_gameSettings->setHumanTile(m_tileShapeModel->getByIndex(index));
 
-    if(index == 3) {
+    if (index == 3) {
         m_gameSettings->setAiTile(m_tileShapeModel->getByIndex(0));
-    }
-    else {
+    } else {
         m_gameSettings->setAiTile(m_tileShapeModel->getByIndex(3));
     }
 }
@@ -91,8 +86,7 @@ TileShapeModel* GameController::tileShapeModel() const
 
 void GameController::setStateChart(statechart::Main* stateChart)
 {
-    if(stateChart)
-    {
+    if (stateChart) {
         m_statechart = stateChart;
         m_statechart->connectToEvent("restartGame", this, &GameController::handleRestartGame);
     }
@@ -114,8 +108,8 @@ void GameController::aiThinkAndPlay()
     unsigned int columnAI = 0;
     m_aiImplement->playPosition(*m_gameBoard, rowAI, columnAI);
 
-    //emits a threads safe signl from the a.i to the board
-    emit aiPlayedAt(rowAI,columnAI);
+    // emits a threads safe signl from the a.i to the board
+    emit aiPlayedAt(rowAI, columnAI);
 }
 
 void GameController::setIsPlayLock(bool isPlayLock)
@@ -139,34 +133,32 @@ void GameController::setTileShapeModel(TileShapeModel* tileShapeModel)
 void GameController::handleAIPlayedAt(unsigned int row, unsigned int column)
 {
     m_gameBoard->playAt(row, column, m_aiPlayer);
-    if (m_gameBoard->checkGameState() == Board::GameState::ONGOING)
-    {
+    if (m_gameBoard->checkGameState() == Board::GameState::ONGOING) {
         setIsPlayLock(false);
     }
 
-    emit updateAIPlayerOnUI(row,column);
+    emit updateAIPlayerOnUI(row, column);
 }
 
 void GameController::handleGameDifficultyChanged(GameDifficulty::Difficulty difficulty)
 {
-    switch (difficulty)
-    {
-    case GameDifficulty::Difficulty::Easy:
-        m_gameBoard->setDepth(m_gameSettings->getAILevel());
-        m_gameSettings->setAiPlayerName("EasyBot.AI");
-        break;
-    case GameDifficulty::Difficulty::Medium:
-        m_gameBoard->setDepth(m_gameSettings->getAILevel());
-        m_gameSettings->setAiPlayerName("MediumBot.AI");
-        break;
-    case GameDifficulty::Difficulty::Hard:
-        m_gameBoard->setDepth(m_gameSettings->getAILevel());
-        m_gameSettings->setAiPlayerName("HardBot.AI");
-        break;
-    default:
-        m_gameBoard->setDepth(m_gameSettings->getAILevel());
-        m_gameSettings->setAiPlayerName("EasyBot.AI");
-        break;
+    switch (difficulty) {
+        case GameDifficulty::Difficulty::Easy:
+            m_gameBoard->setDepth(m_gameSettings->getAILevel());
+            m_gameSettings->setAiPlayerName("EasyBot.AI");
+            break;
+        case GameDifficulty::Difficulty::Medium:
+            m_gameBoard->setDepth(m_gameSettings->getAILevel());
+            m_gameSettings->setAiPlayerName("MediumBot.AI");
+            break;
+        case GameDifficulty::Difficulty::Hard:
+            m_gameBoard->setDepth(m_gameSettings->getAILevel());
+            m_gameSettings->setAiPlayerName("HardBot.AI");
+            break;
+        default:
+            m_gameBoard->setDepth(m_gameSettings->getAILevel());
+            m_gameSettings->setAiPlayerName("EasyBot.AI");
+            break;
     }
 
     m_gameBoard->restart();

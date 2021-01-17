@@ -1,13 +1,12 @@
 #include "player.h"
 
 Player::Player(const Type& type)
-    : m_type(type)
+  : m_type(type)
 {}
 
-Player::~Player()
-{}
+Player::~Player() {}
 
-void Player::SetType(const Type &type)
+void Player::SetType(const Type& type)
 {
     m_type = type;
 }

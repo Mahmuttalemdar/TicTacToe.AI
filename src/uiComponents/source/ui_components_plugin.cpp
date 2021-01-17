@@ -21,23 +21,22 @@ static void initProviders() {}
 
 static void cleanupProviders() {}
 
-UIComponentsPlugin::UIComponentsPlugin(QObject *parent)
-    : QQmlExtensionPlugin(parent)
-    , registered(false)
+UIComponentsPlugin::UIComponentsPlugin(QObject* parent)
+  : QQmlExtensionPlugin(parent)
+  , registered(false)
 {
     initResources();
 }
 
 UIComponentsPlugin::~UIComponentsPlugin()
 {
-    if (registered)
-    {
+    if (registered) {
         cleanupResources();
         cleanupProviders();
     }
 }
 
-void UIComponentsPlugin::registerTypes(const char * uri)
+void UIComponentsPlugin::registerTypes(const char* uri)
 {
     Q_UNUSED(uri)
 
@@ -50,7 +49,7 @@ void UIComponentsPlugin::registerTypes(const char * uri)
     qmlRegisterModule("UIComponents.Text", 1, 0);
 }
 
-void UIComponentsPlugin::initializeEngine(QQmlEngine *engine, const char * uri)
+void UIComponentsPlugin::initializeEngine(QQmlEngine* engine, const char* uri)
 {
     Q_UNUSED(uri)
     engine->addImportPath(QLatin1String(":/imports"));

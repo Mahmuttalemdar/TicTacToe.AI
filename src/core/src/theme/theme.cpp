@@ -1,19 +1,18 @@
 #include "theme.h"
 
 namespace FontFactor {
-    constexpr auto small                          = 0.8;
-    constexpr auto medium                         = 0.9;
-    constexpr auto large                          = 1.1;
+constexpr auto small = 0.8;
+constexpr auto medium = 0.9;
+constexpr auto large = 1.1;
 }
 
-
-Theme::Theme(QObject *parent)
-    : QObject(parent)
-    , colors_(new Colors(parent))
-    , lightColors_(new Colors(parent))
-    , darkColors_(new Colors(parent))
-    , sizes_(new Sizes(parent))
-    , fonts_(new Fonts(parent))
+Theme::Theme(QObject* parent)
+  : QObject(parent)
+  , colors_(new Colors(parent))
+  , lightColors_(new Colors(parent))
+  , darkColors_(new Colors(parent))
+  , sizes_(new Sizes(parent))
+  , fonts_(new Fonts(parent))
 {
     // Light theme colors
     setDefaultLightColors();
@@ -30,22 +29,19 @@ Theme::Theme(QObject *parent)
 
 Theme::~Theme()
 {
-    if(colors_)
-    {
+    if (colors_) {
         colors_->deleteLater();
         delete colors_;
         colors_ = nullptr;
     }
 
-    if(lightColors_)
-    {
+    if (lightColors_) {
         lightColors_->deleteLater();
         delete lightColors_;
         lightColors_ = nullptr;
     }
 
-    if(darkColors_)
-    {
+    if (darkColors_) {
         darkColors_->deleteLater();
         delete darkColors_;
         darkColors_ = nullptr;
@@ -59,14 +55,13 @@ Colors* Theme::colors()
 
 void Theme::setColors(Colors* colors)
 {
-    if(colors)
-    {
+    if (colors) {
         colors_ = colors;
         emit colorsChanged();
     }
 }
 
-Sizes *Theme::sizes() const
+Sizes* Theme::sizes() const
 {
     return sizes_;
 }
@@ -78,33 +73,31 @@ Theme::FontSize Theme::fontSize() const
 
 void Theme::changeTheme(Theme::ThemeName themeName)
 {
-    switch (themeName)
-    {
+    switch (themeName) {
         case Theme::ThemeName::Light:
             setColors(lightColors_);
             name_ = themeName;
             emit nameChanged();
-            //MPC_LOG_INFO(loggingModuleNames::coreLogModuleName, "Theme changed to Light.")
+            // MPC_LOG_INFO(loggingModuleNames::coreLogModuleName, "Theme changed to Light.")
             break;
         case Theme::ThemeName::Dark:
             setColors(darkColors_);
             name_ = themeName;
             emit nameChanged();
-            //MPC_LOG_INFO(loggingModuleNames::coreLogModuleName, "Theme changed to Dark.")
+            // MPC_LOG_INFO(loggingModuleNames::coreLogModuleName, "Theme changed to Dark.")
             break;
         default:
             setColors(lightColors_);
             name_ = themeName;
             emit nameChanged();
-            //MPC_LOG_INFO(loggingModuleNames::coreLogModuleName, "Theme changed to Light.")
+            // MPC_LOG_INFO(loggingModuleNames::coreLogModuleName, "Theme changed to Light.")
             break;
     }
 }
 
 void Theme::changeFontSize(Theme::FontSize fontSize)
 {
-    switch (fontSize)
-    {
+    switch (fontSize) {
         case Theme::FontSize::Small:
             sizes_->setFontScaleFactor(FontFactor::small);
             emit sizesChanged();
@@ -112,7 +105,7 @@ void Theme::changeFontSize(Theme::FontSize fontSize)
             fontSize_ = FontSize::Small;
             emit fontSizeChanged();
 
-            //MPC_LOG_INFO(loggingModuleNames::coreLogModuleName, "Theme, font size changed to small.")
+            // MPC_LOG_INFO(loggingModuleNames::coreLogModuleName, "Theme, font size changed to small.")
             break;
         case Theme::FontSize::Medium:
             sizes_->setFontScaleFactor(FontFactor::medium);
@@ -121,7 +114,7 @@ void Theme::changeFontSize(Theme::FontSize fontSize)
             fontSize_ = FontSize::Medium;
             emit fontSizeChanged();
 
-            //MPC_LOG_INFO(loggingModuleNames::coreLogModuleName, "Theme, font size changed to medium.")
+            // MPC_LOG_INFO(loggingModuleNames::coreLogModuleName, "Theme, font size changed to medium.")
             break;
         case Theme::FontSize::Large:
             sizes_->setFontScaleFactor(FontFactor::large);
@@ -130,18 +123,17 @@ void Theme::changeFontSize(Theme::FontSize fontSize)
             fontSize_ = FontSize::Large;
             emit fontSizeChanged();
 
-            //MPC_LOG_INFO(loggingModuleNames::coreLogModuleName, "Theme, font size changed to large.")
+            // MPC_LOG_INFO(loggingModuleNames::coreLogModuleName, "Theme, font size changed to large.")
             break;
         default:
             sizes_->setFontScaleFactor(FontFactor::medium);
             emit sizesChanged();
             fontSize_ = FontSize::Medium;
             emit fontSizeChanged();
-            //MPC_LOG_INFO(loggingModuleNames::coreLogModuleName, "Theme, font size changed to medium.")
+            // MPC_LOG_INFO(loggingModuleNames::coreLogModuleName, "Theme, font size changed to medium.")
             break;
     }
 }
-
 
 void Theme::setDefaultLightColors()
 {
@@ -156,7 +148,7 @@ void Theme::setDefaultLightColors()
     lightColors_->setPanelBackground("#FFFFFF");
 
     // Line
-    //lightColors_->setLine("#C9C9C9");
+    // lightColors_->setLine("#C9C9C9");
     lightColors_->setLine("#F6F4F6");
     lightColors_->setLineDialog("#dad4d3");
 
@@ -177,7 +169,6 @@ void Theme::setDefaultLightColors()
     lightColors_->setTextAreaSelectedColor("#505050");
     lightColors_->setLinkMessageTextIn("#00589C");
     lightColors_->setLinkMessageTextOut("#00589C");
-
 
     // Button
     lightColors_->setUserSwitchButton("#000000");
@@ -331,7 +322,6 @@ void Theme::setDefaultLightColors()
 
     lightColors_->setToolTipText("#000000");
     lightColors_->setToolTipBackground("#EFEFEF");
-
 }
 
 void Theme::setDefaultDarkColors()
@@ -422,7 +412,6 @@ void Theme::setDefaultDarkColors()
     darkColors_->setInfoHeaderText("#FFFFFF");
     darkColors_->setInfoSubHeaderText("#FFFFFF");
 
-
     // List Items
     darkColors_->setDelegateBackground("#323232");
     darkColors_->setDelegateSelectedBackground("#00589C");
@@ -467,7 +456,7 @@ void Theme::setDefaultDarkColors()
 
     // Chat Bubble
     darkColors_->setChatBubbleBackgroundIn("#666666");
-    //darkColors_->setChatBubbleBackgroundIn("#CB886E");
+    // darkColors_->setChatBubbleBackgroundIn("#CB886E");
     darkColors_->setChatBubbleBackgroundOut("#85929E");
     darkColors_->setChatBubbleTextIn("#FFFFFF");
     darkColors_->setChatBubbleTextOut("#FFFFFF");
@@ -529,7 +518,7 @@ Theme::ThemeName Theme::name() const
     return name_;
 }
 
-Fonts *Theme::fonts() const
+Fonts* Theme::fonts() const
 {
     return fonts_;
 }

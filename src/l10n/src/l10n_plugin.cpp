@@ -1,23 +1,20 @@
 #include "l10n_plugin.h"
+#include <QDebug>
 #include <QObject>
-#include <QtPlugin>
 #include <QQmlContext>
 #include <QQmlEngine>
-#include <QDebug>
+#include <QtPlugin>
 #include <QtQml/QQmlExtensionPlugin>
 
-static inline void initResources()
-{}
+static inline void initResources() {}
 
-static void initProviders()
-{}
+static void initProviders() {}
 
-static void cleanupProviders()
-{}
+static void cleanupProviders() {}
 
-LocalizationPlugin::LocalizationPlugin(QObject *parent)
-    : QQmlExtensionPlugin(parent)
-    , registered(false)
+LocalizationPlugin::LocalizationPlugin(QObject* parent)
+  : QQmlExtensionPlugin(parent)
+  , registered(false)
 {
     initResources();
     registerTypes(nullptr);
@@ -30,8 +27,7 @@ LocalizationPlugin::~LocalizationPlugin()
     }
 }
 
-
-void LocalizationPlugin::registerTypes(const char *uri)
+void LocalizationPlugin::registerTypes(const char* uri)
 {
     Q_UNUSED(uri)
 
@@ -44,7 +40,7 @@ void LocalizationPlugin::registerTypes(const char *uri)
     initProviders();
 }
 
-void LocalizationPlugin::initializeEngine(QQmlEngine *engine, const char *uri)
+void LocalizationPlugin::initializeEngine(QQmlEngine* engine, const char* uri)
 {
     Q_UNUSED(engine)
     Q_UNUSED(uri)

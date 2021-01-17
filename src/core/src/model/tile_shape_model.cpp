@@ -1,11 +1,10 @@
 #include "tile_shape_model.h"
 
 TileShapeModel::TileShapeModel(QObject* parent)
-    : QAbstractListModel(parent)
+  : QAbstractListModel(parent)
 {}
 
-TileShapeModel::~TileShapeModel()
-{}
+TileShapeModel::~TileShapeModel() {}
 
 void TileShapeModel::addTileShape(TileShape* tileShape)
 {
@@ -22,17 +21,15 @@ int TileShapeModel::rowCount(const QModelIndex& parent) const
 
 QVariant TileShapeModel::data(const QModelIndex& index, int role) const
 {
-    if(index.row() < 0 || index.row() >= m_tileShapeList.count())
-    {
+    if (index.row() < 0 || index.row() >= m_tileShapeList.count()) {
         return QVariant();
     }
 
     const TileShape& tileShape = *m_tileShapeList[index.row()];
 
-    if(role == TypeRole){
+    if (role == TypeRole) {
         return tileShape.type();
-    }
-    else if(role == ImageRole) {
+    } else if (role == ImageRole) {
         return tileShape.image();
     }
 
@@ -50,12 +47,9 @@ QHash<int, QByteArray> TileShapeModel::roleNames() const
 
 TileShape* TileShapeModel::getByIndex(const int index) const
 {
-    if(m_tileShapeList.count() > index)
-    {
+    if (m_tileShapeList.count() > index) {
         return m_tileShapeList.at(index);
-    }
-    else
-    {
+    } else {
         return new TileShape(TileShape::TileShapeType::None, "");
     }
 }

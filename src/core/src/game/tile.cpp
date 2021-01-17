@@ -1,16 +1,14 @@
 #include "tile.h"
 #include "player.h"
 
-
 Tile::Tile()
-    : m_row(0)
-    , m_column(0)
-    , m_state(State::BLANK)
-    , m_player(Player::Type::NONE)
+  : m_row(0)
+  , m_column(0)
+  , m_state(State::BLANK)
+  , m_player(Player::Type::NONE)
 {}
 
-Tile::~Tile()
-{}
+Tile::~Tile() {}
 
 void Tile::SetRow(const unsigned int& row)
 {
@@ -34,12 +32,9 @@ const unsigned int& Tile::GetColumn() const
 
 void Tile::SetPlayer(const Player& player)
 {
-    if(player.GetType() == Player::Type::NONE)
-    {
+    if (player.GetType() == Player::Type::NONE) {
         SetState(State::BLANK);
-    }
-    else
-    {
+    } else {
         SetState(State::OCCUPIED);
     }
 

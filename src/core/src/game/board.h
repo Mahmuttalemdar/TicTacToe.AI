@@ -1,12 +1,12 @@
 #ifndef BOARD_H
 #define BOARD_H
 
-#include <vector>
 #include <ostream>
+#include <vector>
 
 #include <QList>
-#include <QPoint>
 #include <QObject>
+#include <QPoint>
 
 class Tile;
 class Player;
@@ -17,192 +17,193 @@ class Player;
  */
 class Board : public QObject
 {
-        Q_OBJECT
-        Q_PROPERTY(GameState gameState READ gameState WRITE setGameState NOTIFY gameStateChanged)
-    public:
-        enum GameState
-        {
-            WON = 0
-            , LOSS
-            , ONGOING
-            , DRAW
-        };
-        Q_ENUM(GameState)
+    Q_OBJECT
+    Q_PROPERTY(GameState gameState READ gameState WRITE setGameState NOTIFY gameStateChanged)
 
-        /**
-         * @brief C-tor
-         * @param gridSize: size of board
-         */
-        Board(unsigned int gridSize = 3);
+public:
+    enum GameState
+    {
+        WON = 0,
+        LOSS,
+        ONGOING,
+        DRAW
+    };
+    Q_ENUM(GameState)
 
-        /**
-         * @brief Copy C-tor
-         */
-        Board(const Board& board);
+    /**
+     * @brief C-tor
+     * @param gridSize: size of board
+     */
+    Board(unsigned int gridSize = 3);
 
-        /**
-         * @brief Copy Operator =
-         */
-        Board& operator =(const Board& board);
+    /**
+     * @brief Copy C-tor
+     */
+    Board(const Board& board);
 
-        /**
-         * @brief Special constructor for create new board state
-         * from current state
-         */
-        Board(const Board& board, unsigned  int row, unsigned int  column, Player player);
+    /**
+     * @brief Copy Operator =
+     */
+    Board& operator=(const Board& board);
 
-        /**
-         * @brief Move C-tor
-         */
-        Board(Board&& board);
+    /**
+     * @brief Special constructor for create new board state
+     * from current state
+     */
+    Board(const Board& board, unsigned int row, unsigned int column, Player player);
 
-        /**
-         * @brief Move Operator =
-         */
-        Board& operator =(Board&& board);
+    /**
+     * @brief Move C-tor
+     */
+    Board(Board&& board);
 
-        /**
-         * @brief D-tor
-         */
-        virtual ~Board();
+    /**
+     * @brief Move Operator =
+     */
+    Board& operator=(Board&& board);
 
-        /**
-         * @brief GetGameBoard
-         * @return board grid
-         */
-        const std::vector<std::vector<Tile>>& getGameBoard();
+    /**
+     * @brief D-tor
+     */
+    virtual ~Board();
 
-        /**
-         * @brief Get tile from tile board
-         * @param row
-         * @param column
-         * @return : Tile
-         */
-        const Tile& getTile(unsigned int row, unsigned int column) const;
+    /**
+     * @brief GetGameBoard
+     * @return board grid
+     */
+    const std::vector<std::vector<Tile>>& getGameBoard();
 
-        /**
-         * @brief getGridSize of current board
-         * @return : grid size
-         */
-        unsigned int getGridSize() const;
+    /**
+     * @brief Get tile from tile board
+     * @param row
+     * @param column
+     * @return : Tile
+     */
+    const Tile& getTile(unsigned int row, unsigned int column) const;
 
-        /**
-         * @brief setGridSize to current board
-         * @param value: grid size
-         */
-        void setGridSize(unsigned int value);
+    /**
+     * @brief getGridSize of current board
+     * @return : grid size
+     */
+    unsigned int getGridSize() const;
 
-        /**
-         * @brief getUtilityValue
-         * @return
-         */
-        const int& getUtilityValue() const;
+    /**
+     * @brief setGridSize to current board
+     * @param value: grid size
+     */
+    void setGridSize(unsigned int value);
 
-        /**
-         * @brief setUtilityValue
-         * @param value
-         */
-        void setUtilityValue(const int& value);
+    /**
+     * @brief getUtilityValue
+     * @return
+     */
+    const int& getUtilityValue() const;
 
-        /**
-         * @brief getDepth
-         * @return
-         */
-        unsigned int getDepth() const;
+    /**
+     * @brief setUtilityValue
+     * @param value
+     */
+    void setUtilityValue(const int& value);
 
-        /**
-         * @brief setDepth
-         * @param value
-         */
-        void setDepth(unsigned int value);
+    /**
+     * @brief getDepth
+     * @return
+     */
+    unsigned int getDepth() const;
 
-        /**
-         * @brief getRow_played
-         * @return
-         */
-        unsigned int getRowPlayed() const;
+    /**
+     * @brief setDepth
+     * @param value
+     */
+    void setDepth(unsigned int value);
 
-        /**
-         * @brief getColumnPlayed
-         * @return
-         */
-        unsigned int getColumnPlayed() const;
+    /**
+     * @brief getRow_played
+     * @return
+     */
+    unsigned int getRowPlayed() const;
 
-        /**
-         * @brief getCachedLastRowPlayed
-         * @return
-         */
-        unsigned int getCachedLastRowPlayed() const;
+    /**
+     * @brief getColumnPlayed
+     * @return
+     */
+    unsigned int getColumnPlayed() const;
 
-        /**
-         * @brief setDepth
-         * @param value
-         */
-        void setCachedLastRowPlayed(unsigned int value);
+    /**
+     * @brief getCachedLastRowPlayed
+     * @return
+     */
+    unsigned int getCachedLastRowPlayed() const;
 
-        /**
-         * @brief getCachedLastRowPlayed
-         * @return
-         */
-        unsigned int getCachedLastColumnPlayed() const;
+    /**
+     * @brief setDepth
+     * @param value
+     */
+    void setCachedLastRowPlayed(unsigned int value);
 
-        /**
-         * @brief setDepth
-         * @param value
-         */
-        void setCachedLastColumnPlayed(unsigned int value);
+    /**
+     * @brief getCachedLastRowPlayed
+     * @return
+     */
+    unsigned int getCachedLastColumnPlayed() const;
 
-        friend std::ostream& operator<<(std::ostream& os, const Tile& tile);
+    /**
+     * @brief setDepth
+     * @param value
+     */
+    void setCachedLastColumnPlayed(unsigned int value);
 
-        bool isPlayed(unsigned int row, unsigned int column);
+    friend std::ostream& operator<<(std::ostream& os, const Tile& tile);
 
-        /**
-         * @brief play at
-         * @param row
-         * @param column
-         * @param playerCharacter
-         */
-        void playAt(unsigned int row, unsigned int column, Player player);
+    bool isPlayed(unsigned int row, unsigned int column);
 
-        /**
-         * @brief generatePossibleStates: Guess possible states of current board
-         * @param player
-         * @return
-         */
-        const std::vector<std::unique_ptr<Board>> generatePossibleStates(Player player);
+    /**
+     * @brief play at
+     * @param row
+     * @param column
+     * @param playerCharacter
+     */
+    void playAt(unsigned int row, unsigned int column, Player player);
 
-        GameState checkGameState();
+    /**
+     * @brief generatePossibleStates: Guess possible states of current board
+     * @param player
+     * @return
+     */
+    const std::vector<std::unique_ptr<Board>> generatePossibleStates(Player player);
 
-        bool nextChildBoard(Player player, std::shared_ptr<Board>& childBoard);
+    GameState checkGameState();
 
-        void restart();
+    bool nextChildBoard(Player player, std::shared_ptr<Board>& childBoard);
 
-        Q_INVOKABLE QList<QPoint> getWinnerList();
+    void restart();
 
-        GameState gameState() const;
+    Q_INVOKABLE QList<QPoint> getWinnerList();
 
-    public slots:
-        void setGameState(GameState gameState);
+    GameState gameState() const;
 
-    signals:
-        void gameStateChanged(GameState gameState);
+public slots:
+    void setGameState(GameState gameState);
 
-    private:
-        unsigned int m_gridSize = 0;
-        int m_utilityValue = 0;
-        unsigned int m_depth = 0;
-        unsigned int m_rowPlayed = 0;
-        unsigned int m_columnPlayed = 0;
-        unsigned int m_cachedLastRowPlayed = 0;
-        unsigned int m_cachedLastColumnPlayed = 0;
+signals:
+    void gameStateChanged(GameState gameState);
 
-        std::vector<std::vector<Tile>> m_gameBoard;
-        std::shared_ptr<Board> m_childrenBoard = nullptr;
-        QList<QPoint> m_winnerList;
-        GameState m_gameState;
+private:
+    unsigned int m_gridSize = 0;
+    int m_utilityValue = 0;
+    unsigned int m_depth = 0;
+    unsigned int m_rowPlayed = 0;
+    unsigned int m_columnPlayed = 0;
+    unsigned int m_cachedLastRowPlayed = 0;
+    unsigned int m_cachedLastColumnPlayed = 0;
+
+    std::vector<std::vector<Tile>> m_gameBoard;
+    std::shared_ptr<Board> m_childrenBoard = nullptr;
+    QList<QPoint> m_winnerList;
+    GameState m_gameState;
 };
 
-Q_DECLARE_METATYPE(Board *)
-Q_DECLARE_METATYPE(const Board *)
+Q_DECLARE_METATYPE(Board*)
+Q_DECLARE_METATYPE(const Board*)
 
 #endif // BOARD_H

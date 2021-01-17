@@ -1,16 +1,15 @@
 #include "entrance.h"
 #include "entrance_p.h"
 
-#include <QtPlugin>
+#include <QDebug>
 #include <QPluginLoader>
 #include <QQmlExtensionPlugin>
-#include <QDebug>
+#include <QtPlugin>
 
 #ifdef QT_DEBUG
 #include <QQmlDebuggingEnabler>
 static QQmlDebuggingEnabler enabler;
 #endif
-
 
 /**
  * Static methods should be defined outside the class.
@@ -19,7 +18,7 @@ Entrance* Entrance::instance = nullptr;
 std::mutex Entrance::mutex;
 
 Entrance::Entrance()
-    : data{ new EntrancePrivate }
+  : data{ new EntrancePrivate }
 {
     // Init Resources From Libraies
     Q_INIT_RESOURCE(main);
@@ -28,18 +27,16 @@ Entrance::Entrance()
 
 Entrance* Entrance::getInstance()
 {
-    if (instance == nullptr)
-    {
-        std::lock_guard <std::mutex> lock(mutex);
-        if (instance == nullptr)
-        {
+    if (instance == nullptr) {
+        std::lock_guard<std::mutex> lock(mutex);
+        if (instance == nullptr) {
             instance = new Entrance();
         }
     }
     return instance;
 }
 
-int Entrance::run(int argc, char *argv[])
+int Entrance::run(int argc, char* argv[])
 {
     // Pre-Settings of Application
     configureQGuiApplication();
@@ -62,7 +59,7 @@ int Entrance::run(int argc, char *argv[])
     return m_app->exec();
 }
 
-statechart::Main *Entrance::statechart() const
+statechart::Main* Entrance::statechart() const
 {
     return data->statechart.get();
 }
@@ -93,30 +90,25 @@ void Entrance::configureQGuiApplication() const
 
 void Entrance::registerPlugins()
 {
-    try
-    {
+    try {
         Q_IMPORT_PLUGIN(CorePlugin)
         Q_IMPORT_PLUGIN(UIComponentsPlugin)
         Q_IMPORT_PLUGIN(UIScreensPlugin)
         Q_IMPORT_PLUGIN(InterfacesPlugin)
         Q_IMPORT_PLUGIN(GluePlugin)
 
-        for (auto const &plugin : QPluginLoader::staticPlugins())
-        {
+        for (auto const& plugin : QPluginLoader::staticPlugins()) {
             auto name = plugin.metaData()["IID"].toString("");
             auto iid = name.toStdString();
             auto instance = qobject_cast<QQmlExtensionPlugin*>(plugin.instance());
 
-            qDebug() << "Initialized plugin: "<< instance << " : "<<iid.c_str();
-            if (instance != nullptr)
-            {
+            qDebug() << "Initialized plugin: " << instance << " : " << iid.c_str();
+            if (instance != nullptr) {
                 instance->registerTypes(iid.c_str());
                 instance->initializeEngine(m_engine, iid.c_str());
             }
         }
-    }
-    catch (std::exception& e)
-    {
+    } catch (std::exception& e) {
         qCritical() << "Failed to register plugins: " << e.what();
     }
 }
@@ -129,12 +121,9 @@ void Entrance::createQQmlEngines() const
 
 void Entrance::startStateChart() const
 {
-    if(data->statechart)
-    {
+    if (data->statechart) {
         data->statechart->start();
-    }
-    else
-    {
+    } else {
         qDebug() << "Statechat not initialized, please call 'initialize()' function first.";
     }
 }

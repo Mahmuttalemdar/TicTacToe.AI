@@ -9,26 +9,25 @@
  */
 class GameObject
 {
-    public:
-        /**
-         * @brief C-tor
-         */
-        GameObject();
+public:
+    /**
+     * @brief C-tor
+     */
+    GameObject();
 
-        /**
-         * @brief D-tor
-         */
-        virtual ~GameObject();
+    /**
+     * @brief D-tor
+     */
+    virtual ~GameObject();
 
-        /**
-         * @brief get unique id o object
-         * @return
-         */
-        const QUuid& getID() const;
+    /**
+     * @brief get unique id o object
+     * @return
+     */
+    const QUuid& getID() const;
 
-    private:
-        QUuid m_id;
-
+private:
+    QUuid m_id;
 };
 
 #endif // GAME_OBJECT_H

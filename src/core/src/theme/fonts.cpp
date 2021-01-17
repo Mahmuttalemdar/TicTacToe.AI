@@ -2,11 +2,12 @@
 #include <QFontDatabase>
 
 namespace FontFiles {
-    constexpr auto robotoMedium = ":/imports/Theme/fonts/Roboto/Roboto-Medium.ttf";
-    constexpr auto OpenSansRegular = ":/imports/Theme/fonts/Open_Sans/OpenSans-Regular.ttf";
+constexpr auto robotoMedium = ":/imports/Theme/fonts/Roboto/Roboto-Medium.ttf";
+constexpr auto OpenSansRegular = ":/imports/Theme/fonts/Open_Sans/OpenSans-Regular.ttf";
 }
 
-Fonts::Fonts(QObject *parent) : QObject(parent)
+Fonts::Fonts(QObject* parent)
+  : QObject(parent)
 {
     // Install Application Fonts from QRC
     int id = QFontDatabase::addApplicationFont(FontFiles::robotoMedium);
@@ -18,10 +19,7 @@ Fonts::Fonts(QObject *parent) : QObject(parent)
     openSansChanged();
 }
 
-Fonts::~Fonts()
-{
-
-}
+Fonts::~Fonts() {}
 
 QString Fonts::roboto() const
 {

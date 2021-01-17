@@ -1,13 +1,12 @@
 #include "tile_shape.h"
 
 TileShape::TileShape(const TileShape::TileShapeType& type, const QString& image, QObject* parent)
-    : QObject(parent)
-    , m_type(type)
-    , m_image(image)
+  : QObject(parent)
+  , m_type(type)
+  , m_image(image)
 {}
 
-TileShape::~TileShape()
-{}
+TileShape::~TileShape() {}
 
 TileShape::TileShapeType TileShape::type() const
 {

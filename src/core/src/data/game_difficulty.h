@@ -1,48 +1,49 @@
 #ifndef GAME_DIFFICULTY_H
 #define GAME_DIFFICULTY_H
 
-#include <QString>
 #include <QObject>
+#include <QString>
 
 class GameDifficulty : public QObject
 {
-        Q_OBJECT
-        Q_PROPERTY(Difficulty difficulty READ difficulty WRITE setDifficulty NOTIFY difficultyChanged)
+    Q_OBJECT
+    Q_PROPERTY(Difficulty difficulty READ difficulty WRITE setDifficulty NOTIFY difficultyChanged)
 
-    public:
-        enum Difficulty {
-            None = 0,
-            Easy,
-            Medium,
-            Hard
-        };
-        Q_ENUM(Difficulty)
+public:
+    enum Difficulty
+    {
+        None = 0,
+        Easy,
+        Medium,
+        Hard
+    };
+    Q_ENUM(Difficulty)
 
-        /**
-         * @brief C-tor
-         * @param parent; parent QObject based component
-         */
-        GameDifficulty(QObject* parent = nullptr);
+    /**
+     * @brief C-tor
+     * @param parent; parent QObject based component
+     */
+    GameDifficulty(QObject* parent = nullptr);
 
-        /**
-         * @brief D-tor
-         */
-        ~GameDifficulty();
+    /**
+     * @brief D-tor
+     */
+    ~GameDifficulty();
 
-        Difficulty difficulty() const;
+    Difficulty difficulty() const;
 
-        unsigned int getDifficultyValue() const;
+    unsigned int getDifficultyValue() const;
 
-    public slots:
-        void setDifficulty(Difficulty difficulty);
-    signals:
-        void difficultyChanged(Difficulty difficulty);
+public slots:
+    void setDifficulty(Difficulty difficulty);
+signals:
+    void difficultyChanged(Difficulty difficulty);
 
-    private:
-        Difficulty m_difficulty;
+private:
+    Difficulty m_difficulty;
 };
 
-Q_DECLARE_METATYPE(GameDifficulty *)
-Q_DECLARE_METATYPE(const GameDifficulty *)
+Q_DECLARE_METATYPE(GameDifficulty*)
+Q_DECLARE_METATYPE(const GameDifficulty*)
 
 #endif // GAME_DIFFICULTY_H
