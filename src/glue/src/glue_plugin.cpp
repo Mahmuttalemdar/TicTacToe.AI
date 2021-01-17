@@ -4,33 +4,30 @@
 #include "entrance.h"
 #include "glue_plugin.h"
 
-static inline void initResources()
-{}
+static inline void initResources() {}
 
-static inline void cleanupResources()
-{}
+static inline void cleanupResources() {}
 
 static void initProviders() {}
 
 static void cleanupProviders() {}
 
-GluePlugin::GluePlugin(QObject *parent)
-    : QQmlExtensionPlugin(parent)
-    , registered(false)
+GluePlugin::GluePlugin(QObject* parent)
+  : QQmlExtensionPlugin(parent)
+  , registered(false)
 {
     initResources();
 }
 
 GluePlugin::~GluePlugin()
 {
-    if (registered)
-    {
+    if (registered) {
         cleanupResources();
         cleanupProviders();
     }
 }
 
-void GluePlugin::registerTypes(const char * uri)
+void GluePlugin::registerTypes(const char* uri)
 {
     Q_UNUSED(uri)
 
@@ -38,7 +35,7 @@ void GluePlugin::registerTypes(const char * uri)
     initProviders();
 }
 
-void GluePlugin::initializeEngine(QQmlEngine *engine, const char *)
+void GluePlugin::initializeEngine(QQmlEngine* engine, const char*)
 {
     engine->rootContext()->setContextProperty("entrance", Entrance::getInstance());
 }

@@ -1,11 +1,10 @@
 #include "game_object.h"
 
 GameObject::GameObject()
-    : m_id(QUuid::createUuid())
+  : m_id(QUuid::createUuid())
 {}
 
-GameObject::~GameObject()
-{}
+GameObject::~GameObject() {}
 
 const QUuid& GameObject::getID() const
 {
