@@ -3,7 +3,7 @@ name: Packaging(Windows)
 on:
   push:
     branches:
-      - master*
+      - main
     paths-ignore:
       - 'README.md'
       - 'LICENSE'
