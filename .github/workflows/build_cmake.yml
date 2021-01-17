@@ -15,7 +15,6 @@ on:
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
   BUILD_TYPE: RelWithDebInfo
-  QT_DIR: /usr/lib/x86_64-linux-gnu/cmake/
 
 jobs:
   linux-build:
@@ -71,9 +70,17 @@ jobs:
         # The CMake binaries on the Github Actions machines are (as of this writing) 3.12
         # 
         # We need to source the profile file to make sure conan is in PATH
-        # -DQt5_DIR=/usr/lib/x86_64-linux-gnu/cmake/
+        # Core Gui Qml Scxml Svg Xml
+
         run: |
-          cmake $GITHUB_WORKSPACE -DCMAKE_BUILD_TYPE=$BUILD_TYPE -DQt5_DIR=$QT_DIR
+          cmake $GITHUB_WORKSPACE -DCMAKE_BUILD_TYPE=$BUILD_TYPE \
+            -DQt5_DIR=/usr/lib/x86_64-linux-gnu/cmake/Qt5 \
+            -DQt5Core_DIR=/usr/lib/x86_64-linux-gnu/cmake/Qt5Core \
+            -DQt5Gui_DIR=/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui \
+            -DQt5Qml_DIR=/usr/lib/x86_64-linux-gnu/cmake/Qt5Qml \
+            -DQt5Scxml_DIR=/usr/lib/x86_64-linux-gnu/cmake/Qt5Scxml \
+            -DQt5Svg_DIR=/usr/lib/x86_64-linux-gnu/cmake/Qt5Svg
+
       - name: Build
         working-directory: ${{runner.workspace}}/build
         shell: bash
