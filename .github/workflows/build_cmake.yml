@@ -98,7 +98,7 @@ jobs:
       - name: Install Qt
         uses: jurplel/install-qt-action@v2
         with:
-          version: 5.15.2
+          version: 5.15.1
           target:  desktop
           dir: '${{ github.workspace }}/build/'
 
@@ -106,7 +106,7 @@ jobs:
         working-directory: build
         shell: powershell
         run: |
-          cmake -DCMAKE_BUILD_TYPE=$env:BUILD_TYPE ../
+          cmake -DCMAKE_BUILD_TYPE=$env:BUILD_TYPE -DDEPLOYMENT_MODE=ON ../
 
       - name: Build
         working-directory: build
