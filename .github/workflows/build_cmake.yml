@@ -57,7 +57,6 @@ jobs:
             qtbase5-dev \
             qtdeclarative5-dev \
             qtmultimedia5-dev \
-            qt-quickcontrols2-5-dev \
 
       - name: Create Build Environment
         # Some projects don't allow in-source building, so create a separate build directory
