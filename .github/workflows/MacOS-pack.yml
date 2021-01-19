@@ -32,7 +32,7 @@ jobs:
         run: |
           mkdir build
           cd build
-          rm -rf ./src/TicTacToeAI.dmg ./src/TicTacToeAI.app/
+          rm -rf ./src/app/TicTacToeAI.dmg ./src/app/TicTacToeAI.app/
           cmake .. -DQt5_DIR=$(brew --prefix qt5)/lib/cmake/Qt5 -DDEPLOYMENT_MODE=ON
 
       - name: Compile
@@ -42,8 +42,8 @@ jobs:
 
       - name: Build dmg package
         run: |
-          cd build/src
-          /usr/local/opt/qt5/bin/macdeployqt TicTacToeAI.app -dmg
+          cd build/src/app
+          $(brew --prefix qt5)/bin/macdeployqt TicTacToeAI.app -dmg
 
       - name: Update dmg package links
         run: |
