@@ -83,7 +83,7 @@ function(deploy_project)
                 deploy_win_output
                 COMMENT "Windeployqt finished"
                 )
-        endif()
+        endif(QT5_WINDEPLOYQT_EXECUTABLE AND DEPLOYMENT_MODE)
 
     endif(APPLE AND UNIX)
 endfunction()
