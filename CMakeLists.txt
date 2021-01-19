@@ -30,7 +30,6 @@ include(BrandSettings)
 include(ImportStaticLibraries)
 include(Qt5LibraryManager)
 include(Qt5ScxmlMacros)
-include(Qt5Localization)
 include(ProjectDeployment)
 
 # -------------------------------------------------------------------------------------------------
