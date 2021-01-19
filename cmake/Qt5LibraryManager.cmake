@@ -5,7 +5,7 @@ include(CMakeParseArguments)
 # -------------------------------------------------------------------------------------------------
 find_package(
     Qt5 REQUIRED COMPONENTS
-    Core Gui Qml Scxml Svg Xml
+    Core Gui Quick Qml Scxml Svg Xml
     )
 
 # -------------------------------------------------------------------------------------------------
@@ -37,7 +37,7 @@ function(link_libraries)
     # -------------------------------------------------------------------------------------------------
     target_link_libraries(
         ${ARGN} LINK_PRIVATE
-            Qt5::Core Qt5::Gui Qt5::Qml Qt5::Scxml Qt5::Svg Qt5::Xml
+            Qt5::Core Qt5::Gui Qt5::Quick Qt5::Qml Qt5::Scxml Qt5::Svg Qt5::Xml
     )
 
     # -------------------------------------------------------------------------------------------------

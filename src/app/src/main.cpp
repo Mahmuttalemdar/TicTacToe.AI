@@ -2,6 +2,6 @@
 
 int main(int argc, char* argv[])
 {
-    // Show time for TicTacToe.AI
+    // Show time for TicTacToeAI
     Entrance::getInstance()->run(argc, argv);
 }

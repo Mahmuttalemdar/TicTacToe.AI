@@ -1,7 +1,7 @@
 
 # CPack
 set(CPACK_PACKAGE_VENDOR "AlemdarCorp")
-set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "TicTacToe.AI game, playing against human like ai.")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "TicTacToeAI game, playing against human like ai.")
 set(CPACK_PACKAGE_VERSION ${PROJECT_VERSION})
 set(CPACK_PACKAGE_HOMEPAGE_URL "https://github.com/Mahmuttalemdar/TicTacToe.AI")
 set(CPACK_PACKAGE_CONTACT "AlemdarCorp developers <info@alemdarcorp.com>")

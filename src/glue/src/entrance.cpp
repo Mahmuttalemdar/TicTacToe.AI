@@ -81,7 +81,7 @@ GameController* Entrance::gameController() const
 
 void Entrance::configureQGuiApplication() const
 {
-    QGuiApplication::setApplicationName("TicTacToe.AI");
+    QGuiApplication::setApplicationName("TicTacToeAI");
     QGuiApplication::setOrganizationName("AlemdarCorp");
     QGuiApplication::setApplicationVersion("0.1.0");
     QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);

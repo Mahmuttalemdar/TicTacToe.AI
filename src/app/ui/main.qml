@@ -12,7 +12,7 @@ import UIScreens.StartScreen 1.0
 ApplicationWindow {
     id: appRoot
     visible: true
-    title: qsTr("TicTacToe.AI")
+    title: qsTr("TicTacToeAI")
     width: 1400
     height: 900
     minimumWidth: 1400

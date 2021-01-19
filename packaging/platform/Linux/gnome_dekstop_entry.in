@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Version=${PROJECT_VERSION}
+Name=${PROJECT_NAME}
+GenericName=${PROJECT_NAME}
+Comment=${PROJECT_NAME}
+Keywords=kobil;mPower;
+Exec=${CMAKE_BINARY_DIR}/bin/${PROJECT_NAME} %U
+Icon=${ICON_FILE}
+Terminal=false
+Categories=Kobil;mPower;
