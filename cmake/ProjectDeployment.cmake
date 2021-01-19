@@ -25,10 +25,6 @@ function(deploy_project)
                 list(APPEND QT5_DEPLOY_FLAGS "-qmldir=${ARGS_QMLDIR}")
             endforeach()
 
-            if(${CMAKE_BUILD_TYPE} STREQUAL "Debug")
-                # list(APPEND QT5_DEPLOY_FLAGS -use-debug-libs)
-            endif()
-
             list(APPEND QT5_DEPLOY_FLAGS -libpath=${Qt5_PREFIX_PATH}/lib)
             list(APPEND QT5_DEPLOY_FLAGS -libpath=${BUNDLE_PATH})
 
