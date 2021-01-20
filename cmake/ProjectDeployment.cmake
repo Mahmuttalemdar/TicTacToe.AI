@@ -20,7 +20,7 @@ function(deploy_project)
 
             set(QT5_DEPLOY_FLAGS "")
 
-            # list(APPEND QT5_DEPLOY_FLAGS -dmg)
+            list(APPEND QT5_DEPLOY_FLAGS -dmg)
             foreach (ARGS_QMLDIR ${ARGS_QMLDIRS})
                 list(APPEND QT5_DEPLOY_FLAGS "-qmldir=${ARGS_QMLDIR}")
             endforeach()
