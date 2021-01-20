@@ -48,22 +48,22 @@ jobs:
 
       - name: Update dmg package links
         run: |
-          cd build/src
-          ../../packaging/macos/update_package.sh
+          cd build/src/app
+          ../../../packaging/macos/update_package.sh
 
       - name: Upload dmg package
         shell: bash
         run: |
           python3 -m pip install -U -q requests
           echo "================MacOS dmg image download link================"
-          echo $(python3 $GITHUB_WORKSPACE/scripts/upload_services/transferwee.py upload $GITHUB_WORKSPACE/build/src/TicTacToeAI.dmg)
+          echo $(python3 $GITHUB_WORKSPACE/scripts/upload_services/transferwee.py upload $GITHUB_WORKSPACE/build/src/app/TicTacToeAI.dmg)
           echo "=====no operation for you can see link in the log console====="
 
       - name: Artifact Upload
         uses: actions/upload-artifact@v2
         with:
           name: MacOS-artifact
-          path: ${{ github.workspace }}/build/src/TicTacToeAI.dmg
+          path: ${{ github.workspace }}/build/src/app/TicTacToeAI.dmg
 
   windows-build:
     name: VS 2019 ${{ matrix.config.arch }}-${{ matrix.type }}
