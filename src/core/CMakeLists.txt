@@ -33,11 +33,6 @@ set(SOURCES
     "${CMAKE_CURRENT_LIST_DIR}/src/game/tile.cpp"
 
     "${CMAKE_CURRENT_LIST_DIR}/src/model/tile_shape_model.cpp"
-
-    "${CMAKE_CURRENT_LIST_DIR}/src/theme/theme.cpp"
-    "${CMAKE_CURRENT_LIST_DIR}/src/theme/colors.cpp"
-    "${CMAKE_CURRENT_LIST_DIR}/src/theme/sizes.cpp"
-    "${CMAKE_CURRENT_LIST_DIR}/src/theme/fonts.cpp"
     )
 
 # Header files *.h
@@ -56,11 +51,6 @@ set(HEADERS
     "${CMAKE_CURRENT_LIST_DIR}/src/game/tile.h"
 
     "${CMAKE_CURRENT_LIST_DIR}/src/model/tile_shape_model.h"
-
-    "${CMAKE_CURRENT_LIST_DIR}/src/theme/theme.h"
-    "${CMAKE_CURRENT_LIST_DIR}/src/theme/colors.h"
-    "${CMAKE_CURRENT_LIST_DIR}/src/theme/sizes.h"
-    "${CMAKE_CURRENT_LIST_DIR}/src/theme/fonts.h"
     )
 
 # Resource files *.qrc

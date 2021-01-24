@@ -42,7 +42,7 @@ endif()
 # -------------------------------------------------------------------------------------------------
 if(APPLE)
     set(${PROJECT_NAME}_ICON tictactoe.icns)
-elseif(WINDOWS)
+elseif(WIN32)
     set(${PROJECT_NAME}_ICON tictactoe.ico)
 elseif(UNIX AND NOT APPLE)
     set(${PROJECT_NAME}_ICON tictactoe.png)

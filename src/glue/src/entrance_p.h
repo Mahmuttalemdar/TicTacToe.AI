@@ -5,7 +5,6 @@
 
 #include "statechart/Main.h"
 #include <core/src/settings/game_settings.h>
-#include <core/src/theme/theme.h>
 #include <interfaces/src/controllers/game_controller.h>
 
 struct EntrancePrivate
@@ -13,7 +12,6 @@ struct EntrancePrivate
     // CORE
     std::unique_ptr<statechart::Main> statechart{};
     std::unique_ptr<GameSettings> gameSettings{};
-    std::unique_ptr<Theme> theme{};
 
     // INTERFACES
     std::unique_ptr<GameController> gameController{};

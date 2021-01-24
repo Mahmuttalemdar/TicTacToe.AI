@@ -1,8 +1,4 @@
 #include "core_plugin.h"
-#include "src/theme/colors.h"
-#include "src/theme/fonts.h"
-#include "src/theme/sizes.h"
-#include "src/theme/theme.h"
 
 #include "src/data/game_difficulty.h"
 #include "src/data/tile_shape.h"
@@ -49,11 +45,6 @@ void CorePlugin::registerTypes(const char* uri)
 
     registered = true;
     initProviders();
-
-    qmlRegisterType<Theme>("Core.Theme", 1, 0, "Theme");
-    qmlRegisterType<Colors>("Core.Theme", 1, 0, "Colors");
-    qmlRegisterType<Sizes>("Core.Theme", 1, 0, "Sizes");
-    qmlRegisterType<Fonts>("Core.Theme", 1, 0, "Fonts");
 
     qmlRegisterType<GameSettings>("Core.Data", 1, 0, "GameSettings");
     qmlRegisterType<GameDifficulty>("Core.Data", 1, 0, "GameDifficulty");

@@ -17,7 +17,7 @@ class GluePlugin : public QQmlExtensionPlugin
 public:
     /**
      * @brief C-tor
-     * @param parent; parent QObject based component
+     * @param parent: constructs an object with parent object parent
      */
     GluePlugin(QObject* parent = nullptr);
 
@@ -27,13 +27,13 @@ public:
     ~GluePlugin() override;
 
     /**
-     * @brief Registering all qml types
+     * @brief registerTypes: Registering all qml types
      * @param uri
      */
     void registerTypes(const char* uri) override;
 
     /**
-     * @brief initializeEngine
+     * @brief initializeEngine: initialize qml engine
      * @param engine
      */
     void initializeEngine(QQmlEngine* engine, const char* uri) override;

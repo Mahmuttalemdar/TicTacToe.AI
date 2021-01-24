@@ -7,7 +7,7 @@
 
 /**
  * @brief The UIComponentsPlugin class; providing
- * sub or custom components for screes
+ * sub or custom components for screens
  */
 class UIComponentsPlugin : public QQmlExtensionPlugin
 {
@@ -17,7 +17,7 @@ class UIComponentsPlugin : public QQmlExtensionPlugin
 public:
     /**
      * @brief C-tor
-     * @param parent; parent QObject based component
+     * @param parent: constructs an object with parent object parent
      */
     UIComponentsPlugin(QObject* parent = nullptr);
 
@@ -27,13 +27,13 @@ public:
     ~UIComponentsPlugin() override;
 
     /**
-     * @brief Registering all qml types
+     * @brief registerTypes: Registering all qml types
      * @param uri
      */
     void registerTypes(const char* uri) override;
 
     /**
-     * @brief initializeEngine
+     * @brief initializeEngine: initialize qml engine
      * @param engine
      */
     void initializeEngine(QQmlEngine* engine, const char* uri) override;

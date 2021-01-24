@@ -69,11 +69,6 @@ GameSettings* Entrance::gameSettings() const
     return data->gameSettings.get();
 }
 
-Theme* Entrance::theme() const
-{
-    return data->theme.get();
-}
-
 GameController* Entrance::gameController() const
 {
     return data->gameController.get();
@@ -133,7 +128,6 @@ void Entrance::initialize() const
     // Initialize objects
     data->statechart = std::make_unique<statechart::Main>();
     data->gameSettings = std::make_unique<GameSettings>();
-    data->theme = std::make_unique<Theme>();
     data->gameController = std::make_unique<GameController>(data->gameSettings.get());
     data->gameController->setStateChart(data->statechart.get());
 }

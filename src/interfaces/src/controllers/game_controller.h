@@ -91,30 +91,110 @@ private:
     void aiThinkAndPlay();
 
 public slots:
+    /**
+     * @brief Setter: lock a player thats can not move
+     * @param isPlayLock: can player move or not?
+     */
     void setIsPlayLock(bool isPlayLock);
+
+    /**
+     * @brief Setter: set tile shape model to current controller
+     * @param tileShapeModel: model data of tiles
+     */
     void setTileShapeModel(TileShapeModel* tileShapeModel);
+
+    /**
+     * @brief handleAIPlayedAt: play coordinates and lock player
+     * @param row: coordinate x on board
+     * @param column: coordinate y on board
+     */
     void handleAIPlayedAt(unsigned int row, unsigned int column);
+
+    /**
+     * @brief handleGameDifficultyChanged: set game difficulty according to given param
+     * @param difficulty: current game difficulty
+     */
     void handleGameDifficultyChanged(GameDifficulty::Difficulty difficulty);
+
+    /**
+     * @brief Slot: capture when grid size changed
+     * @param value: grid size
+     */
     void handleGridSizeChanged(unsigned int gridSize);
+
+    /**
+     * @brief Slot: capture when player name changed
+     * @param value: player name
+     */
     void handleHumanPlayerNameChanged(QString playerName);
+
+    /**
+     * @brief Slot: capture when player name changed
+     * @param value: player name
+     */
     void handleAiPlayerNameChanged(QString playerName);
+
+    /**
+     * @brief Slot: capture when try to restart game
+     */
     void handleRestartGame();
 
 signals:
+    /**
+     * @brief Signal: emit signal when isPlayLock changed
+     * @param value: isPlayLock
+     */
     void isPlayLockChanged(bool isPlayLock);
+
+    /**
+     * @brief Signal: emit signal when aiPlayedAt
+     * @param row: coordinate x on board
+     * @param column: coordinate y on board
+     */
     void aiPlayedAt(unsigned int row, unsigned int column);
+
+    /**
+     * @brief Signal: emit signal when updateAIPlayerOnUI
+     * @param row: coordinate x on board
+     * @param column: coordinate y on board
+     */
     void updateAIPlayerOnUI(unsigned int row, unsigned int column);
+
+    /**
+     * @brief Signal: emit signal when game board changed
+     * @param value: Board data
+     */
     void gameBoardChanged(Board* gameBoard);
+
+    /**
+     * @brief Signal: emit signal when tile shape model changed
+     * @param value: TileShapeModel data
+     */
     void tileShapeModelChanged(TileShapeModel* tileShapeModel);
 
 private:
+    // Game settings
     GameSettings* m_gameSettings;
+
+    // Player lock flag
     bool m_isPlayLock = false;
+
+    // Player (Human)
     Player m_humanPlayer;
+
+    // Player (AI)
     Player m_aiPlayer;
+
+    // Game Board
     Board* m_gameBoard;
+
+    // AI player
     AIPlayer* m_aiImplement;
+
+    // Tile shape model
     TileShapeModel* m_tileShapeModel;
+
+    // State chart
     statechart::Main* m_statechart;
 };
 

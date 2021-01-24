@@ -5,7 +5,7 @@
         <state id="StartScreen">
             <qt:editorinfo geometry="50.17;67.80;-60;-50;221.11;273.09" scenegeometry="385.18;213.53;325.18;163.53;221.11;273.09"/>
             <transition type="external" event="openOptionScreen" target="OptionsScreen">
-                <qt:editorinfo endTargetFactors="2.61;66.65" startTargetFactors="95.64;67.02"/>
+                <qt:editorinfo startTargetFactors="95.64;67.02" endTargetFactors="2.61;66.65"/>
             </transition>
             <onentry>
                 <log label="[Statechart]::[StartScreen]" expr="Entered"/>
@@ -28,25 +28,28 @@
             <state id="ChooseDifficulty">
                 <qt:editorinfo geometry="-122.36;30.29;-60;-50;163.90;122.70" scenegeometry="881.06;288.79;821.06;238.79;163.90;122.70"/>
                 <transition type="external" event="backToChooseShapePage" target="ChooseShape">
-                    <qt:editorinfo endTargetFactors="91.96;78.28" startTargetFactors="7.53;80.24" movePoint="15.01;28.87"/>
+                    <qt:editorinfo startTargetFactors="7.53;80.24" movePoint="15.01;28.87" endTargetFactors="91.96;78.28"/>
                 </transition>
                 <onentry>
                     <log label="[Statechart]::[ChooseDifficulty]" expr="Entered"/>
                 </onentry>
                 <transition type="external" event="openGridSizePage" target="ChooseGridSize">
-                    <qt:editorinfo endTargetFactors="12.62;48.23" startTargetFactors="91.04;48.10"/>
+                    <qt:editorinfo startTargetFactors="91.04;48.10" endTargetFactors="12.62;48.23"/>
                 </transition>
             </state>
             <state id="PlayerSettings">
                 <qt:editorinfo geometry="299.36;38;-60;-55.87;159.53;119.86" scenegeometry="1302.78;296.50;1242.78;240.63;159.53;119.86"/>
                 <transition type="external" event="openGamePlayScreen" target="GamePlayScreen">
-                    <qt:editorinfo endTargetFactors="30.23;10.80" localGeometry="0;124.80;-857.25;124.80" startTargetFactors="54.99;92.34"/>
+                    <qt:editorinfo localGeometry="0;124.80;-857.25;124.80" startTargetFactors="54.99;92.34" endTargetFactors="30.23;10.80"/>
                 </transition>
+                <onentry>
+                    <log label="[Statechart]::[PlayerSettings]"/>
+                </onentry>
             </state>
             <state id="ChooseGridSize">
                 <qt:editorinfo geometry="98.31;31.91;-60;-50;160.53;121.08" scenegeometry="1101.73;290.41;1041.73;240.41;160.53;121.08"/>
                 <transition type="external" event="openPlayerSettings" target="PlayerSettings">
-                    <qt:editorinfo endTargetFactors="12.01;56.65" startTargetFactors="92.12;54.21"/>
+                    <qt:editorinfo startTargetFactors="92.12;54.21" endTargetFactors="12.01;56.65"/>
                 </transition>
                 <onentry>
                     <qt:editorinfo geometry="-60;-50;0;0;0;0"/>
@@ -59,6 +62,9 @@
             <transition type="external" event="openScoreScreen" target="ScoreScreen">
                 <qt:editorinfo endTargetFactors="5.50;51.16"/>
             </transition>
+            <onentry>
+                <log label="[Statechart]::[GamePlayScreen]"/>
+            </onentry>
         </state>
         <state id="ScoreScreen">
             <qt:editorinfo geometry="655.13;456.07;-66.12;-50.44;446.19;289.54" scenegeometry="990.14;601.80;924.02;551.36;446.19;289.54"/>
