@@ -6,7 +6,7 @@ GameObject::GameObject()
 
 GameObject::~GameObject() {}
 
-const QUuid& GameObject::getID() const
+const QUuid& GameObject::id() const
 {
     return m_id;
 }

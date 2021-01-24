@@ -10,48 +10,48 @@ Tile::Tile()
 
 Tile::~Tile() {}
 
-void Tile::SetRow(const unsigned int& row)
+void Tile::setRow(const unsigned int& row)
 {
     m_row = row;
 }
 
-const unsigned int& Tile::GetRow() const
+const unsigned int& Tile::row() const
 {
     return m_row;
 }
 
-void Tile::SetColumn(const unsigned int& column)
+void Tile::setColumn(const unsigned int& column)
 {
     m_column = column;
 }
 
-const unsigned int& Tile::GetColumn() const
+const unsigned int& Tile::column() const
 {
     return m_column;
 }
 
-void Tile::SetPlayer(const Player& player)
+void Tile::setPlayer(const Player& player)
 {
-    if (player.getType() == Player::Type::NONE) {
-        SetState(State::BLANK);
+    if (player.type() == Player::Type::NONE) {
+        setState(State::BLANK);
     } else {
-        SetState(State::OCCUPIED);
+        setState(State::OCCUPIED);
     }
 
     m_player = player;
 }
 
-const Player& Tile::GetPlayer() const
+const Player& Tile::player() const
 {
     return m_player;
 }
 
-void Tile::SetState(const Tile::State& state)
+void Tile::setState(const Tile::State& state)
 {
     m_state = state;
 }
 
-const Tile::State& Tile::GetState() const
+const Tile::State& Tile::state() const
 {
     return m_state;
 }

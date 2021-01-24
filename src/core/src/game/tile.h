@@ -29,57 +29,64 @@ public:
     virtual ~Tile();
 
     /**
-     * @brief Modifies the tile row
-     * @param row: unsigned int
+     * @brief Setter: set row number to tile
+     * @param value: row number of tile
      */
-    void SetRow(const unsigned int& row);
+    void setRow(const unsigned int& row);
 
     /**
-     * @brief Returns current row value
-     * @return row: unsigned int
+     * @brief Getter: get current row number
+     * @return value: row number of tile
      */
-    const unsigned int& GetRow() const;
+    const unsigned int& row() const;
 
     /**
-     * @brief Modifies the tile column
-     * @param column: unsigned int
+     * @brief Setter: set column number to tile
+     * @param value: column number of tile
      */
-    void SetColumn(const unsigned int& column);
+    void setColumn(const unsigned int& column);
 
     /**
-     * @brief Returns current column value
-     * @return column: unsigned int
+     * @brief Getter: get current column number
+     * @return value: column number of tile
      */
-    const unsigned int& GetColumn() const;
+    const unsigned int& column() const;
 
     /**
-     * @brief SetPlayer: Set player to selected tile
-     * @param player: Player
+     * @brief Setter: set player to selected tile
+     * @param value: Player data
      */
-    void SetPlayer(const Player& player);
+    void setPlayer(const Player& player);
 
     /**
-     * @brief Which player played to this tile
-     * @return HUMAN, AI or NONE
+     * @brief Getter: get which player played to this tile
+     * @return value: HUMAN, AI or NONE
      */
-    const Player& GetPlayer() const;
+    const Player& player() const;
 
     /**
-     * @brief Modifies the tile column
-     * @param column: unsigned int
+     * @brief Setter: set state of tile, which player played or tile is empty:BLANK?
+     * @param value: tile state
      */
-    void SetState(const State& state);
+    void setState(const State& state);
 
     /**
-     * @brief Returns current state of tile
-     * @return State
+     * @brief Getter: get current state of tile
+     * @return value: tile state
      */
-    const State& GetState() const;
+    const State& state() const;
 
 private:
+    // Tile row value
     unsigned int m_row = 0;
+
+    // Tile column value
     unsigned int m_column = 0;
+
+    // State of tile
     State m_state;
+
+    // Which player using this tile or BLANK
     Player m_player;
 };
 

@@ -39,7 +39,7 @@ public:
      * @brief Getter: Returns current type of type
      * @return value: player type (HUMAN or AI)
      */
-    const Type& getType() const;
+    const Type& type() const;
 
     /**
      * @brief Setter: Modifies the player name
@@ -51,7 +51,7 @@ public:
      * @brief Getter: Returns current name of player
      * @return value: playerName as String
      */
-    const QString& getPlayerName() const;
+    const QString& playerName() const;
 
 private:
     // Player type

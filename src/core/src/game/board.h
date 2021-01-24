@@ -70,7 +70,7 @@ public:
      * @brief GetGameBoard
      * @return board grid
      */
-    const std::vector<std::vector<Tile>>& getGameBoard();
+    const std::vector<std::vector<Tile>>& gameBoard();
 
     /**
      * @brief getTile: get tile by (row & colum) from current instance of tile list
@@ -78,13 +78,13 @@ public:
      * @param column: coordinate y on board
      * @return Tile data
      */
-    const Tile& getTile(unsigned int row, unsigned int column) const;
+    const Tile& tile(unsigned int row, unsigned int column) const;
 
     /**
      * @brief Getter: get grid size of current board
      * @return grid size value
      */
-    unsigned int getGridSize() const;
+    unsigned int gridSize() const;
 
     /**
      * @brief Setter: set grid size to current board
@@ -96,7 +96,7 @@ public:
      * @brief Getter: get utility value of current board
      * @return value: utility value of current board
      */
-    const int& getUtilityValue() const;
+    const int& utilityValue() const;
 
     /**
      * @brief Setter: utility value to current board
@@ -108,7 +108,7 @@ public:
      * @brief Getter: get depth value of current board
      * @return value: depth value of current board
      */
-    unsigned int getDepth() const;
+    unsigned int depth() const;
 
     /**
      * @brief Setter: utility value to current board
@@ -120,19 +120,19 @@ public:
      * @brief Getter: get played row value on current board
      * @return value: get played row value on current board
      */
-    unsigned int getRowPlayed() const;
+    unsigned int rowPlayed() const;
 
     /**
      * @brief Getter: get played column value on current board
      * @return value: get played column value on current board
      */
-    unsigned int getColumnPlayed() const;
+    unsigned int columnPlayed() const;
 
     /**
      * @brief Getter: get cached last row played value on current board
      * @return value: cached last row played value on current board
      */
-    unsigned int getCachedLastRowPlayed() const;
+    unsigned int cachedLastRowPlayed() const;
 
     /**
      * @brief Setter: set cached last row played value to current board
@@ -144,7 +144,7 @@ public:
      * @brief Getter: get cached last column played value on current board
      * @return value: cached last column played value on current board
      */
-    unsigned int getCachedLastColumnPlayed() const;
+    unsigned int cachedLastColumnPlayed() const;
 
     /**
      * @brief Setter: set cached last column played value to current board
@@ -203,10 +203,10 @@ public:
     void restart();
 
     /**
-     * @brief getWinnerList: If somebody finished game with a WON result, get tile list according to him
+     * @brief Getter: If somebody finished game with a WON result, get tile list according to him
      * @return list of tile which is played from winner player
      */
-    Q_INVOKABLE QList<QPoint> getWinnerList();
+    Q_INVOKABLE QList<QPoint> winnerList();
 
     /**
      * @brief Getter: get game state value of current board

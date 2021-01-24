@@ -25,7 +25,7 @@ public:
 
     /**
      * @brief C-tor
-     * @param constructs an object with parent object parent
+     * @param parent: constructs an object with parent object parent
      */
     GameDifficulty(QObject* parent = nullptr);
 

@@ -11,7 +11,7 @@ void Player::setType(const Type& type)
     m_type = type;
 }
 
-const Player::Type& Player::getType() const
+const Player::Type& Player::type() const
 {
     return m_type;
 }
@@ -21,7 +21,7 @@ void Player::setPlayerName(const QString& playerName)
     m_playerName = playerName;
 }
 
-const QString& Player::getPlayerName() const
+const QString& Player::playerName() const
 {
     return m_playerName;
 }

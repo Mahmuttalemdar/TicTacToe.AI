@@ -57,7 +57,7 @@ Board::Board(const Board& board, unsigned int row, unsigned int column, Player p
     m_cachedLastRowPlayed = 0;
     m_cachedLastColumnPlayed = 0;
     m_gameBoard = board.m_gameBoard;
-    m_gameBoard[row][column].SetPlayer(player);
+    m_gameBoard[row][column].setPlayer(player);
     m_gameState = board.m_gameState;
 }
 
@@ -90,7 +90,7 @@ Board& Board::operator=(Board&& board)
 
 Board::~Board() {}
 
-unsigned int Board::getGridSize() const
+unsigned int Board::gridSize() const
 {
     return m_gridSize;
 }
@@ -100,7 +100,7 @@ void Board::setGridSize(unsigned int value)
     m_gridSize = value;
 }
 
-const int& Board::getUtilityValue() const
+const int& Board::utilityValue() const
 {
     return m_utilityValue;
 }
@@ -110,7 +110,7 @@ void Board::setUtilityValue(const int& value)
     m_utilityValue = value;
 }
 
-unsigned int Board::getDepth() const
+unsigned int Board::depth() const
 {
     return m_depth;
 }
@@ -120,17 +120,17 @@ void Board::setDepth(unsigned int value)
     m_depth = value;
 }
 
-unsigned int Board::getRowPlayed() const
+unsigned int Board::rowPlayed() const
 {
     return m_rowPlayed;
 }
 
-unsigned int Board::getColumnPlayed() const
+unsigned int Board::columnPlayed() const
 {
     return m_columnPlayed;
 }
 
-unsigned int Board::getCachedLastRowPlayed() const
+unsigned int Board::cachedLastRowPlayed() const
 {
     return m_cachedLastRowPlayed;
 }
@@ -140,7 +140,7 @@ void Board::setCachedLastRowPlayed(unsigned int value)
     m_cachedLastRowPlayed = value;
 }
 
-unsigned int Board::getCachedLastColumnPlayed() const
+unsigned int Board::cachedLastColumnPlayed() const
 {
     return m_cachedLastColumnPlayed;
 }
@@ -152,26 +152,26 @@ void Board::setCachedLastColumnPlayed(unsigned int value)
 
 bool Board::isPlayed(unsigned int row, unsigned int column)
 {
-    if (getTile(row, column).GetState() == Tile::State::BLANK) {
+    if (tile(row, column).state() == Tile::State::BLANK) {
         return false;
     }
 
     return true;
 }
 
-const std::vector<std::vector<Tile>>& Board::getGameBoard()
+const std::vector<std::vector<Tile>>& Board::gameBoard()
 {
     return m_gameBoard;
 }
 
-const Tile& Board::getTile(unsigned int row, unsigned int column) const
+const Tile& Board::tile(unsigned int row, unsigned int column) const
 {
     return m_gameBoard[row][column];
 }
 
 std::ostream& operator<<(std::ostream& os, const Tile& tile)
 {
-    switch (tile.GetPlayer().getType()) {
+    switch (tile.player().type()) {
         case Player::Type::NONE:
             os << "";
             break;
@@ -189,8 +189,8 @@ std::ostream& operator<<(std::ostream& os, const Tile& tile)
 
 void Board::playAt(unsigned int row, unsigned int column, Player player)
 {
-    if (getTile(row, column).GetState() == Tile::State::BLANK) {
-        m_gameBoard[row][column].SetPlayer(player);
+    if (tile(row, column).state() == Tile::State::BLANK) {
+        m_gameBoard[row][column].setPlayer(player);
     } else {
         throw std::runtime_error("You can not play there, another tile has already taken.");
     }
@@ -202,11 +202,11 @@ const std::vector<std::unique_ptr<Board>> Board::generatePossibleStates(Player p
     std::vector<std::unique_ptr<Board>> movesSet;
 
     // Lopps Through each Row
-    for (unsigned int row = 0; row < getGridSize(); row++) {
+    for (unsigned int row = 0; row < gridSize(); row++) {
         // Loop through each colum
-        for (unsigned int column = 0; column < getGridSize(); column++) {
+        for (unsigned int column = 0; column < gridSize(); column++) {
             // if we have a free spot generate a possible outcome
-            if (getTile(row, column).GetState() == Tile::State::BLANK) {
+            if (tile(row, column).state() == Tile::State::BLANK) {
                 Board newBoard = *this;
                 std::unique_ptr<Board> possibleGameState(new Board(std::move(newBoard), row, column, player));
 
@@ -223,12 +223,12 @@ const std::vector<std::unique_ptr<Board>> Board::generatePossibleStates(Player p
 Board::GameState Board::checkGameState()
 {
     // ROWS
-    for (unsigned int row = 0; row < getGridSize(); row++) {
+    for (unsigned int row = 0; row < gridSize(); row++) {
         unsigned int rowCount = 0;
 
-        for (unsigned int column = 0; column < getGridSize() - 1; column++) {
-            if (m_gameBoard[row][column].GetPlayer().getType() == m_gameBoard[row][column + 1].GetPlayer().getType() &&
-                m_gameBoard[row][column].GetState() != Tile::State::BLANK) {
+        for (unsigned int column = 0; column < gridSize() - 1; column++) {
+            if (m_gameBoard[row][column].player().type() == m_gameBoard[row][column + 1].player().type() &&
+                m_gameBoard[row][column].state() != Tile::State::BLANK) {
                 ++rowCount;
                 m_winnerList.append(QPoint(row, column));
             } else {
@@ -237,9 +237,9 @@ Board::GameState Board::checkGameState()
         }
 
         // If one row is fill (this mean HUMAN or AI WON)
-        if (rowCount == getGridSize() - 1) {
+        if (rowCount == gridSize() - 1) {
             m_winnerList.append(QPoint(0, rowCount));
-            if (m_gameBoard[row][0].GetPlayer().getType() == Player::Type::AI) {
+            if (m_gameBoard[row][0].player().type() == Player::Type::AI) {
                 setGameState(GameState::WON);
                 return GameState::WON;
             } else {
@@ -253,11 +253,11 @@ Board::GameState Board::checkGameState()
     }
 
     // COLUMNS
-    for (unsigned int column = 0; column < getGridSize(); column++) {
+    for (unsigned int column = 0; column < gridSize(); column++) {
         unsigned int columnCount = 0;
-        for (unsigned int row = 0; row < getGridSize() - 1; row++) {
-            if (m_gameBoard[row][column].GetPlayer().getType() == m_gameBoard[row + 1][column].GetPlayer().getType() &&
-                m_gameBoard[row][column].GetState() != Tile::State::BLANK) {
+        for (unsigned int row = 0; row < gridSize() - 1; row++) {
+            if (m_gameBoard[row][column].player().type() == m_gameBoard[row + 1][column].player().type() &&
+                m_gameBoard[row][column].state() != Tile::State::BLANK) {
                 ++columnCount;
                 m_winnerList.append(QPoint(row, column));
             } else {
@@ -267,9 +267,9 @@ Board::GameState Board::checkGameState()
         }
 
         // If one row is fill (this mean HUMAN or AI WON)
-        if (columnCount == getGridSize() - 1) {
+        if (columnCount == gridSize() - 1) {
             m_winnerList.append(QPoint(columnCount, 0));
-            if (m_gameBoard[0][column].GetPlayer().getType() == Player::Type::AI) {
+            if (m_gameBoard[0][column].player().type() == Player::Type::AI) {
                 setGameState(GameState::WON);
                 return GameState::WON;
             } else {
@@ -284,9 +284,9 @@ Board::GameState Board::checkGameState()
 
     // DIAGONAL
     unsigned int diagonalCount = 0;
-    for (unsigned int index = 0; index < getGridSize() - 1; index++) {
-        if (m_gameBoard[index][index].GetPlayer().getType() == m_gameBoard[index + 1][index + 1].GetPlayer().getType() &&
-            m_gameBoard[index][index].GetState() != Tile::State::BLANK) {
+    for (unsigned int index = 0; index < gridSize() - 1; index++) {
+        if (m_gameBoard[index][index].player().type() == m_gameBoard[index + 1][index + 1].player().type() &&
+            m_gameBoard[index][index].state() != Tile::State::BLANK) {
             ++diagonalCount;
         } else {
             break;
@@ -295,8 +295,8 @@ Board::GameState Board::checkGameState()
     }
 
     // If one row is fill (this mean HUMAN or AI WON)
-    if (diagonalCount == getGridSize() - 1) {
-        if (m_gameBoard[0][0].GetPlayer().getType() == Player::Type::AI) {
+    if (diagonalCount == gridSize() - 1) {
+        if (m_gameBoard[0][0].player().type() == Player::Type::AI) {
             setGameState(GameState::WON);
             return GameState::WON;
         } else {
@@ -307,10 +307,10 @@ Board::GameState Board::checkGameState()
 
     // ANTI DIAGONAL
     unsigned int antiDiagonalCount = 0;
-    for (unsigned int index = 0; index < getGridSize() - 1; index++) {
-        if (m_gameBoard[index][getGridSize() - index - 1].GetPlayer().getType() ==
-              m_gameBoard[index + 1][getGridSize() - index - 2].GetPlayer().getType() &&
-            m_gameBoard[index][getGridSize() - index - 1].GetState() != Tile::State::BLANK) {
+    for (unsigned int index = 0; index < gridSize() - 1; index++) {
+        if (m_gameBoard[index][gridSize() - index - 1].player().type() ==
+              m_gameBoard[index + 1][gridSize() - index - 2].player().type() &&
+            m_gameBoard[index][gridSize() - index - 1].state() != Tile::State::BLANK) {
             ++antiDiagonalCount;
         } else {
             break;
@@ -319,8 +319,8 @@ Board::GameState Board::checkGameState()
     }
 
     // If one row is fill (this mean HUMAN or AI WON)
-    if (antiDiagonalCount == getGridSize() - 1) {
-        if (m_gameBoard[0][getGridSize() - 1].GetPlayer().getType() == Player::Type::AI) {
+    if (antiDiagonalCount == gridSize() - 1) {
+        if (m_gameBoard[0][gridSize() - 1].player().type() == Player::Type::AI) {
             setGameState(GameState::WON);
             return GameState::WON;
         } else {
@@ -330,9 +330,9 @@ Board::GameState Board::checkGameState()
     }
 
     // ONGOING
-    for (unsigned int i = 0; i < getGridSize(); i++) {
-        for (unsigned int j = 0; j < getGridSize(); j++) {
-            if (m_gameBoard[i][j].GetState() == Tile::State::BLANK) {
+    for (unsigned int i = 0; i < gridSize(); i++) {
+        for (unsigned int j = 0; j < gridSize(); j++) {
+            if (m_gameBoard[i][j].state() == Tile::State::BLANK) {
                 setGameState(GameState::ONGOING);
                 return GameState::ONGOING;
             }
@@ -351,10 +351,10 @@ bool Board::nextChildBoard(Player player, std::shared_ptr<Board>& childBoard)
         childBoard = std::make_shared<Board>(m_gridSize);
     }
 
-    for (unsigned int row = childBoard->getCachedLastRowPlayed(); row < getGridSize(); row++) {
-        for (unsigned int column = childBoard->getCachedLastColumnPlayed(); column < getGridSize(); column++) {
-            if (getTile(row, column).GetState() == Tile::State::BLANK &&
-                (childBoard->getRowPlayed() != row || childBoard->getColumnPlayed() != column)) {
+    for (unsigned int row = childBoard->cachedLastRowPlayed(); row < gridSize(); row++) {
+        for (unsigned int column = childBoard->cachedLastColumnPlayed(); column < gridSize(); column++) {
+            if (tile(row, column).state() == Tile::State::BLANK &&
+                (childBoard->rowPlayed() != row || childBoard->columnPlayed() != column)) {
                 auto childBoardPtr = childBoard.get();
 
                 std::destroy_at(childBoardPtr);
@@ -391,7 +391,7 @@ void Board::restart()
     setGameState(GameState::ONGOING);
 }
 
-QList<QPoint> Board::getWinnerList()
+QList<QPoint> Board::winnerList()
 {
     return m_winnerList;
 }

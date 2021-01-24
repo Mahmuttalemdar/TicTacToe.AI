@@ -21,14 +21,10 @@ public:
     virtual ~GameObject();
 
     /**
-     * @brief get unique id o object
-     * @return
-     */
-    /**
      * @brief Getter: convert uid value of game object
      * @return value: unique value of game object
      */
-    const QUuid& getID() const;
+    const QUuid& id() const;
 
 private:
     // Unique-id

@@ -50,7 +50,7 @@ public:
      * @brief Getter: which player trying to get max value by ai
      * @return Player data
      */
-    const Player& getMaxPlayer() const;
+    const Player& maxPlayer() const;
 
     /**
      * @brief Setter: set which player trying to get max value by ai
