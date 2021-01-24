@@ -20,7 +20,7 @@ public:
 
     /**
      * @brief C-tor
-     * @param symbol: X or O
+     * @param constructs an object depend on player type
      */
     Player(const Type& type = Type::NONE);
 
@@ -30,31 +30,34 @@ public:
     virtual ~Player();
 
     /**
-     * @brief Modifies the player type
-     * @param type: HUMAN or AI
+     * @brief Setter: Modifies the player type
+     * @param value: player type (HUMAN or AI)
      */
-    void SetType(const Type& type);
+    void setType(const Type& type);
 
     /**
-     * @brief Returns current type of type
-     * @return Type
+     * @brief Getter: Returns current type of type
+     * @return value: player type (HUMAN or AI)
      */
-    const Type& GetType() const;
+    const Type& getType() const;
 
     /**
-     * @brief Modifies the player name
-     * @param name: Name of Human player or Default AI Name
+     * @brief Setter: Modifies the player name
+     * @param value: Name of Human player or Default AI Name
      */
-    void SetPlayerName(const QString& playerName);
+    void setPlayerName(const QString& playerName);
 
     /**
-     * @brief Returns current name of player
-     * @return playerName as String
+     * @brief Getter: Returns current name of player
+     * @return value: playerName as String
      */
-    const QString& GetPlayerName() const;
+    const QString& getPlayerName() const;
 
 private:
+    // Player type
     Type m_type;
+
+    // Player name
     QString m_playerName;
 };
 

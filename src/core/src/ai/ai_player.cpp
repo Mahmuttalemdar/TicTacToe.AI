@@ -19,11 +19,8 @@ AIPlayer::~AIPlayer() {}
 bool AIPlayer::play(Board& currentBoard)
 {
     try {
-        // Get copy of current board
-        auto copyBoard = currentBoard;
-
         // Calculate the best move
-        auto bestMove = MiniMaxDecision(&currentBoard);
+        auto bestMove = miniMaxDecision(&currentBoard);
 
         // Play at the coordinates
         currentBoard.playAt(bestMove.getRowPlayed(), bestMove.getColumnPlayed(), *m_maxPlayer.get());
@@ -40,7 +37,7 @@ bool AIPlayer::playPosition(Board& currentBoardModel, unsigned int& row, unsigne
 {
     try {
         // calculate the best move
-        auto bestMove = MiniMaxDecision(&currentBoardModel);
+        auto bestMove = miniMaxDecision(&currentBoardModel);
         // set the best moves
         row = bestMove.getRowPlayed();
         column = bestMove.getColumnPlayed();
@@ -65,7 +62,7 @@ void AIPlayer::setMaxPlayer(Player& player)
     m_maxPlayer.reset(&player);
 }
 
-Board AIPlayer::MiniMaxDecision(Board* currentBoard)
+Board AIPlayer::miniMaxDecision(Board* currentBoard)
 {
     auto possibleMoves = currentBoard->generatePossibleStates(*m_maxPlayer.get());
 
@@ -78,9 +75,7 @@ Board AIPlayer::MiniMaxDecision(Board* currentBoard)
 
     Board* bestMove = &(*possibleMoves[0]);
     for (auto& stateNode : possibleMoves) {
-        // Emin değiliz
         stateNode->setUtilityValue(minValue(*stateNode, alpha, beta));
-
         if (stateNode->getUtilityValue() > alpha) {
             alpha = stateNode->getUtilityValue();
             bestMove = &*stateNode;
@@ -106,7 +101,7 @@ int AIPlayer::evalutaionFunciton(Board& currentBoard, Player player)
     }
     // ONGOING :: Game is still on going
     else {
-        if (player.GetType() == m_maxPlayer.get()->GetType()) {
+        if (player.getType() == m_maxPlayer.get()->getType()) {
             return heuristic(currentBoard, *m_maxPlayer.get());
         } else {
             return -heuristic(currentBoard, *m_minOpponent.get());
@@ -219,8 +214,8 @@ int AIPlayer::checkRow(const Board& gameBoard, const Player& player)
             if (gameBoard.getTile(row, column).GetState() != Tile::State::BLANK) {
                 if (countOccupiedTile == 0) {
                     countOccupiedTile++;
-                    firstEncounteredType = gameBoard.getTile(row, column).GetPlayer().GetType();
-                } else if (firstEncounteredType != gameBoard.getTile(row, column).GetPlayer().GetType()) {
+                    firstEncounteredType = gameBoard.getTile(row, column).GetPlayer().getType();
+                } else if (firstEncounteredType != gameBoard.getTile(row, column).GetPlayer().getType()) {
                     countOccupiedTile++;
                     break;
                 }
@@ -230,7 +225,7 @@ int AIPlayer::checkRow(const Board& gameBoard, const Player& player)
         }
 
         // Winning state guards
-        if (countOccupiedTile < 2 && countBlankTile == 1 && (firstEncounteredType == player.GetType())) {
+        if (countOccupiedTile < 2 && countBlankTile == 1 && (firstEncounteredType == player.getType())) {
             countWinningSpot++;
         }
 
@@ -265,8 +260,8 @@ int AIPlayer::checkColumns(const Board& gameBoard, const Player& player)
             if (gameBoard.getTile(row, column).GetState() != Tile::State::BLANK) {
                 if (countOccupiedTile == 0) {
                     countOccupiedTile++;
-                    firstEncounteredType = gameBoard.getTile(row, column).GetPlayer().GetType();
-                } else if (firstEncounteredType != gameBoard.getTile(row, column).GetPlayer().GetType()) {
+                    firstEncounteredType = gameBoard.getTile(row, column).GetPlayer().getType();
+                } else if (firstEncounteredType != gameBoard.getTile(row, column).GetPlayer().getType()) {
                     countOccupiedTile++;
                     break;
                 }
@@ -276,7 +271,7 @@ int AIPlayer::checkColumns(const Board& gameBoard, const Player& player)
         }
 
         // Winning state guards
-        if (countOccupiedTile < 2 && countBlankTile == 1 && (firstEncounteredType == player.GetType())) {
+        if (countOccupiedTile < 2 && countBlankTile == 1 && (firstEncounteredType == player.getType())) {
             countWinningSpot++;
         }
 
@@ -309,8 +304,8 @@ int AIPlayer::checkDiagonal(const Board& gameBoard, const Player& player)
         if (gameBoard.getTile(item, item).GetState() != Tile::State::BLANK) {
             if (countOccupiedTile == 0) {
                 countOccupiedTile++;
-                firstEncounteredType = gameBoard.getTile(item, item).GetPlayer().GetType();
-            } else if (firstEncounteredType != gameBoard.getTile(item, item).GetPlayer().GetType()) {
+                firstEncounteredType = gameBoard.getTile(item, item).GetPlayer().getType();
+            } else if (firstEncounteredType != gameBoard.getTile(item, item).GetPlayer().getType()) {
                 countOccupiedTile++;
                 break;
             }
@@ -320,7 +315,7 @@ int AIPlayer::checkDiagonal(const Board& gameBoard, const Player& player)
     }
 
     // Winning state guards
-    if (countOccupiedTile < 2 && countBlankTile == 1 && (firstEncounteredType == player.GetType())) {
+    if (countOccupiedTile < 2 && countBlankTile == 1 && (firstEncounteredType == player.getType())) {
         countWinningSpot++;
     }
 
@@ -351,8 +346,8 @@ int AIPlayer::checkAntiDiagonal(const Board& gameBoard, const Player& player)
                 if (gameBoard.getTile(row, column).GetState() != Tile::State::BLANK) {
                     if (countOccupiedTile == 0) {
                         countOccupiedTile++;
-                        firstEncounteredType = gameBoard.getTile(row, column).GetPlayer().GetType();
-                    } else if (firstEncounteredType != gameBoard.getTile(row, column).GetPlayer().GetType()) {
+                        firstEncounteredType = gameBoard.getTile(row, column).GetPlayer().getType();
+                    } else if (firstEncounteredType != gameBoard.getTile(row, column).GetPlayer().getType()) {
                         countOccupiedTile++;
                         break;
                     }
@@ -364,7 +359,7 @@ int AIPlayer::checkAntiDiagonal(const Board& gameBoard, const Player& player)
     }
 
     // Winning state guards
-    if (countOccupiedTile < 2 && countBlankTile == 1 && (firstEncounteredType == player.GetType())) {
+    if (countOccupiedTile < 2 && countBlankTile == 1 && (firstEncounteredType == player.getType())) {
         countWinningSpot++;
     }
 

@@ -32,7 +32,7 @@ const unsigned int& Tile::GetColumn() const
 
 void Tile::SetPlayer(const Player& player)
 {
-    if (player.GetType() == Player::Type::NONE) {
+    if (player.getType() == Player::Type::NONE) {
         SetState(State::BLANK);
     } else {
         SetState(State::OCCUPIED);

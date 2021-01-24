@@ -24,9 +24,14 @@ public:
      * @brief get unique id o object
      * @return
      */
+    /**
+     * @brief Getter: convert uid value of game object
+     * @return value: unique value of game object
+     */
     const QUuid& getID() const;
 
 private:
+    // Unique-id
     QUuid m_id;
 };
 

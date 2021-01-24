@@ -171,7 +171,7 @@ const Tile& Board::getTile(unsigned int row, unsigned int column) const
 
 std::ostream& operator<<(std::ostream& os, const Tile& tile)
 {
-    switch (tile.GetPlayer().GetType()) {
+    switch (tile.GetPlayer().getType()) {
         case Player::Type::NONE:
             os << "";
             break;
@@ -227,7 +227,7 @@ Board::GameState Board::checkGameState()
         unsigned int rowCount = 0;
 
         for (unsigned int column = 0; column < getGridSize() - 1; column++) {
-            if (m_gameBoard[row][column].GetPlayer().GetType() == m_gameBoard[row][column + 1].GetPlayer().GetType() &&
+            if (m_gameBoard[row][column].GetPlayer().getType() == m_gameBoard[row][column + 1].GetPlayer().getType() &&
                 m_gameBoard[row][column].GetState() != Tile::State::BLANK) {
                 ++rowCount;
                 m_winnerList.append(QPoint(row, column));
@@ -239,7 +239,7 @@ Board::GameState Board::checkGameState()
         // If one row is fill (this mean HUMAN or AI WON)
         if (rowCount == getGridSize() - 1) {
             m_winnerList.append(QPoint(0, rowCount));
-            if (m_gameBoard[row][0].GetPlayer().GetType() == Player::Type::AI) {
+            if (m_gameBoard[row][0].GetPlayer().getType() == Player::Type::AI) {
                 setGameState(GameState::WON);
                 return GameState::WON;
             } else {
@@ -256,7 +256,7 @@ Board::GameState Board::checkGameState()
     for (unsigned int column = 0; column < getGridSize(); column++) {
         unsigned int columnCount = 0;
         for (unsigned int row = 0; row < getGridSize() - 1; row++) {
-            if (m_gameBoard[row][column].GetPlayer().GetType() == m_gameBoard[row + 1][column].GetPlayer().GetType() &&
+            if (m_gameBoard[row][column].GetPlayer().getType() == m_gameBoard[row + 1][column].GetPlayer().getType() &&
                 m_gameBoard[row][column].GetState() != Tile::State::BLANK) {
                 ++columnCount;
                 m_winnerList.append(QPoint(row, column));
@@ -269,7 +269,7 @@ Board::GameState Board::checkGameState()
         // If one row is fill (this mean HUMAN or AI WON)
         if (columnCount == getGridSize() - 1) {
             m_winnerList.append(QPoint(columnCount, 0));
-            if (m_gameBoard[0][column].GetPlayer().GetType() == Player::Type::AI) {
+            if (m_gameBoard[0][column].GetPlayer().getType() == Player::Type::AI) {
                 setGameState(GameState::WON);
                 return GameState::WON;
             } else {
@@ -285,7 +285,7 @@ Board::GameState Board::checkGameState()
     // DIAGONAL
     unsigned int diagonalCount = 0;
     for (unsigned int index = 0; index < getGridSize() - 1; index++) {
-        if (m_gameBoard[index][index].GetPlayer().GetType() == m_gameBoard[index + 1][index + 1].GetPlayer().GetType() &&
+        if (m_gameBoard[index][index].GetPlayer().getType() == m_gameBoard[index + 1][index + 1].GetPlayer().getType() &&
             m_gameBoard[index][index].GetState() != Tile::State::BLANK) {
             ++diagonalCount;
         } else {
@@ -296,7 +296,7 @@ Board::GameState Board::checkGameState()
 
     // If one row is fill (this mean HUMAN or AI WON)
     if (diagonalCount == getGridSize() - 1) {
-        if (m_gameBoard[0][0].GetPlayer().GetType() == Player::Type::AI) {
+        if (m_gameBoard[0][0].GetPlayer().getType() == Player::Type::AI) {
             setGameState(GameState::WON);
             return GameState::WON;
         } else {
@@ -308,8 +308,8 @@ Board::GameState Board::checkGameState()
     // ANTI DIAGONAL
     unsigned int antiDiagonalCount = 0;
     for (unsigned int index = 0; index < getGridSize() - 1; index++) {
-        if (m_gameBoard[index][getGridSize() - index - 1].GetPlayer().GetType() ==
-              m_gameBoard[index + 1][getGridSize() - index - 2].GetPlayer().GetType() &&
+        if (m_gameBoard[index][getGridSize() - index - 1].GetPlayer().getType() ==
+              m_gameBoard[index + 1][getGridSize() - index - 2].GetPlayer().getType() &&
             m_gameBoard[index][getGridSize() - index - 1].GetState() != Tile::State::BLANK) {
             ++antiDiagonalCount;
         } else {
@@ -320,7 +320,7 @@ Board::GameState Board::checkGameState()
 
     // If one row is fill (this mean HUMAN or AI WON)
     if (antiDiagonalCount == getGridSize() - 1) {
-        if (m_gameBoard[0][getGridSize() - 1].GetPlayer().GetType() == Player::Type::AI) {
+        if (m_gameBoard[0][getGridSize() - 1].GetPlayer().getType() == Player::Type::AI) {
             setGameState(GameState::WON);
             return GameState::WON;
         } else {

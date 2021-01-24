@@ -12,8 +12,6 @@
 class Tile
 {
 public:
-    // Tile states
-    // enum class State { Normal, Dragged, Highlighted, Removed, Selected };
     enum class State
     {
         BLANK,
@@ -22,7 +20,6 @@ public:
 
     /**
      * @brief C-tor
-     * @param player: HUMAN, AI or NONE
      */
     Tile();
 

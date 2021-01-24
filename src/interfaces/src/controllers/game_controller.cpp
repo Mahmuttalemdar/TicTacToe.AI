@@ -172,13 +172,13 @@ void GameController::handleGridSizeChanged(unsigned int gridSize)
 
 void GameController::handleHumanPlayerNameChanged(QString playerName)
 {
-    m_humanPlayer.SetPlayerName(playerName);
+    m_humanPlayer.setPlayerName(playerName);
     m_gameBoard->restart();
 }
 
 void GameController::handleAiPlayerNameChanged(QString playerName)
 {
-    m_aiPlayer.SetPlayerName(playerName);
+    m_aiPlayer.setPlayerName(playerName);
     m_gameBoard->restart();
 }
 
