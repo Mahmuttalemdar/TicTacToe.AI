@@ -13,7 +13,6 @@ class GameDifficulty : public QObject
     Q_PROPERTY(Difficulty difficulty READ difficulty WRITE setDifficulty NOTIFY difficultyChanged)
 
 public:
-
     enum Difficulty
     {
         None = 0,
