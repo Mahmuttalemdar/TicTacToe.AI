@@ -2,6 +2,8 @@
 #include "player.h"
 #include "tile.h"
 
+#include <ostream>
+
 Board::Board(unsigned int gridSize)
   : m_gridSize(gridSize)
   , m_utilityValue(0)
