@@ -1,7 +1,7 @@
 #ifndef BOARD_H
 #define BOARD_H
 
-#include <ostream>
+#include <memory>
 #include <vector>
 
 #include <QList>
