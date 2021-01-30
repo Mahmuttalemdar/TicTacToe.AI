@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" binding="early" xmlns:qt="http://www.qt.io/2015/02/scxml-ext" name="Main" qt:editorversion="4.13.3">
     <state id="TicTacToe.AI">
-        <qt:editorinfo geometry="335.01;145.73;-171.40;-81.20;1278.70;826.44" scenegeometry="335.01;145.73;163.61;64.53;1278.70;826.44"/>
+        <qt:editorinfo scenegeometry="335.01;145.73;163.61;64.53;1278.70;826.44" geometry="335.01;145.73;-171.40;-81.20;1278.70;826.44"/>
         <state id="StartScreen">
-            <qt:editorinfo geometry="50.17;67.80;-60;-50;221.11;273.09" scenegeometry="385.18;213.53;325.18;163.53;221.11;273.09"/>
+            <qt:editorinfo scenegeometry="385.18;213.53;325.18;163.53;221.11;273.09" geometry="50.17;67.80;-60;-50;221.11;273.09"/>
             <transition type="external" event="openOptionScreen" target="OptionsScreen">
-                <qt:editorinfo startTargetFactors="95.64;67.02" endTargetFactors="2.61;66.65"/>
+                <qt:editorinfo endTargetFactors="2.61;66.65" startTargetFactors="95.64;67.02"/>
             </transition>
             <onentry>
                 <log label="[Statechart]::[StartScreen]" expr="Entered"/>
             </onentry>
         </state>
         <state id="OptionsScreen">
-            <qt:editorinfo geometry="668.41;112.77;-424.98;-94.26;843.87;275.11" scenegeometry="1003.42;258.50;578.44;164.24;843.87;275.11"/>
+            <qt:editorinfo scenegeometry="1003.42;258.50;578.44;164.24;843.87;275.11" geometry="668.41;112.77;-424.98;-94.26;843.87;275.11"/>
             <state id="ChooseShape">
-                <qt:editorinfo geometry="-344.98;29.47;-60;-48.34;162.13;123.89" scenegeometry="658.44;287.97;598.44;239.63;162.13;123.89"/>
+                <qt:editorinfo scenegeometry="658.44;287.97;598.44;239.63;162.13;123.89" geometry="-344.98;29.47;-60;-48.34;162.13;123.89"/>
                 <transition type="external" event="openDifficultyPage" target="ChooseDifficulty">
                     <qt:editorinfo endTargetFactors="10.75;48.94"/>
                 </transition>
@@ -26,30 +26,30 @@
                 <log label="[Statechart]::[OptionsScreen]" expr="Entered"/>
             </onentry>
             <state id="ChooseDifficulty">
-                <qt:editorinfo geometry="-122.36;30.29;-60;-50;163.90;122.70" scenegeometry="881.06;288.79;821.06;238.79;163.90;122.70"/>
+                <qt:editorinfo scenegeometry="881.06;288.79;821.06;238.79;163.90;122.70" geometry="-122.36;30.29;-60;-50;163.90;122.70"/>
                 <transition type="external" event="backToChooseShapePage" target="ChooseShape">
-                    <qt:editorinfo startTargetFactors="7.53;80.24" movePoint="15.01;28.87" endTargetFactors="91.96;78.28"/>
+                    <qt:editorinfo endTargetFactors="91.96;78.28" startTargetFactors="7.53;80.24" movePoint="15.01;28.87"/>
                 </transition>
                 <onentry>
                     <log label="[Statechart]::[ChooseDifficulty]" expr="Entered"/>
                 </onentry>
                 <transition type="external" event="openGridSizePage" target="ChooseGridSize">
-                    <qt:editorinfo startTargetFactors="91.04;48.10" endTargetFactors="12.62;48.23"/>
+                    <qt:editorinfo endTargetFactors="12.62;48.23" startTargetFactors="91.04;48.10"/>
                 </transition>
             </state>
             <state id="PlayerSettings">
-                <qt:editorinfo geometry="299.36;38;-60;-55.87;159.53;119.86" scenegeometry="1302.78;296.50;1242.78;240.63;159.53;119.86"/>
+                <qt:editorinfo scenegeometry="1302.78;296.50;1242.78;240.63;159.53;119.86" geometry="299.36;38;-60;-55.87;159.53;119.86"/>
                 <transition type="external" event="openGamePlayScreen" target="GamePlayScreen">
-                    <qt:editorinfo localGeometry="0;124.80;-857.25;124.80" startTargetFactors="54.99;92.34" endTargetFactors="30.23;10.80"/>
+                    <qt:editorinfo localGeometry="0;124.80;-857.25;124.80" endTargetFactors="30.23;10.80" startTargetFactors="54.99;92.34"/>
                 </transition>
                 <onentry>
-                    <log label="[Statechart]::[PlayerSettings]"/>
+                    <log label="[Statechart]::[PlayerSettings]" expr="Entered"/>
                 </onentry>
             </state>
             <state id="ChooseGridSize">
-                <qt:editorinfo geometry="98.31;31.91;-60;-50;160.53;121.08" scenegeometry="1101.73;290.41;1041.73;240.41;160.53;121.08"/>
+                <qt:editorinfo scenegeometry="1101.73;290.41;1041.73;240.41;160.53;121.08" geometry="98.31;31.91;-60;-50;160.53;121.08"/>
                 <transition type="external" event="openPlayerSettings" target="PlayerSettings">
-                    <qt:editorinfo startTargetFactors="92.12;54.21" endTargetFactors="12.01;56.65"/>
+                    <qt:editorinfo endTargetFactors="12.01;56.65" startTargetFactors="92.12;54.21"/>
                 </transition>
                 <onentry>
                     <qt:editorinfo geometry="-60;-50;0;0;0;0"/>
@@ -58,16 +58,16 @@
             </state>
         </state>
         <state id="GamePlayScreen">
-            <qt:editorinfo geometry="58.41;453;-60;-50;462.58;293.19" scenegeometry="393.42;598.73;333.42;548.73;462.58;293.19"/>
+            <qt:editorinfo scenegeometry="393.42;598.73;333.42;548.73;462.58;293.19" geometry="58.41;453;-60;-50;462.58;293.19"/>
             <transition type="external" event="openScoreScreen" target="ScoreScreen">
                 <qt:editorinfo endTargetFactors="5.50;51.16"/>
             </transition>
             <onentry>
-                <log label="[Statechart]::[GamePlayScreen]"/>
+                <log label="[Statechart]::[GamePlayScreen]" expr="Entered"/>
             </onentry>
         </state>
         <state id="ScoreScreen">
-            <qt:editorinfo geometry="655.13;456.07;-66.12;-50.44;446.19;289.54" scenegeometry="990.14;601.80;924.02;551.36;446.19;289.54"/>
+            <qt:editorinfo scenegeometry="990.14;601.80;924.02;551.36;446.19;289.54" geometry="655.13;456.07;-66.12;-50.44;446.19;289.54"/>
             <onentry>
                 <log label="[Statechart]::[ScoreScreen]" expr="Entered"/>
             </onentry>

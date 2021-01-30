@@ -14,5 +14,7 @@
         <file>Text/qmldir</file>
         <file>Sheets/BottomSheet.qml</file>
         <file>Sheets/qmldir</file>
+        <file>Views/MainStackView.qml</file>
+        <file>Views/qmldir</file>
     </qresource>
 </RCC>

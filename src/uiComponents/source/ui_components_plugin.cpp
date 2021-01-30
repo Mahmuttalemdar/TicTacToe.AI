@@ -47,6 +47,7 @@ void UIComponentsPlugin::registerTypes(const char* uri)
     qmlRegisterModule("UIComponents.Buttons", 1, 0);
     qmlRegisterModule("UIComponents.Sheets", 1, 0);
     qmlRegisterModule("UIComponents.Text", 1, 0);
+    qmlRegisterModule("UIComponents.Views", 1, 0);
 }
 
 void UIComponentsPlugin::initializeEngine(QQmlEngine* engine, const char* uri)

@@ -4,6 +4,7 @@ import QtQuick.Controls 2.15
 import QtScxml 5.15
 
 import UIComponents.Backgrounds 1.0
+import UIComponents.Views 1.0
 import UIScreens.GamePlayScreen 1.0
 import UIScreens.OptionsScreen 1.0
 import UIScreens.ScoreScreen 1.0
@@ -22,49 +23,14 @@ ApplicationWindow {
     property real appRootHeight: appRoot.height
 
     // MAIN STACKVIEW
-    StackView {
+    MainStackView {
         id: mainStack
         width: appRootWidth
         height: appRootHeight
         initialItem: startScreenPageComp
         focus: true
 
-        popEnter: Transition {
-            XAnimator {
-                from: (mainStack.mirrored ? -1 : 1) * -mainStack.width
-                to: 0
-                duration: 400
-                easing.type: Easing.OutCubic
-            }
-        }
-
-        popExit: Transition {
-            XAnimator {
-                from: 0
-                to: (mainStack.mirrored ? -1 : 1) * mainStack.width
-                duration: 400
-                easing.type: Easing.OutCubic
-            }
-        }
-
-        pushEnter: Transition {
-            XAnimator {
-                from: (mainStack.mirrored ? -1 : 1) * -mainStack.width
-                to: 0
-                duration: 400
-                easing.type: Easing.OutCubic
-            }
-        }
-
-        pushExit: Transition {
-            XAnimator {
-                from: 0
-                to: (mainStack.mirrored ? -1 : 1) * mainStack.width
-                duration: 400
-                easing.type: Easing.OutCubic
-            }
-        }
-
+        // SCORE SCREEN
         ScoreScreenPage {
             id: scoreScreenPage
         }
@@ -126,7 +92,6 @@ ApplicationWindow {
         stateMachine: entrance.statechart
         events: ["restartGame"]
         onOccurred: {
-            console.log("Main stack current item: ", mainStack.currentItem)
             mainStack.pop()
             mainStack.push(gamePlayScreenPageComp)
         }
