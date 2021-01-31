@@ -57,7 +57,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-#          ref: main
+          ref: main
 
       - name: Checkout Source code
         if: github.event_name == 'pull_request'
@@ -138,17 +138,6 @@ jobs:
       - name: Package Clean
         run: rm -r $env:GITHUB_WORKSPACE/build/Package/_CPack_Packages
 
-      - name: SHA256Sum of Windows installer(daily build)
-        if:  matrix.type == 'installer'
-        shell: bash
-        run: |
-          sha256sum $GITHUB_WORKSPACE/build/Package/TicTacToeAI-${VERSION}-${{ matrix.config.pak_arch }}.msi
-          sha256sum $GITHUB_WORKSPACE/build/Package/TicTacToeAI-${VERSION}-${{ matrix.config.pak_arch }}.msi > $GITHUB_WORKSPACE/build/Package/TicTacToeAI-${VERSION}-${{ matrix.config.pak_arch }}.msi.sha256sum
-          python -m pip install -U -q requests
-          echo "============Windows installer sha256sum download link============"
-          echo $(python $GITHUB_WORKSPACE/scripts/upload_services/transferwee.py upload $GITHUB_WORKSPACE/build/Package/TicTacToeAI-${VERSION}-${{ matrix.config.pak_arch }}.msi.sha256sum)
-          echo "=======no operation for you can see link in the log console====="
-
       - name: SHA256Sum of Windows portable(daily build)
         if:  matrix.type == 'portable'
         shell: bash
@@ -160,15 +149,6 @@ jobs:
           echo $(python $GITHUB_WORKSPACE/scripts/upload_services/transferwee.py upload $GITHUB_WORKSPACE/build/Package/TicTacToeAI-${VERSION}-${{ matrix.config.pak_arch }}.zip.sha256sum)
           echo "=====no operation for you can see link in the log console====="
 
-      - name: Upload Windows installer(daily build)
-        if:  matrix.type == 'installer'
-        shell: bash
-        run: |
-          python -m pip install -U -q requests
-          echo "================Windows installer download link================"
-          echo $(python $GITHUB_WORKSPACE/scripts/upload_services/transferwee.py upload $GITHUB_WORKSPACE/build/Package/TicTacToeAI-${VERSION}-${{ matrix.config.pak_arch }}.msi)
-          echo "=====no operation for you can see link in the log console====="
-
       - name: Upload Windows portable(daily build)
         if:  matrix.type == 'portable'
         shell: bash
@@ -177,6 +157,7 @@ jobs:
           echo "=================Windows portable download link================"
           echo $(python $GITHUB_WORKSPACE/scripts/upload_services/transferwee.py upload $GITHUB_WORKSPACE/build/Package/TicTacToeAI-${VERSION}-${{ matrix.config.pak_arch }}.zip)
           echo "=====no operation for you can see link in the log console====="
+          
       - name: Artifact Upload
         uses: actions/upload-artifact@v2
         with:
