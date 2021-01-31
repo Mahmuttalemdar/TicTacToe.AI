@@ -3,7 +3,7 @@ name: Packaging(Windows)
 on:
   push:
     branches:
-      - master*
+      - main*
     paths-ignore:
       - 'README.md'
       - 'LICENSE'
@@ -57,7 +57,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
-#          ref: master
+#          ref: main
 
       - name: Checkout Source code
         if: github.event_name == 'pull_request'
