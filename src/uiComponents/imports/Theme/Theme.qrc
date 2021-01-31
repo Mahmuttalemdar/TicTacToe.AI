@@ -1,7 +1,5 @@
 <RCC>
     <qresource prefix="/imports/Theme">
-        <file>fonts/Open_Sans/OpenSans-Regular.ttf</file>
-        <file>fonts/Roboto/Roboto-Medium.ttf</file>
         <file>images/Backgrounds/Background.png</file>
         <file>images/Backgrounds/Background2.png</file>
         <file>images/Backgrounds/Background2.svg</file>
