@@ -111,6 +111,7 @@ jobs:
           cmake ..  ${{matrix.config.generator}}  `
           -DCMAKE_TOOLCHAIN_FILE="${{ github.workspace }}\vcpkg\scripts\buildsystems\vcpkg.cmake"  `
           -DENABLE_OPENSSL=ON `
+          -DDEPLOYMENT_MODE=ON `
           -DCMAKE_BUILD_TYPE=Release  `
           -DRUN_IN_PLACE=${{ contains(matrix.type, 'portable') }}
 
@@ -135,7 +136,7 @@ jobs:
           TYPE: ${{matrix.type}}
 
       - name: Package Clean
-        run: rm -r $env:GITHUB_WORKSPACE\build\Package\_CPack_Packages
+        run: rm -r $env:GITHUB_WORKSPACE/build/Package/_CPack_Packages
 
       - name: SHA256Sum of Windows installer(daily build)
         if:  matrix.type == 'installer'
