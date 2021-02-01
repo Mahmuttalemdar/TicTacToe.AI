@@ -1,7 +1,6 @@
 # TICTACTOE.AI
 ![test-clang-format](https://github.com/Mahmuttalemdar/TicTacToe.AI/workflows/test-clang-format/badge.svg)
 ![Building(CMake)](https://github.com/Mahmuttalemdar/TicTacToe.AI/workflows/Building(CMake)/badge.svg)
-![Packaging(Windows)](https://github.com/Mahmuttalemdar/TicTacToe.AI/workflows/Packaging(Windows)/badge.svg)
 
 TicTacToe game that is implemented with "MiniMax-Alpha Beta Pruning" algorithm and using module based Qt-Qml architecture.
 
