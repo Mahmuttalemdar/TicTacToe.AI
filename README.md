@@ -1,3 +1,5 @@
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=Mahmuttalemdar&theme=tokyonight)](https://git.io/streak-stats)
+
 # TICTACTOE.AI
 ![test-clang-format](https://github.com/Mahmuttalemdar/TicTacToe.AI/workflows/test-clang-format/badge.svg)
 ![Building(CMake)](https://github.com/Mahmuttalemdar/TicTacToe.AI/workflows/Building(CMake)/badge.svg)
